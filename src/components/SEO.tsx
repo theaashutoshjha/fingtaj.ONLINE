@@ -32,7 +32,7 @@ export default function SEO({
 }: SEOProps) {
   const location = useLocation();
   const currentPath = canonicalPath || location.pathname;
-  const canonicalUrl = `https://www.fingtaj.com${currentPath === '/' ? '' : currentPath}`;
+  const canonicalUrl = `https://fingtaj.online${currentPath === '/' ? '' : currentPath}`;
 
   useEffect(() => {
     // 1. Update Document Title
@@ -73,7 +73,7 @@ export default function SEO({
     setMeta('property', 'og:type', type);
     setMeta('property', 'og:site_name', 'FingTaj');
     setMeta('property', 'og:locale', 'en_US');
-    setMeta('property', 'og:image', 'https://www.fingtaj.com/og-image.png');
+    setMeta('property', 'og:image', 'https://fingtaj.online/og-image.png');
 
     // 5. Twitter / X Card Tags
     setMeta('name', 'twitter:card', 'summary_large_image');
@@ -82,7 +82,7 @@ export default function SEO({
     setMeta('name', 'twitter:title', title);
     setMeta('name', 'twitter:description', description);
     setMeta('name', 'twitter:url', canonicalUrl);
-    setMeta('name', 'twitter:image', 'https://www.fingtaj.com/og-image.png');
+    setMeta('name', 'twitter:image', 'https://fingtaj.online/og-image.png');
 
     // 6. Inject Dynamic Schema.org JSON-LD
     const schemaScriptId = 'fingtaj-dynamic-schema';
@@ -102,7 +102,7 @@ export default function SEO({
         name: title,
         description: description,
         isPartOf: {
-          '@id': 'https://www.fingtaj.com/#website',
+          '@id': 'https://fingtaj.online/#website',
         },
         inLanguage: 'en-US',
       },
@@ -116,7 +116,7 @@ export default function SEO({
           '@type': 'ListItem',
           position: idx + 1,
           name: crumb.name,
-          item: `https://www.fingtaj.com${crumb.path}`,
+          item: `https://fingtaj.online${crumb.path}`,
         })),
       });
     }

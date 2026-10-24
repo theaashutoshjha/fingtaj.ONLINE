@@ -181,11 +181,11 @@ export default function About() {
                   X (Twitter): @FinGTaj
                 </a>
                 <a
-                  href="mailto:support@fingtaj.com"
+                  href="mailto:support@fingtaj.online"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition"
                 >
                   <Mail className="w-3.5 h-3.5 text-cyan-400" />
-                  support@fingtaj.com
+                  support@fingtaj.online
                 </a>
               </div>
             </div>

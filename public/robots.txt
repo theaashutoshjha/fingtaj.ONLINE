@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.fingtaj.com/sitemap.xml
+Sitemap: https://fingtaj.online/sitemap.xml

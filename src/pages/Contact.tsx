@@ -44,7 +44,7 @@ export default function Contact() {
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText('support@fingtaj.com');
+      await navigator.clipboard.writeText('support@fingtaj.online');
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2500);
     } catch {
@@ -114,9 +114,9 @@ export default function Contact() {
   const createMailtoLink = (record: ContactRecord) => {
     const subject = encodeURIComponent(`[${record.id}] ${record.category}: ${record.subject}`);
     const body = encodeURIComponent(
-      `Ticket ID: ${record.id}\nName: ${record.name}\nEmail: ${record.email}\nCategory: ${record.category}\nTimestamp: ${record.timestamp} IST\n\nQuery Details:\n${record.message}\n\n--\nSent via FingTaj Financial Computing Portal (https://www.fingtaj.com)`
+      `Ticket ID: ${record.id}\nName: ${record.name}\nEmail: ${record.email}\nCategory: ${record.category}\nTimestamp: ${record.timestamp} IST\n\nQuery Details:\n${record.message}\n\n--\nSent via FingTaj Financial Computing Portal (https://fingtaj.online)`
     );
-    return `mailto:support@fingtaj.com?subject=${subject}&body=${body}`;
+    return `mailto:support@fingtaj.online?subject=${subject}&body=${body}`;
   };
 
   const handleResetForm = () => {
@@ -185,7 +185,7 @@ export default function Contact() {
               <div>
                 <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold">Primary Support Email</span>
                 <div className="flex items-center justify-between gap-2 mt-1 p-2.5 bg-slate-950/90 border border-slate-800 rounded-lg">
-                  <span className="font-mono text-cyan-300 font-medium select-all">support@fingtaj.com</span>
+                  <span className="font-mono text-cyan-300 font-medium select-all">support@fingtaj.online</span>
                   <button
                     type="button"
                     onClick={handleCopyEmail}

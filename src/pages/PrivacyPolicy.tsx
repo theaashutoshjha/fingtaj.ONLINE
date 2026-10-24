@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Privacy Policy</h1>
         <p className="mt-3 text-sm text-slate-400">
-          Last Updated: <strong>October 24, 2026</strong> | Governing Domain: <strong>https://www.fingtaj.com</strong>
+          Last Updated: <strong>October 24, 2026</strong> | Governing Domain: <strong>https://fingtaj.online</strong>
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
             Commitment to Zero-Telemetry Financial Privacy
           </h2>
           <p className="text-slate-300 text-sm">
-            At FingTaj (accessible from <a href="https://www.fingtaj.com" className="text-cyan-400 underline">https://www.fingtaj.com</a>), one of our core architectural priorities is the absolute privacy of our visitors. This Privacy Policy document outlines the types of information that are collected or recorded by FingTaj, how it is handled, and our compliance with Google AdSense, the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA/CPRA), and the Digital Personal Data Protection Act (DPDPA, 2023) of India.
+            At FingTaj (accessible from <a href="https://fingtaj.online" className="text-cyan-400 underline">https://fingtaj.online</a>), one of our core architectural priorities is the absolute privacy of our visitors. This Privacy Policy document outlines the types of information that are collected or recorded by FingTaj, how it is handled, and our compliance with Google AdSense, the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA/CPRA), and the Digital Personal Data Protection Act (DPDPA, 2023) of India.
           </p>
         </section>
 
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
             2. Google AdSense & Third-Party Advertising Cookies
           </h2>
           <p>
-            FingTaj uses <strong>Google AdSense</strong> to display advertisements. Google is a third-party vendor on our site. Google uses cookies, including the <strong>DoubleClick DART cookie</strong>, to serve advertisements to visitors based on their visit to www.fingtaj.com and other websites across the Internet.
+            FingTaj uses <strong>Google AdSense</strong> to display advertisements. Google is a third-party vendor on our site. Google uses cookies, including the <strong>DoubleClick DART cookie</strong>, to serve advertisements to visitors based on their visit to fingtaj.online and other websites across the Internet.
           </p>
           
           <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2 text-sm">
@@ -149,7 +149,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
           <p className="text-xs text-slate-400">
-            Because FingTaj does not retain user accounts or financial calculation databases, we hold zero financial records on our servers. Inquiries regarding data privacy can be dispatched to <code className="text-cyan-300 font-mono">support@fingtaj.com</code>.
+            Because FingTaj does not retain user accounts or financial calculation databases, we hold zero financial records on our servers. Inquiries regarding data privacy can be dispatched to <code className="text-cyan-300 font-mono">support@fingtaj.online</code>.
           </p>
         </section>
 
@@ -203,7 +203,7 @@ export default function PrivacyPolicy() {
           <div className="text-xs text-slate-400 space-y-1 font-mono">
             <p>Attention: Data Grievance Redressal</p>
             <p>Lead Engineer: Ashutosh Jha</p>
-            <p>Email: <a href="mailto:support@fingtaj.com" className="text-cyan-400 underline">support@fingtaj.com</a></p>
+            <p>Email: <a href="mailto:support@fingtaj.online" className="text-cyan-400 underline">support@fingtaj.online</a></p>
             <p>Physical Jurisdiction: Chennai, Tamil Nadu, 600001, India</p>
             <p>Response Timeline: Within 48 business hours</p>
           </div>

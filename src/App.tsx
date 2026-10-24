@@ -8,6 +8,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import CookieConsent from './components/CookieConsent';
 
 // Individual Calculator Pages
 import SipCalculator from './pages/SipCalculator';
@@ -47,6 +48,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </BrowserRouter>
   );

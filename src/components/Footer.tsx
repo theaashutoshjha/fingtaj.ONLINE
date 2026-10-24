@@ -126,7 +126,7 @@ export default function Footer() {
         {/* Bottom Bar: Legal Disclaimers & Copyright */}
         <div className="pt-8 space-y-4 text-xs text-slate-500">
           <p className="leading-relaxed text-justify">
-            <strong className="text-slate-400">Statutory YMYL Notice:</strong> FingTaj (<a href="https://www.fingtaj.com" className="text-slate-400 hover:text-cyan-400 underline">https://www.fingtaj.com</a>) is an independent financial technology utility. Calculations, estimates, and schedules are provided solely for educational, self-planning, and computational modeling purposes and do not constitute formal investment, tax, or legal advisory services. Users must consult a certified Chartered Accountant or SEBI-registered investment advisor prior to executing binding financial agreements.
+            <strong className="text-slate-400">Statutory YMYL Notice:</strong> FingTaj (<a href="https://fingtaj.online" className="text-slate-400 hover:text-cyan-400 underline">https://fingtaj.online</a>) is an independent financial technology utility. Calculations, estimates, and schedules are provided solely for educational, self-planning, and computational modeling purposes and do not constitute formal investment, tax, or legal advisory services. Users must consult a certified Chartered Accountant or SEBI-registered investment advisor prior to executing binding financial agreements.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-slate-900 text-[11px] text-slate-600">
             <div>
@@ -135,7 +135,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <span>Chennai, Tamil Nadu, India</span>
               <span>•</span>
-              <a href="mailto:support@fingtaj.com" className="hover:text-cyan-400 transition">support@fingtaj.com</a>
+              <a href="mailto:support@fingtaj.online" className="hover:text-cyan-400 transition">support@fingtaj.online</a>
             </div>
           </div>
         </div>
