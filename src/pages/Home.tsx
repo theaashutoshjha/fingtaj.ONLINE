@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import SocialLinks from '../components/SocialLinks';
 
 interface ToolCard {
   id: string;
@@ -131,22 +133,37 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+      <SEO
+        title="FingTaj — Institutional-Grade Statutory Financial Calculators for India"
+        description="High-precision client-side Indian financial calculators. Compute SIP wealth, Home Loan EMI, Income Tax (Section 115BAC), Gratuity, and Capital Gains with zero data collection."
+        canonicalPath="/"
+        keywords="statutory financial calculator, income tax calculator 115bac, loan emi calculator, sip calculator india, gratuity calculator, zero telemetry"
+      />
+
       {/* Hero Banner */}
       <section className="border border-slate-800 bg-slate-900/60 rounded-2xl p-6 sm:p-10 relative overflow-hidden">
         <div className="max-w-3xl space-y-4">
-          <div className="flex items-center gap-2 text-xs font-medium text-slate-400">
+          <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-400">
             <span>Statutory Financial Architecture</span>
             <span aria-hidden="true">·</span>
             <span>Income Tax Act 1961</span>
             <span aria-hidden="true">·</span>
             <span>Finance Act 2024-2026</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Institutional-Grade Statutory Financial Calculators for India
+
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Institutional-Grade Statutory Financial Computation
           </h1>
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            High-precision client-side financial computation suite. Compute SIP wealth, Home Loan EMI, Income Tax (Section 115BAC), Gratuity, and Capital Gains with zero data collection and 100% in-browser memory execution.
+
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            High-precision algorithmic calculators complying with Indian statutory frameworks. Every calculation runs strictly client-side in browser memory with zero tracking, zero remote logging, and zero financial telemetry.
           </p>
+
+          {/* Social Communities Strip */}
+          <div className="pt-2 flex flex-wrap items-center gap-3">
+            <span className="text-xs font-semibold text-slate-400">Join Our Community:</span>
+            <SocialLinks layout="inline" />
+          </div>
         </div>
 
         {/* Live Search & Filter */}

@@ -1,10 +1,20 @@
 import React from 'react';
 import { Scale, AlertTriangle, ShieldCheck, FileCheck, CheckCircle2, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function TermsOfService() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 text-slate-300">
+      <SEO
+        title="Terms of Service & Statutory Financial Disclaimer — FingTaj"
+        description="Terms of service, intellectual property guidelines, and statutory financial disclaimers for using FingTaj calculation utilities."
+        canonicalPath="/terms-of-service"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Terms of Service', path: '/terms-of-service' },
+        ]}
+      />
       {/* Header */}
       <div className="mb-10 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-800 mb-3">

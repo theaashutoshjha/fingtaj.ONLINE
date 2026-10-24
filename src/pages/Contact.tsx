@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Clock, MapPin, Send, CheckCircle2, ShieldCheck, HelpCircle, Copy, Check, MessageSquare, AlertCircle } from 'lucide-react';
+import SEO from '../components/SEO';
+import SocialLinks from '../components/SocialLinks';
 
 interface ContactRecord {
   id: string;
@@ -149,6 +151,16 @@ export default function Contact() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 text-slate-300">
+      <SEO
+        title="Contact FingTaj — Statutory Financial & Engineering Support Desk"
+        description="Connect with FingTaj engineering support for statutory tax questions, calculation discrepancies, and feature requests. Guaranteed 24-48 hr response SLA."
+        canonicalPath="/contact"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact Us', path: '/contact' },
+        ]}
+        faqs={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       {/* Page Header */}
       <div className="mb-10 text-center sm:text-left">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-800 mb-3">
@@ -187,8 +199,8 @@ export default function Contact() {
               </div>
 
               <div>
-                <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold">Lead Developer</span>
-                <p className="text-slate-200 font-medium mt-0.5">Ashutosh Jha</p>
+                <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold">Lead Systems Architect</span>
+                <p className="text-slate-200 font-medium mt-0.5">Ashutosh Kumar</p>
                 <p className="text-xs text-slate-400">Computational Finance & Full-Stack Systems</p>
               </div>
 
@@ -206,6 +218,14 @@ export default function Contact() {
                   <span className="text-slate-300 font-medium text-xs block">Operational Base & Jurisdiction</span>
                   <span className="text-xs text-slate-400">Chennai, Tamil Nadu 600001, India</span>
                 </div>
+              </div>
+
+              {/* Official Social Outlets */}
+              <div className="pt-3 border-t border-slate-800">
+                <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold mb-2">
+                  Official Channels & Community
+                </span>
+                <SocialLinks layout="icons-only" />
               </div>
             </div>
           </div>

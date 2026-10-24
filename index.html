@@ -34,6 +34,60 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://www.fingtaj.com/#website",
+          "url": "https://www.fingtaj.com",
+          "name": "FingTaj",
+          "description": "Institutional-Grade Statutory Financial Calculators for India",
+          "publisher": {
+            "@id": "https://www.fingtaj.com/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.fingtaj.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.fingtaj.com/#organization",
+          "name": "FingTaj",
+          "url": "https://www.fingtaj.com",
+          "logo": "https://www.fingtaj.com/favicon.svg",
+          "description": "Institutional-grade statutory financial calculation engine for Indian taxpayers, salaried professionals, and long-term investors.",
+          "founder": {
+            "@type": "Person",
+            "name": "Ashutosh Kumar",
+            "alternateName": "Ashutosh Jha",
+            "jobTitle": "Founding Architect & Computational Finance Engineer",
+            "sameAs": [
+              "https://www.linkedin.com/in/ashutosh-kumar-r/",
+              "https://x.com/FinGTaj",
+              "https://www.youtube.com/@fingtaj"
+            ]
+          },
+          "sameAs": [
+            "https://x.com/FinGTaj",
+            "https://www.youtube.com/@fingtaj",
+            "https://whatsapp.com/channel/0029Vb7gkNgIt5rwnKzp0Y0K",
+            "https://www.linkedin.com/in/ashutosh-kumar-r/",
+            "https://www.quora.com/profile/FinGTaj"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@fingtaj.com",
+            "contactType": "customer support",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "postalCode": "600001",
+            "addressCountry": "IN"
+          }
+        },
+        {
           "@type": "WebApplication",
           "@id": "https://www.fingtaj.com/#webapp",
           "name": "FingTaj Financial Engine",
@@ -45,20 +99,6 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "INR"
-          }
-        },
-        {
-          "@type": "FinancialService",
-          "@id": "https://www.fingtaj.com/#service",
-          "name": "FingTaj",
-          "url": "https://www.fingtaj.com",
-          "logo": "https://www.fingtaj.com/favicon.svg",
-          "description": "Institutional-grade financial calculations and statutory tax modeling.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Chennai",
-            "addressRegion": "Tamil Nadu",
-            "addressCountry": "IN"
           }
         }
       ]

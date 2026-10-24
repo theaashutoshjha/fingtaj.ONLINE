@@ -1,10 +1,21 @@
 import React from 'react';
 import { ShieldCheck, Cpu, Scale, FileText, CheckCircle2, UserCheck, ExternalLink, Mail, Award, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SocialLinks from '../components/SocialLinks';
+import SEO from '../components/SEO';
 
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 text-slate-300">
+      <SEO
+        title="About FingTaj — Zero-Telemetry Statutory Financial Engineering & Governance"
+        description="Learn about FingTaj, an institutional-grade, zero-telemetry financial calculation suite built for Indian taxpayers, salaried professionals, and investors by Ashutosh Kumar."
+        canonicalPath="/about"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'About Us', path: '/about' },
+        ]}
+      />
       {/* Header */}
       <div className="mb-10 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-800 mb-3">
@@ -139,35 +150,35 @@ export default function About() {
           
           <div className="flex flex-col sm:flex-row gap-6 items-start">
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-600 flex items-center justify-center text-white text-2xl font-black font-mono shrink-0 shadow-lg shadow-cyan-500/20">
-              AJ
+              AK
             </div>
             <div className="space-y-3">
               <div>
-                <h3 className="text-xl font-bold text-white">Ashutosh Jha</h3>
+                <h3 className="text-xl font-bold text-white">Ashutosh Kumar</h3>
                 <p className="text-sm text-cyan-400 font-medium">Founding Architect & Computational Finance Engineer</p>
                 <p className="text-xs text-slate-400">Head of Mathematical Modeling at FingTaj • Chennai, Tamil Nadu, India</p>
               </div>
               <p className="text-sm text-slate-300 leading-relaxed text-justify">
-                Ashutosh Jha is a Full-Stack Systems Engineer and computational finance specialist dedicated to software ergonomics, cryptographic privacy, and automated statutory modeling. With a rigorous background in full-stack web applications, algorithmic mathematics, and financial compliance, he created FingTaj to give Indian citizens access to dependable, unmonitored financial modeling tools.
+                Ashutosh Kumar is a Full-Stack Systems Engineer and computational finance specialist dedicated to software ergonomics, cryptographic privacy, and automated statutory modeling. With a rigorous background in full-stack web applications, algorithmic mathematics, and financial compliance, he created FingTaj to give Indian citizens access to dependable, unmonitored financial modeling tools.
               </p>
-              <div className="flex flex-wrap items-center gap-4 text-xs font-semibold pt-2">
+              <div className="flex flex-wrap items-center gap-3 text-xs font-semibold pt-2">
                 <a
-                  href="https://github.com/imaashutoshjha"
+                  href="https://www.linkedin.com/in/ashutosh-kumar-r/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition"
                 >
                   <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
-                  GitHub: @imaashutoshjha
+                  LinkedIn: ashutosh-kumar-r
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/imaashutoshjha"
+                  href="https://x.com/FinGTaj"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition"
                 >
                   <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
-                  LinkedIn Profile
+                  X (Twitter): @FinGTaj
                 </a>
                 <a
                   href="mailto:support@fingtaj.com"
@@ -178,6 +189,14 @@ export default function About() {
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Official Community & Social Media Channels Grid */}
+          <div className="pt-6 border-t border-slate-800/80">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-200 mb-3">
+              Official FingTaj Social & Community Outlets
+            </h3>
+            <SocialLinks layout="cards" />
           </div>
         </section>
 
