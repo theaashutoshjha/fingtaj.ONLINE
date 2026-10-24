@@ -1,0 +1,6 @@
+{
+  "name": "FingTaj - Statutory Financial Calculators",
+  "description": "Production-grade, client-side statutory financial calculators for Indian tax regimes, loans, investments, gratuity, capital gains, and wealth planning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
