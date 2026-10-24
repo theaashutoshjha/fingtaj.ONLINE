@@ -20,11 +20,11 @@ export default function Navbar() {
         {/* Brand Lockup */}
         <Link to="/" className="flex items-center gap-2.5 whitespace-nowrap shrink-0 group">
           <svg className="w-8 h-8 text-cyan-400 transition-transform group-hover:scale-105" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#0f172a" stroke="#0891b2" stroke-width="1.5"/>
-            <path d="M8 22L14 14L18 18L24 10" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect width="32" height="32" rx="8" fill="#0f172a" stroke="#0891b2" strokeWidth="1.5"/>
+            <path d="M8 22L14 14L18 18L24 10" stroke="#22d3ee" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             <circle cx="24" cy="10" r="2" fill="#22d3ee"/>
-            <path d="M8 10H16" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-            <path d="M8 14H12" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 10H16" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M8 14H12" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round"/>
           </svg>
           <span className="text-xl font-bold tracking-tight text-white group-hover:text-cyan-300 transition-colors">
             Fing<span className="text-cyan-400">Taj</span>
