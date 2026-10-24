@@ -11,8 +11,91 @@
   }
 }
 
-input[type=range] {
+/* Global Range Slider Polish: 44px x 44px thumb touch target for mobile AdSense & Core Web Vitals */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px !important; /* Minimum touch target height for mobile accessibility */
+  background: transparent !important;
+  cursor: pointer;
+  touch-action: pan-y; /* Vertical page scroll permitted while dragging horizontally */
+  margin: 0;
+  padding: 0;
   accent-color: #06b6d4;
+}
+
+/* WebKit / Blink (Chrome, Safari, Edge, Android WebView) Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background-color: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid #334155;
+}
+
+/* WebKit / Blink Thumb: 44px x 44px hit-box with 24px visual circle */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #06b6d4;
+  background-clip: padding-box;
+  border: 10px solid transparent; /* 44px total touch area, 24px visible knob */
+  margin-top: -18px; /* Perfectly centers 44px thumb on 8px track: (8 - 44) / 2 */
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.45), inset 0 0 0 2px #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]:active::-webkit-slider-thumb,
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #22d3ee;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+}
+
+input[type="range"]:focus-visible {
+  outline: none;
+}
+
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.3), 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+}
+
+/* Firefox Track */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background-color: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid #334155;
+}
+
+/* Firefox Thumb: 44px x 44px hit-box */
+input[type="range"]::-moz-range-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #06b6d4;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.45), inset 0 0 0 2px #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]:active::-moz-range-thumb,
+input[type="range"]:hover::-moz-range-thumb {
+  background-color: #22d3ee;
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+}
+
+input[type="range"]:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.3), 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
 }
 
 /* Print optimizations */
