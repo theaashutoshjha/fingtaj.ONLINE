@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CalculatorLayout from '../components/CalculatorLayout';
+import { Link } from 'react-router-dom';
 
 export default function LoanEmiCalculator() {
   const [amount, setAmount] = useState<number>(5000000);
@@ -30,6 +31,16 @@ export default function LoanEmiCalculator() {
       title="Home & Personal Loan EMI Amortization Calculator"
       subtitle="Compute equated monthly installments and interest distributions across home, personal, and vehicular financing facilities under RBI Master Directions."
       formula="E = [ P × r × (1 + r)^n ] / [ (1 + r)^n - 1 ]"
+      whoItsFor={
+        <>
+          <p>
+            <strong>What It Computes:</strong> This tool calculates your uniform Equated Monthly Installment (EMI), total cumulative interest payable over the loan tenure, and aggregate financial outflow across home loans, car loans, mortgage property loans, and retail personal credit.
+          </p>
+          <p>
+            <strong>Target Audience:</strong> Designed for home buyers, vehicular purchasers, debt consoliders, and prospective mortgage borrowers evaluating affordability, bank loan eligibility criteria, and Fixed Obligation to Income Ratio (FOIR) limits.
+          </p>
+        </>
+      }
       mathematicalPrinciples={
         <>
           <p>
@@ -40,12 +51,64 @@ export default function LoanEmiCalculator() {
           </p>
         </>
       }
+      formulaExplanation={
+        <>
+          <p>
+            To understand the operational mechanics of the reducing balance formula:
+          </p>
+          <ul className="list-disc pl-5 space-y-1.5 text-slate-300">
+            <li><strong>P (Principal Disbursed):</strong> The sanctioned net loan disbursed to the seller or borrower.</li>
+            <li><strong>r (Periodic Monthly Rate):</strong> The annual percentage rate (APR) divided by 12 months and 100: <code className="text-amber-300">r = Rate / (12 × 100)</code>. For 8.75%, <code className="text-amber-300">r = 0.00729167</code>.</li>
+            <li><strong>n (Total Tenure in Months):</strong> Total monthly installments across the loan lifetime (<code className="text-amber-300">Years × 12</code>).</li>
+            <li><strong>Numerator vs Denominator:</strong> The numerator models the compounded interest load over time, while the denominator annuity factor scales that load into equal monthly installments.</li>
+          </ul>
+        </>
+      }
       variables={[
         { variable: 'E', name: 'Equated Monthly Installment', definition: 'Uniform monthly installment comprising blended principal repayment and interest charges.' },
         { variable: 'P', name: 'Sanctioned Principal Amount', definition: 'Total capital disbursed by the lending institution net of administrative fees.' },
         { variable: 'r', name: 'Monthly Fractional Interest Rate', definition: 'Annual interest rate divided by 12 months and 100: r = R / (12 × 100).' },
         { variable: 'n', name: 'Loan Duration in Monthly Cycles', definition: 'Total duration of the loan facility expressed in calendar months.' },
       ]}
+      workedExample={
+        <>
+          <div className="font-semibold text-white mb-1">
+            Real-World Scenario: ₹50,00,000 Home Loan at 8.75% Annual Interest for 20 Years (240 Monthly Cycles)
+          </div>
+          <p className="text-xs text-slate-300">
+            Let us walk through the exact numbers for a 20-year housing loan:
+          </p>
+          <div className="space-y-1.5 font-mono text-xs bg-slate-900/60 p-3 rounded border border-slate-800/80 mt-2">
+            <div>• Sanctioned Loan Principal (P): ₹50,00,000</div>
+            <div>• Annual Interest Rate: 8.75% p.a.</div>
+            <div>• Monthly Rate (r): 8.75 / 1200 = 0.007291667</div>
+            <div>• Total Tenure in Months (n): 20 × 12 = 240 Months</div>
+            <div>• Compounding Term: (1 + r)^240 = (1.007291667)^240 ≈ 5.717654</div>
+            <div>• Numerator: 50,00,000 × 0.007291667 × 5.717654 ≈ ₹2,08,443.43</div>
+            <div>• Denominator: 5.717654 - 1 = 4.717654</div>
+            <div className="text-amber-300 font-bold">• Monthly EMI (E): 2,08,443.43 / 4.717654 = ₹44,186 / Month</div>
+            <div className="pt-2 border-t border-slate-800 text-slate-300">
+              • Total Repayment over 20 Years: 240 × ₹44,186 = ₹1,06,04,640
+            </div>
+            <div className="text-rose-400 font-bold">
+              • Total Bank Interest Paid: ₹1,06,04,640 - ₹50,00,000 = ₹56,04,640 (112% of loan!)
+            </div>
+          </div>
+          <p className="text-xs text-slate-400 mt-2">
+            <strong>Key Insight:</strong> Over 20 years at 8.75%, you repay <strong>more than double</strong> the original borrowed amount in bank interest. In Month 1, ₹36,458 (82.5%) of your ₹44,186 EMI is pure interest!
+          </p>
+        </>
+      }
+      howToReadResults={
+        <>
+          <p>
+            <strong>The 40% FOIR Affordability Rule:</strong> Lending banks look at your Fixed Obligation to Income Ratio (FOIR). Your total combined monthly EMIs across all existing debts should ideally never exceed 40% to 50% of your net monthly take-home salary.
+          </p>
+          <p>
+            <strong>Prepayment Leverage:</strong> Because reducing balance math front-loads interest, prepaying even 1 extra EMI per year in the first 5 years saves hundreds of thousands in interest and truncates your loan tenure by 3 to 4 years.
+          </p>
+        </>
+      }
       statutoryNotes={
         <>
           <p><strong>RBI Master Direction on Prepayment:</strong> Scheduled commercial banks and Housing Finance Companies (HFCs) are strictly prohibited from levying foreclosure charges or prepayment penalties on floating-rate term loans sanctioned to individual borrowers.</p>
@@ -65,6 +128,28 @@ export default function LoanEmiCalculator() {
           question: 'Are foreclosure and prepayment penalties legally permissible on floating-rate loans?',
           answer: 'No. As per RBI Master Directions, banks and Housing Finance Companies (HFCs) are strictly prohibited from levying foreclosure charges or prepayment penalties on floating-rate term loans sanctioned to individual borrowers for non-business objectives.',
         },
+        {
+          question: 'How do banks treat floating vs fixed interest rates?',
+          answer: 'Most Indian home loans are linked to an External Benchmark Lending Rate (EBLR), typically the RBI Repo Rate. When RBI adjusts the repo rate, banks automatically adjust your loan tenure (or EMI) to reflect the new interest rate.',
+        },
+        {
+          question: 'What is the difference between flat rate and reducing balance EMI?',
+          answer: 'In a flat rate loan, interest is computed against the full original loan amount for the whole tenure, making the effective interest rate almost double the advertised rate. The reducing balance method computes interest strictly on the remaining unpaid balance, ensuring fair interest charges.',
+        },
+      ]}
+      relatedArticles={[
+        {
+          title: 'How Loan EMI is Calculated: The Reducing Balance Formula & Prepayment Impact',
+          path: '/articles/how-loan-emi-is-calculated',
+          readTime: '8 min',
+          summary: 'A mathematical breakdown of equated monthly installments, why early payments are 80%+ interest, and prepayment math.',
+        },
+        {
+          title: 'New vs Old Tax Regime in India: Slabs, Deductions, and Break-Even Salary Analysis',
+          path: '/articles/new-vs-old-tax-regime',
+          readTime: '10 min',
+          summary: 'Understand how Section 24(b) home loan interest deductions compare between the Old and New Tax Regimes.',
+        },
       ]}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -72,7 +157,7 @@ export default function LoanEmiCalculator() {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <label htmlFor="emi-amount-input" className="font-medium text-slate-200">Principal Loan Amount</label>
-              <span className="font-mono text-cyan-400 font-semibold">{formatINR(amount)}</span>
+              <span className="font-mono text-amber-400 font-semibold">{formatINR(amount)}</span>
             </div>
             <input
               id="emi-amount-input"
@@ -94,7 +179,7 @@ export default function LoanEmiCalculator() {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <label htmlFor="emi-rate-input" className="font-medium text-slate-200">Annual Interest Rate (% p.a.)</label>
-              <span className="font-mono text-cyan-400 font-semibold">{rate.toFixed(2)}%</span>
+              <span className="font-mono text-amber-400 font-semibold">{rate.toFixed(2)}%</span>
             </div>
             <input
               id="emi-rate-input"
@@ -116,7 +201,7 @@ export default function LoanEmiCalculator() {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <label htmlFor="emi-years-input" className="font-medium text-slate-200">Loan Tenure (Years)</label>
-              <span className="font-mono text-cyan-400 font-semibold">{years} Years ({years * 12} Mos)</span>
+              <span className="font-mono text-amber-400 font-semibold">{years} Years ({years * 12} Mos)</span>
             </div>
             <input
               id="emi-years-input"
@@ -139,8 +224,8 @@ export default function LoanEmiCalculator() {
         <div className="lg:col-span-6 bg-slate-950 border border-slate-800 rounded-lg p-6 flex flex-col justify-between space-y-6 min-h-[220px]">
           <div className="space-y-4">
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">Monthly EMI</span>
-              <span className="text-2xl font-mono font-extrabold text-cyan-300 tabular-nums">{formatINR(emi)}</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">Monthly EMI</span>
+              <span className="text-2xl font-mono font-extrabold text-amber-300 tabular-nums">{formatINR(emi)}</span>
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-rose-400">Total Interest Payable</span>

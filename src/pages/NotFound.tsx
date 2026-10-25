@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Search, Calculator, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Calculator } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export default function NotFound() {
@@ -14,14 +14,14 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-16 text-center text-slate-300">
+    <div className="max-w-4xl mx-auto px-4 py-16 text-center text-zinc-300">
       <SEO
         title="404 — Page Not Found | FingTaj"
         description="The requested page could not be located. Explore our suite of zero-telemetry statutory financial calculators for Indian taxpayers and investors."
         canonicalPath="/404"
       />
 
-      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-rose-950/80 text-rose-300 border border-rose-800 mb-6 font-mono">
+      <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-rose-950/60 text-rose-300 border border-rose-800/60 mb-6 font-mono">
         HTTP 404: RESOURCE_NOT_FOUND
       </div>
 
@@ -29,29 +29,29 @@ export default function NotFound() {
         Page Not Found
       </h1>
 
-      <p className="text-base sm:text-lg text-slate-400 max-w-xl mx-auto mb-8">
+      <p className="text-base sm:text-lg text-zinc-400 max-w-xl mx-auto mb-8">
         The statutory financial calculation URL you requested does not exist or has been moved to an updated canonical route.
       </p>
 
       <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3 rounded-lg transition shadow-lg cursor-pointer text-sm"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-zinc-950 font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-amber-950/30 cursor-pointer text-sm"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to FingTaj Hub</span>
         </Link>
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-medium px-6 py-3 rounded-lg transition text-sm"
+          className="inline-flex items-center gap-2 bg-[#0F121A] hover:bg-[#141824] border border-[#1E2433] text-zinc-200 font-medium px-6 py-3 rounded-xl transition text-sm"
         >
           <span>Report a Broken Link</span>
         </Link>
       </div>
 
-      <div className="border-t border-slate-800/80 pt-10 text-left">
+      <div className="border-t border-[#1E2433] pt-10 text-left">
         <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-          <Calculator className="w-5 h-5 text-cyan-400" />
+          <Calculator className="w-5 h-5 text-amber-400" />
           <span>Popular Statutory Calculators</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -59,12 +59,12 @@ export default function NotFound() {
             <Link
               key={item.path}
               to={item.path}
-              className="p-3.5 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/40 rounded-xl transition group block"
+              className="p-3.5 bg-[#0F121A] hover:bg-[#141824] border border-[#1E2433] hover:border-amber-500/40 rounded-xl transition group block"
             >
-              <div className="font-semibold text-white group-hover:text-cyan-300 transition-colors text-sm">
+              <div className="font-semibold text-white group-hover:text-amber-300 transition-colors text-sm">
                 {item.title}
               </div>
-              <div className="text-xs text-slate-400 mt-1">
+              <div className="text-xs text-zinc-400 mt-1">
                 {item.desc}
               </div>
             </Link>

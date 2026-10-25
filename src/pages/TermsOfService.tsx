@@ -1,11 +1,11 @@
 import React from 'react';
-import { Scale, AlertTriangle, ShieldCheck, FileCheck, CheckCircle2, HelpCircle } from 'lucide-react';
+import { Scale, AlertTriangle, FileCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function TermsOfService() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 text-slate-300">
+    <div className="max-w-4xl mx-auto px-4 py-12 text-zinc-300">
       <SEO
         title="Terms of Service & Statutory Financial Disclaimer — FingTaj"
         description="Terms of service, intellectual property guidelines, and statutory financial disclaimers for using FingTaj calculation utilities."
@@ -16,20 +16,20 @@ export default function TermsOfService() {
         ]}
       />
       {/* Header */}
-      <div className="mb-10 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-800 mb-3">
+      <div className="mb-10 text-center sm:text-left border-b border-[#1E2433] pb-8">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-950/40 text-amber-300 border border-amber-800/50 mb-3">
           <Scale className="w-3.5 h-3.5" />
           <span>Statutory Terms & Operational Governance</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Terms of Service</h1>
-        <p className="mt-3 text-sm text-slate-400">
-          Effective Date: <strong>October 24, 2026</strong> | Domain: <strong>https://fingtaj.online</strong>
+        <p className="mt-3 text-sm text-zinc-400">
+          Effective Date: <strong>October 25, 2026</strong> | Domain: <strong>https://fingtaj.online</strong>
         </p>
       </div>
 
       <div className="space-y-10 text-justify leading-relaxed text-sm sm:text-base">
         {/* Prominent Statutory Disclaimer Card */}
-        <section className="p-6 sm:p-8 bg-amber-950/20 border-2 border-amber-500/40 rounded-2xl space-y-3">
+        <section className="p-6 sm:p-8 bg-[#0F121A] border-2 border-amber-500/30 rounded-2xl space-y-3 shadow-md">
           <div className="flex items-center gap-2.5 text-amber-400 font-bold text-lg">
             <AlertTriangle className="w-6 h-6 shrink-0" />
             <h2>MANDATORY STATUTORY FINANCIAL & LEGAL DISCLAIMER</h2>
@@ -48,7 +48,7 @@ export default function TermsOfService() {
           <p>
             By accessing, browsing, or utilizing any of the financial calculation utilities hosted on <strong>https://fingtaj.online</strong> (collectively referred to as the "Service", "Website", or "FingTaj"), you acknowledge that you have read, understood, and agree to be legally bound by these Terms of Service and our Privacy Policy.
           </p>
-          <p className="text-slate-400 text-sm">
+          <p className="text-zinc-400 text-sm">
             If you do not agree to these Terms in their entirety, you must immediately discontinue using the Website and its computational interfaces.
           </p>
         </section>
@@ -59,10 +59,10 @@ export default function TermsOfService() {
           <p>
             While FingTaj takes extensive measures to ensure our formulas match the latest gazette provisions of the <strong>Income-tax Act, 1961</strong> (including Section 115BAC amendments), the <strong>Payment of Gratuity Act, 1972</strong>, and RBI amortization standards:
           </p>
-          <ul className="list-disc list-inside space-y-1.5 text-slate-400 text-sm pl-2">
+          <ul className="list-disc list-inside space-y-1.5 text-zinc-400 text-sm pl-2">
             <li><strong>Legislative Lag & Amendments:</strong> Changes introduced via Union Budgets, Central Board of Direct Taxes (CBDT) circulars, or court rulings may take up to 48 hours to be reflected in our public codebase.</li>
             <li><strong>Individual Tax Specifics:</strong> Statutory tax liabilities depend on individual taxpayer circumstances, residential status (ROR vs RNOR vs NRI), surcharge applicability, and complex exemption combinations under the Old Tax Regime that cannot be fully captured by generic web calculators.</li>
-            <li><strong>Rounding Nuances:</strong> Slight discrepancies (typically less than ₹1 to ₹10) may emerge due to floating-point rounding or rounding conventions prescribed under Section 288A and 288B of the Income-tax Act.</li>
+            <li><strong>Rounding Nuances:</strong> Discrepancies (typically less than ₹1 to ₹10) may emerge due to floating-point rounding or statutory rounding conventions prescribed under Section 288A and 288B of the Income-tax Act.</li>
           </ul>
         </section>
 
@@ -70,21 +70,21 @@ export default function TermsOfService() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-white">3. Intellectual Property Rights & Permitted Use</h2>
           <p>
-            The software architecture, user interface design, visual branding, typography, source code, and statutory explanation text on FingTaj are the intellectual property of <strong>Ashutosh Jha</strong> and FingTaj, protected under Indian and international copyright laws.
+            The software architecture, user interface design, visual branding, typography, source code, and statutory explanation text on FingTaj are the intellectual property of <strong>Ashutosh Kumar</strong> and FingTaj, protected under Indian and international copyright laws.
           </p>
-          <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-2 text-sm">
-            <h3 className="font-semibold text-cyan-300">Permitted Uses:</h3>
-            <p className="text-slate-300 text-xs">
+          <div className="bg-[#0F121A] border border-[#1E2433] p-5 rounded-xl space-y-2.5 text-sm">
+            <h3 className="font-semibold text-amber-300">Permitted Uses:</h3>
+            <p className="text-zinc-300 text-xs">
               ✔ You may freely use the calculators for personal financial self-planning, academic coursework, and salaried tax estimation.
             </p>
-            <p className="text-slate-300 text-xs">
+            <p className="text-zinc-300 text-xs">
               ✔ Professionals, human resource personnel, and accountants may use our tools for quick cross-verifications and client illustrations.
             </p>
             <h3 className="font-semibold text-rose-300 pt-2">Prohibited Uses:</h3>
-            <p className="text-slate-300 text-xs">
+            <p className="text-zinc-300 text-xs">
               ✖ You may not scrape, iframe, reverse-proxy, clone, or redistribute the calculators or statutory content for automated commercial resale without express written permission.
             </p>
-            <p className="text-slate-300 text-xs">
+            <p className="text-zinc-300 text-xs">
               ✖ You may not launch automated denial-of-service (DDoS) requests or systematically stress-test the website infrastructure.
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function TermsOfService() {
           <p>
             FingTaj displays third-party advertisements served via Google AdSense. We do not control, endorse, or verify the legitimacy or promises made by third-party advertisers whose ads appear on the Website.
           </p>
-          <p className="text-slate-400 text-sm">
+          <p className="text-zinc-400 text-sm">
             Engaging with any advertised financial product (including personal loans, mutual funds, insurance policies, or credit cards) is solely at your own risk. FingTaj assumes no responsibility for any agreements, losses, or claims arising from interactions with third-party advertisers.
           </p>
         </section>
@@ -107,7 +107,7 @@ export default function TermsOfService() {
           <p>
             THE SERVICE AND ALL ASSOCIATED CALCULATORS ARE PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR STATUTORY PURPOSE, OR NON-INFRINGEMENT.
           </p>
-          <p className="text-slate-400 text-sm">
+          <p className="text-zinc-400 text-sm">
             FingTaj does not warrant that the service will be uninterrupted, error-free, completely bug-free, or that any errors will be corrected immediately.
           </p>
         </section>
@@ -118,7 +118,7 @@ export default function TermsOfService() {
           <p>
             TO THE FULLEST EXTENT PERMITTED BY APPLICABLE INDIAN LAW, NEITHER FINGTAJ, ITS FOUNDER, NOR ITS CONTRIBUTORS SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES RESULTING FROM:
           </p>
-          <ul className="list-disc list-inside space-y-1 text-slate-400 text-sm pl-2">
+          <ul className="list-disc list-inside space-y-1 text-zinc-400 text-sm pl-2">
             <li>Any discrepancy between calculated figures and your final tax assessment or ITR notice from the Income Tax Department;</li>
             <li>Any penalties, interest under Section 234A/B/C, or statutory fees incurred during tax filing;</li>
             <li>Any loan repayments, foreclosures, or interest adjustments between you and commercial banking institutions;</li>
@@ -140,7 +140,7 @@ export default function TermsOfService() {
           <p>
             These Terms of Service shall be governed by and construed in accordance with the laws of the <strong>Republic of India</strong>, without regard to conflict of law principles.
           </p>
-          <p className="text-slate-400 text-sm">
+          <p className="text-zinc-400 text-sm">
             Any disputes, claims, or legal proceedings arising out of or relating to these Terms or the use of FingTaj shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Chennai, Tamil Nadu, India</strong>.
           </p>
         </section>
@@ -154,16 +154,16 @@ export default function TermsOfService() {
         </section>
 
         {/* Section 10: Legal Contact */}
-        <section className="p-6 bg-slate-900 border border-slate-800 rounded-xl space-y-2">
+        <section className="p-6 bg-[#0F121A] border border-[#1E2433] rounded-xl space-y-2">
           <h2 className="text-lg font-bold text-white flex items-center gap-2">
-            <FileCheck className="w-5 h-5 text-cyan-400" />
+            <FileCheck className="w-5 h-5 text-amber-400" />
             10. Legal & Statutory Inquiries
           </h2>
-          <p className="text-slate-300 text-sm">
+          <p className="text-zinc-300 text-sm">
             If you have questions regarding these Terms of Service or require formal permission for institutional use, please contact our administrative desk:
           </p>
-          <div className="text-xs text-slate-400 space-y-1 font-mono">
-            <p>Email: <a href="mailto:support@fingtaj.online" className="text-cyan-400 underline">support@fingtaj.online</a></p>
+          <div className="text-xs text-zinc-400 space-y-1 font-mono">
+            <p>Email: <a href="mailto:support@fingtaj.online" className="text-amber-400 underline">support@fingtaj.online</a></p>
             <p>Subject Line: "Legal & Terms Inquiry"</p>
             <p>Mailing Base: Chennai, Tamil Nadu, India</p>
           </div>
@@ -171,11 +171,11 @@ export default function TermsOfService() {
       </div>
 
       {/* Footer Navigation */}
-      <div className="mt-12 pt-8 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
-        <Link to="/privacy-policy" className="text-sm font-semibold text-cyan-400 hover:underline">
+      <div className="mt-12 pt-8 border-t border-[#1E2433] flex flex-wrap items-center justify-between gap-4">
+        <Link to="/privacy-policy" className="text-sm font-semibold text-amber-400 hover:underline">
           ← Read Privacy Policy
         </Link>
-        <Link to="/about" className="text-sm font-semibold text-cyan-400 hover:underline">
+        <Link to="/about" className="text-sm font-semibold text-amber-400 hover:underline">
           About FingTaj & Technical Leadership →
         </Link>
       </div>

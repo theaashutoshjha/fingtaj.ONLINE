@@ -18,8 +18,8 @@ export const SOCIAL_LINKS: SocialLinkItem[] = [
     url: 'https://x.com/FinGTaj',
     description: 'Official announcements, Union Budget alerts & financial market insights',
     ariaLabel: 'Follow FingTaj on X (formerly Twitter)',
-    accentClass: 'hover:text-white hover:border-slate-500',
-    badgeClass: 'bg-slate-900 text-slate-300 border-slate-700',
+    accentClass: 'hover:text-white hover:border-zinc-500',
+    badgeClass: 'bg-[#121622] text-zinc-300 border-[#22293A]',
     icon: ({ className = 'w-5 h-5' }) => (
       <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -60,8 +60,8 @@ export const SOCIAL_LINKS: SocialLinkItem[] = [
     url: 'https://www.linkedin.com/in/ashutosh-kumar-r/',
     description: 'Founding architect profile, software systems engineering & financial technology thought leadership',
     ariaLabel: 'Connect with Ashutosh Kumar on LinkedIn',
-    accentClass: 'hover:text-cyan-400 hover:border-cyan-500/50',
-    badgeClass: 'bg-cyan-950/40 text-cyan-300 border-cyan-800/60',
+    accentClass: 'hover:text-amber-400 hover:border-amber-500/50',
+    badgeClass: 'bg-amber-950/30 text-amber-300 border-amber-800/40',
     icon: ({ className = 'w-5 h-5' }) => (
       <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.64 1.64 0 0 0-1.66 1.64c0 .91.74 1.65 1.66 1.65a1.65 1.65 0 0 0 1.66-1.65c0-.9-.75-1.64-1.66-1.64z" />
@@ -102,23 +102,23 @@ export default function SocialLinks({ layout = 'icons-only', className = '' }: S
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.ariaLabel}
-              className={`p-4 bg-slate-900/80 hover:bg-slate-850 border border-slate-800 rounded-xl transition duration-200 group flex flex-col justify-between ${item.accentClass}`}
+              className={`p-4 bg-[#0F121A] hover:bg-[#141824] border border-[#1E2433] hover:border-amber-500/40 rounded-xl transition duration-200 group flex flex-col justify-between ${item.accentClass}`}
             >
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-semibold text-white text-sm group-hover:text-cyan-300 transition-colors flex items-center gap-2">
-                    <Icon className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                  <span className="font-semibold text-white text-sm group-hover:text-amber-300 transition-colors flex items-center gap-2">
+                    <Icon className="w-4 h-4 text-zinc-400 group-hover:text-amber-400 transition-colors" />
                     {item.name}
                   </span>
-                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${item.badgeClass}`}>
+                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${item.badgeClass}`}>
                     {item.handle}
                   </span>
                 </div>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-xs text-zinc-400 leading-relaxed">
                   {item.description}
                 </p>
               </div>
-              <div className="mt-3 text-[11px] font-semibold text-cyan-400 flex items-center gap-1">
+              <div className="mt-3 text-[11px] font-semibold text-amber-400 flex items-center gap-1">
                 <span>Connect & Follow</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </div>
@@ -131,7 +131,7 @@ export default function SocialLinks({ layout = 'icons-only', className = '' }: S
 
   if (layout === 'inline') {
     return (
-      <div className={`flex flex-wrap items-center gap-2.5 ${className}`}>
+      <div className={`flex flex-wrap items-center gap-2 ${className}`}>
         {SOCIAL_LINKS.map((item) => {
           const Icon = item.icon;
           return (
@@ -141,7 +141,7 @@ export default function SocialLinks({ layout = 'icons-only', className = '' }: S
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.ariaLabel}
-              className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-xs font-medium transition duration-150 hover:bg-slate-800 ${item.accentClass}`}
+              className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0F121A] border border-[#1E2433] text-zinc-300 text-xs font-medium transition duration-150 hover:bg-[#161B26] hover:border-amber-500/40 ${item.accentClass}`}
             >
               <Icon className="w-3.5 h-3.5" />
               <span>{item.name}</span>
@@ -154,7 +154,7 @@ export default function SocialLinks({ layout = 'icons-only', className = '' }: S
 
   // icons-only default
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-2.5 ${className}`}>
       {SOCIAL_LINKS.map((item) => {
         const Icon = item.icon;
         return (
@@ -165,7 +165,7 @@ export default function SocialLinks({ layout = 'icons-only', className = '' }: S
             rel="noopener noreferrer"
             aria-label={item.ariaLabel}
             title={`${item.name} (${item.handle})`}
-            className={`w-9 h-9 flex items-center justify-center rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition duration-150 group ${item.accentClass}`}
+            className={`w-9 h-9 flex items-center justify-center rounded-lg bg-[#0F121A] border border-[#1E2433] text-zinc-400 hover:text-white hover:border-amber-500/40 transition duration-150 group ${item.accentClass}`}
           >
             <Icon className="w-4 h-4 transition-transform group-hover:scale-110" />
           </a>

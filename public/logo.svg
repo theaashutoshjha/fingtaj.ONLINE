@@ -1,7 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <rect width="32" height="32" rx="8" fill="#020617" stroke="#0891b2" stroke-width="1.5"/>
-  <path d="M7 23L13 15L17 19L25 9" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="25" cy="9" r="2.5" fill="#22d3ee"/>
-  <path d="M7 9H15" stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M7 13H11" stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="45%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141824" />
+      <stop offset="100%" stop-color="#08090D" />
+    </linearGradient>
+    <linearGradient id="logoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <!-- Iconic Monogram Emblem (44x44) -->
+  <g transform="translate(6, 8)">
+    <rect x="0" y="0" width="44" height="44" rx="11" fill="url(#logoBg)" stroke="url(#logoBorder)" stroke-width="1.5" />
+    <path d="M10 12L22 7L34 12H10Z" fill="url(#logoGold)" opacity="0.9" />
+    <rect x="9" y="14.5" width="26" height="2.5" rx="1.25" fill="url(#logoGold)" />
+    <rect x="20.75" y="17" width="2.5" height="18" rx="1.25" fill="url(#logoGold)" />
+    <path d="M12 21.5H19" stroke="url(#logoGold)" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M12 27H17.5" stroke="url(#logoGold)" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M23 32C25 30 28 26 32 21" stroke="#FDE68A" stroke-width="2" stroke-linecap="round" />
+    <polygon points="32.5,18.5 35.5,21.5 32.5,24.5 29.5,21.5" fill="url(#logoGold)" />
+  </g>
+
+  <!-- Typographic Wordmark -->
+  <text x="62" y="36" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="24" letter-spacing="-0.03em" fill="#FFFFFF">
+    Fing<tspan fill="url(#logoGold)">Taj</tspan>
+  </text>
+
+  <!-- Subtitle Tagline -->
+  <text x="63" y="48" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="7.5" letter-spacing="0.18em" fill="#9CA3AF">
+    STATUTORY FINANCIAL ENGINE
+  </text>
 </svg>

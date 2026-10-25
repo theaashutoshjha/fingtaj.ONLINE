@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CalculatorLayout from '../components/CalculatorLayout';
+import { Link } from 'react-router-dom';
 
 export default function Section44adaCalculator() {
   const [gross, setGross] = useState<number>(4500000);
@@ -45,6 +46,16 @@ export default function Section44adaCalculator() {
       title="Presumptive Professional Tax Calculator (Section 44ADA)"
       subtitle="Model deemed taxable income (50% presumptive profit rule), advance tax liabilities, and statutory compliance exemptions for developers, consultants, and notified professionals."
       formula="Deemed Taxable Profit = Max [ 0.50 × Gross Professional Receipts, Declared Profit ]"
+      whoItsFor={
+        <>
+          <p>
+            <strong>What It Computes:</strong> This specialized direct tax calculator computes the deemed taxable income, net income tax liability, and effective tax rate for Indian professionals and remote contractors under the presumptive taxation regime of Section 44ADA of the Income Tax Act, 1961.
+          </p>
+          <p>
+            <strong>Target Audience:</strong> Tailored for independent software engineers, IT consultants, legal practitioners, chartered accountants, architects, medical doctors, technical advisors, and digital creators earning gross receipts up to ₹75,00,000 annually who want to eliminate the burden of maintaining accounting books and tax audit reports.
+          </p>
+        </>
+      }
       mathematicalPrinciples={
         <>
           <p>
@@ -55,11 +66,62 @@ export default function Section44adaCalculator() {
           </p>
         </>
       }
+      formulaExplanation={
+        <>
+          <p>
+            How Section 44ADA operates mathematically and administratively:
+          </p>
+          <ul className="list-disc pl-5 space-y-1 text-slate-300">
+            <li><strong>Deemed Net Profit:</strong> Exactly 50% of your gross professional billings is treated as your taxable income. For instance, on ₹40 Lakhs of receipts, your deemed income is ₹20 Lakhs.</li>
+            <li><strong>Expense Blanket (50%):</strong> The remaining 50% of your receipts is statutorily presumed to cover all operational expenses (laptop depreciation, software subscriptions, office space, travel, employee wages). No expense bills, invoices, or vouchers are audited or required by the IT department.</li>
+            <li><strong>Advance Tax Freedom:</strong> Instead of tracking 4 quarterly advance tax installments, Section 44ADA assessees pay 100% of their advance tax in a single payment on or before <strong className="text-amber-300">March 15th</strong> of the financial year.</li>
+          </ul>
+        </>
+      }
       variables={[
         { variable: 'Gross Receipts', name: 'Annual Turnover', definition: 'Aggregate billings from notified professional services up to ₹75,00,000.' },
         { variable: 'Deemed Income (50%)', name: 'Statutory Profit Floor', definition: 'Presumed taxable income without requiring expense bills or depreciation schedules.' },
         { variable: 'Advance Tax', name: 'Payment Deadline', definition: 'Exempt from quarterly installments; 100% advance tax payable on or before March 15.' },
       ]}
+      workedExample={
+        <>
+          <div className="font-semibold text-white mb-1">
+            Real-World Scenario: A Remote Software Consultant Earning ₹45,00,000 Gross Receipts via Inward Remittances
+          </div>
+          <p className="text-xs text-slate-300">
+            Let us calculate the net tax for an independent contractor billing foreign clients:
+          </p>
+          <div className="space-y-1.5 font-mono text-xs bg-slate-900/60 p-3 rounded border border-slate-800/80 mt-2">
+            <div>• Annual Gross Inward Receipts: ₹45,00,000</div>
+            <div>• Deemed Professional Income (50%): ₹45,00,000 × 0.50 = ₹22,50,000</div>
+            <div>• Statutory Expense Allowance (50%): ₹22,50,000 (Zero audit required)</div>
+            <div className="pt-1 border-t border-slate-800 text-slate-300">
+              • Calculation under Section 115BAC New Tax Regime:
+            </div>
+            <div>• Slabs on ₹22,50,000: ₹1,40,000 + (₹22,50,000 - ₹15,00,000) × 30% = ₹3,65,000</div>
+            <div>• + 4% Health & Education Cess: ₹3,65,000 × 0.04 = ₹14,600</div>
+            <div className="text-rose-400 font-bold pt-1 border-t border-slate-800">
+              • Total Tax Liability: ₹3,79,600
+            </div>
+            <div className="text-emerald-400 font-extrabold text-sm">
+              • Effective Tax Rate on Gross Income: (₹3,79,600 / ₹45,00,000) × 100 = 8.44%!
+            </div>
+          </div>
+          <p className="text-xs text-slate-400 mt-2">
+            <strong>Key Insight:</strong> The consultant pays an effective tax rate of only <strong>8.44%</strong> on their ₹45 Lakhs revenue, retaining over <strong>₹41.2 Lakhs</strong> with zero book-keeping overhead.
+          </p>
+        </>
+      }
+      howToReadResults={
+        <>
+          <p>
+            <strong>The ₹75 Lakh Enhanced Limit:</strong> The statutory ceiling was enhanced from ₹50 Lakhs to ₹75 Lakhs under Finance Act 2023/2024 on the condition that cash receipts do not exceed 5% of total gross receipts. If cash receipts exceed 5%, the ceiling reverts to ₹50 Lakhs.
+          </p>
+          <p>
+            <strong>Can You Declare Higher or Lower Profits?:</strong> You are legally permitted to declare higher profits (e.g. 60% or 70%). However, if you claim actual profits are lower than 50%, you statutorily lose presumptive protection and must maintain books under Section 44AA and undergo a tax audit under Section 44AB.
+          </p>
+        </>
+      }
       statutoryNotes={
         <>
           <p><strong>Digital Receipts Threshold:</strong> The statutory limit of ₹75 Lakhs applies provided cash receipts do not exceed 5% of gross turnover; otherwise, capped at ₹50 Lakhs.</p>
@@ -79,6 +141,28 @@ export default function Section44adaCalculator() {
           question: 'Can separate business expenses or depreciation be deducted from deemed 50% income?',
           answer: 'No. Under Section 44ADA(2), all allowable deductions under Sections 30 to 38 (including office rent, hardware depreciation, Internet costs, and employee wages) are deemed to have been fully given effect within the 50% statutory expense allowance.',
         },
+        {
+          question: 'Do freelance software developers working for foreign clients qualify for Section 44ADA?',
+          answer: 'Yes. Technical consultancy and software engineering are notified professions under Section 44AA(1) and CBDT notifications. Inward foreign remittances via PayPal, Stripe, Wise, or direct wire transfers qualify as digital professional receipts.',
+        },
+        {
+          question: 'How does GST registration interact with Section 44ADA?',
+          answer: 'Section 44ADA is strictly an income tax provision. For Goods and Services Tax (GST), service providers must obtain GST registration if aggregate turnover exceeds ₹20 Lakhs (₹10 Lakhs in special category states). Export of software services can be executed under Letter of Undertaking (LUT) with 0% GST.',
+        },
+      ]}
+      relatedArticles={[
+        {
+          title: 'New vs Old Tax Regime in India: Slabs, Deductions, and Break-Even Salary Analysis',
+          path: '/articles/new-vs-old-tax-regime',
+          readTime: '10 min',
+          summary: 'A statutory guide for professionals comparing Section 115BAC slabs against presumptive taxation.',
+        },
+        {
+          title: 'Understanding Real vs Nominal Returns: How Inflation Stealthily Erodes Savings',
+          path: '/articles/understanding-real-vs-nominal-returns',
+          readTime: '8 min',
+          summary: 'Learn how freelance consultants can reinvest retained earnings into inflation-beating asset classes.',
+        },
       ]}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -97,7 +181,7 @@ export default function Section44adaCalculator() {
               min={100000}
               max={7500000}
               onChange={(e) => setGross(Number(e.target.value))}
-              className="w-full bg-slate-950 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 font-mono text-sm focus:border-cyan-500 focus:outline-none"
+              className="w-full bg-slate-950 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 font-mono text-sm focus:border-amber-500 focus:outline-none"
             />
           </div>
 
@@ -107,7 +191,7 @@ export default function Section44adaCalculator() {
               id="p44-regime-select"
               value={regime}
               onChange={(e) => setRegime(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-cyan-500 focus:outline-none"
+              className="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-amber-500 focus:outline-none"
             >
               <option value="new">New Tax Regime (Section 115BAC Slabs)</option>
               <option value="old">Old Tax Regime (Standard Slabs + ₹1.5L 80C)</option>
@@ -135,7 +219,7 @@ export default function Section44adaCalculator() {
             </div>
 
             <div className="p-2.5 bg-slate-900 rounded border border-slate-800 text-xs text-slate-300">
-              Advance Tax Rule: Section 44ADA assessees pay 100% advance tax in a single tranche on or before <span className="text-cyan-400 font-bold">March 15</span>.
+              Advance Tax Rule: Section 44ADA assessees pay 100% advance tax in a single tranche on or before <span className="text-amber-400 font-bold">March 15</span>.
             </div>
           </div>
 

@@ -2,16 +2,45 @@
 
 @layer base {
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #08090D;
+    color: #F3F4F6;
   }
   
   .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-variant-numeric: tabular-nums;
   }
 }
 
-/* Global Range Slider Polish: 44px x 44px thumb touch target for mobile AdSense & Core Web Vitals */
+/* Custom Gilded & Obsidian Utility Classes */
+.bg-obsidian-canvas {
+  background-color: #08090D;
+}
+
+.bg-obsidian-card {
+  background-color: #0F121A;
+}
+
+.bg-obsidian-surface {
+  background-color: #141824;
+}
+
+.border-obsidian-border {
+  border-color: #22293A;
+}
+
+.border-gold-subtle {
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FEF08A 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Global Range Slider Polish: Sovereign Gold 44px x 44px thumb touch target for mobile AdSense & Core Web Vitals */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -22,39 +51,39 @@ input[type="range"] {
   touch-action: pan-y; /* Vertical page scroll permitted while dragging horizontally */
   margin: 0;
   padding: 0;
-  accent-color: #06b6d4;
+  accent-color: #f59e0b;
 }
 
 /* WebKit / Blink (Chrome, Safari, Edge, Android WebView) Track */
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8px;
-  background-color: #1e293b;
+  background-color: #181d2a;
   border-radius: 9999px;
-  border: 1px solid #334155;
+  border: 1px solid #2b3347;
 }
 
-/* WebKit / Blink Thumb: 44px x 44px hit-box with 24px visual circle */
+/* WebKit / Blink Thumb: 44px x 44px hit-box with 24px visual circle in Sovereign Gold */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #06b6d4;
+  background-color: #f59e0b;
   background-clip: padding-box;
   border: 10px solid transparent; /* 44px total touch area, 24px visible knob */
-  margin-top: -18px; /* Perfectly centers 44px thumb on 8px track: (8 - 44) / 2 */
-  box-shadow: 0 0 12px rgba(6, 182, 212, 0.45), inset 0 0 0 2px #ffffff;
+  margin-top: -18px; /* Centers 44px thumb on 8px track: (8 - 44) / 2 */
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.5), inset 0 0 0 2px #fffbeb;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 input[type="range"]:active::-webkit-slider-thumb,
 input[type="range"]:hover::-webkit-slider-thumb {
-  background-color: #22d3ee;
+  background-color: #fbbf24;
   transform: scale(1.08);
-  box-shadow: 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.75), inset 0 0 0 2px #ffffff;
 }
 
 input[type="range"]:focus-visible {
@@ -62,40 +91,59 @@ input[type="range"]:focus-visible {
 }
 
 input[type="range"]:focus-visible::-webkit-slider-thumb {
-  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.3), 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.35), 0 0 20px rgba(251, 191, 36, 0.8), inset 0 0 0 2px #ffffff;
 }
 
 /* Firefox Track */
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 8px;
-  background-color: #1e293b;
+  background-color: #181d2a;
   border-radius: 9999px;
-  border: 1px solid #334155;
+  border: 1px solid #2b3347;
 }
 
-/* Firefox Thumb: 44px x 44px hit-box */
+/* Firefox Thumb: 44px x 44px hit-box in Sovereign Gold */
 input[type="range"]::-moz-range-thumb {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #06b6d4;
+  background-color: #f59e0b;
   background-clip: padding-box;
   border: 10px solid transparent;
-  box-shadow: 0 0 12px rgba(6, 182, 212, 0.45), inset 0 0 0 2px #ffffff;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.5), inset 0 0 0 2px #fffbeb;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 input[type="range"]:active::-moz-range-thumb,
 input[type="range"]:hover::-moz-range-thumb {
-  background-color: #22d3ee;
+  background-color: #fbbf24;
   transform: scale(1.08);
-  box-shadow: 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.75), inset 0 0 0 2px #ffffff;
 }
 
 input[type="range"]:focus-visible::-moz-range-thumb {
-  box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.3), 0 0 16px rgba(34, 211, 238, 0.7), inset 0 0 0 2px #ffffff;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.35), 0 0 20px rgba(251, 191, 36, 0.8), inset 0 0 0 2px #ffffff;
+}
+
+/* Custom Scrollbar for tables and code */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22293a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
 }
 
 /* Print optimizations */
@@ -105,6 +153,6 @@ input[type="range"]:focus-visible::-moz-range-thumb {
   }
   body {
     background: #ffffff !important;
-    color: #0f172a !important;
+    color: #111827 !important;
   }
 }

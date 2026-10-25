@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CalculatorLayout from '../components/CalculatorLayout';
+import { Link } from 'react-router-dom';
 
 export default function InflationCalculator() {
   const [principal, setPrincipal] = useState<number>(2000000);
@@ -30,6 +31,16 @@ export default function InflationCalculator() {
       title="Real Inflation-Adjusted Return & Purchasing Power Calculator"
       subtitle="Model future capital purchasing power degradation by discounting nominal investment growth against Consumer Price Index (CPI) inflation."
       formula="Real Rate (r) = [ (1 + Nominal Rate) / (1 + Inflation Rate) ] - 1"
+      whoItsFor={
+        <>
+          <p>
+            <strong>What It Computes:</strong> This macroeconomic calculation engine quantifies the exact erosion of future capital purchasing power using the exact Fisher equation. It computes your apparent nominal terminal corpus, the true inflation-adjusted real purchasing power in today's rupees, and the total wealth destroyed by consumer price inflation over your planning horizon.
+          </p>
+          <p>
+            <strong>Target Audience:</strong> Critical for retirement goal planners, pension accumulators, parents projecting college tuition inflation, and conservative fixed-income investors holding bank deposits who must evaluate whether their post-tax yields beat real living costs.
+          </p>
+        </>
+      }
       mathematicalPrinciples={
         <>
           <p>
@@ -40,12 +51,61 @@ export default function InflationCalculator() {
           </p>
         </>
       }
+      formulaExplanation={
+        <>
+          <p>
+            The Fisher Equation operates in three distinct computational steps:
+          </p>
+          <ul className="list-disc pl-5 space-y-1 text-slate-300">
+            <li><strong>Nominal Future Value:</strong> <code className="text-amber-300">FV_nominal = Principal × (1 + r_nominal)^t</code>. The raw monetary sum in your future account.</li>
+            <li><strong>Exact Real Rate:</strong> <code className="text-amber-300">r_real = [(1 + r_nominal) / (1 + r_inflation)] - 1</code>. Avoids the error of simple subtraction.</li>
+            <li><strong>Real Purchasing Power:</strong> <code className="text-amber-300">FV_real = Principal × (1 + r_real)^t</code>. The true economic value of that future sum measured in today's baseline purchasing power.</li>
+          </ul>
+        </>
+      }
       variables={[
         { variable: 'Nominal Future', name: 'Nominal Terminal Corpus', definition: 'Apparent future monetary value of assets unadjusted for price level escalation.' },
         { variable: 'Real Purchasing Power', name: 'Deflated Real Value', definition: 'Actual purchasing equivalence measured in current purchasing units.' },
         { variable: 'Nominal Growth', name: 'Contractual / Market Return', definition: 'Annualized nominal return prior to inflation discounting.' },
         { variable: 'CPI Inflation', name: 'Consumer Price Inflation', definition: 'Annualized inflation rate reflecting retail living expenditure expansion.' },
       ]}
+      workedExample={
+        <>
+          <div className="font-semibold text-white mb-1">
+            Real-World Scenario: ₹20,00,000 Invested at 11% Nominal Growth for 15 Years against 6% Average CPI Inflation
+          </div>
+          <p className="text-xs text-slate-300">
+            Consider an investor parking ₹20 Lakhs in an equity-hybrid portfolio over a 15-year horizon:
+          </p>
+          <div className="space-y-1.5 font-mono text-xs bg-slate-900/60 p-3 rounded border border-slate-800/80 mt-2">
+            <div>• Starting Capital (P): ₹20,00,000</div>
+            <div>• Nominal Growth Rate (r_nom): 11.0% p.a.</div>
+            <div>• Annual CPI Inflation (i): 6.0% p.a.</div>
+            <div>• Planning Horizon (t): 15 Years</div>
+            <div className="text-slate-300">• Nominal Future Value: ₹20,00,000 × (1.11)^15 = <strong className="text-slate-200">₹95,69,114 (~₹95.7 Lakhs)</strong></div>
+            <div className="pt-1 border-t border-slate-800 text-slate-300">
+              • Fisher Real Rate: (1 + 0.11) / (1 + 0.06) - 1 = (1.11 / 1.06) - 1 = <strong className="text-amber-300">4.717% p.a.</strong>
+            </div>
+            <div>• Real Purchasing Power Corpus: ₹20,00,000 × (1.04717)^15 = <strong className="text-amber-300">₹39,92,868 (~₹39.9 Lakhs)</strong></div>
+            <div className="text-rose-400 font-bold">
+              • Wealth Destroyed by Inflation: ₹95,69,114 - ₹39,92,868 = ₹55,76,246 (58.3% of nominal corpus!)
+            </div>
+          </div>
+          <p className="text-xs text-slate-400 mt-2">
+            <strong>Key Insight:</strong> Although your nominal bank balance reaches nearly ₹1 Crore (₹95.7 Lakhs), its actual purchasing power in terms of real goods and services is only <strong>₹39.9 Lakhs</strong>. Over half of your apparent gains were consumed by inflation!
+          </p>
+        </>
+      }
+      howToReadResults={
+        <>
+          <p>
+            <strong>The Purchasing Power Benchmark:</strong> When setting retirement goals, always plan your target corpus in real terms. If you determine you need ₹2 Crores in today's rupees to retire, in 20 years at 6% inflation you will actually require over <strong>₹6.4 Crores in nominal cash</strong> to buy that exact same lifestyle!
+          </p>
+          <p>
+            <strong>Negative Real Yield Warning:</strong> If your expected nominal return is less than or equal to inflation (common in traditional savings accounts and post-tax FDs), your Real Purchasing Power drops below your starting principal, signifying real capital destruction.
+          </p>
+        </>
+      }
       statutoryNotes={
         <>
           <p><strong>Historical Reserve Bank of India CPI Benchmarks:</strong> Long-term Indian consumer inflation has historically trended between 5% and 7% over rolling decades, with medical and educational expenses inflating at 9% to 12%.</p>
@@ -64,6 +124,28 @@ export default function InflationCalculator() {
           question: 'What asset classes historically beat Indian CPI over 10+ year horizons?',
           answer: 'Broad-based equity indices (NIFTY 50 and S&P BSE SENSEX) have historically delivered 11.5% to 14% nominal CAGR over rolling 15-year intervals, yielding a net real purchasing power premium of 5% to 7% above domestic CPI inflation.',
         },
+        {
+          question: 'What is lifestyle inflation vs headline CPI inflation?',
+          answer: 'Official CPI tracks an all-India basket weighted ~46% toward basic rural food and cereals. Urban professional lifestyle inflation (encompassing private healthcare, international vacations, school fees, and quality housing) typically runs at 8% to 12% annually.',
+        },
+        {
+          question: 'How does the Rule of 72 apply to inflation?',
+          answer: 'Dividing 72 by the annual inflation rate tells you how quickly purchasing power is cut in half. At 6% inflation, prices double (and currency purchasing power halves) every 12 years (72 / 6 = 12). At 8% inflation, purchasing power halves in just 9 years.',
+        },
+      ]}
+      relatedArticles={[
+        {
+          title: 'Understanding Real vs Nominal Returns: How Inflation Stealthily Erodes Savings',
+          path: '/articles/understanding-real-vs-nominal-returns',
+          readTime: '8 min',
+          summary: 'The Fisher Equation demystified: why an 7.5% bank fixed deposit can leave you poorer in purchasing power after tax.',
+        },
+        {
+          title: 'SIP vs Lump Sum Investing: Rupee Cost Averaging and Volatility Protection',
+          path: '/articles/sip-vs-lump-sum-investing',
+          readTime: '9 min',
+          summary: 'Discover how disciplined equity compounding outpaces CPI inflation over 10 to 20-year horizons.',
+        },
       ]}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -71,7 +153,7 @@ export default function InflationCalculator() {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <label htmlFor="inf-principal-input" className="font-medium text-slate-200">Initial Principal Amount</label>
-              <span className="font-mono text-cyan-400 font-semibold">{formatINR(principal)}</span>
+              <span className="font-mono text-amber-400 font-semibold">{formatINR(principal)}</span>
             </div>
             <input
               id="inf-principal-input"
@@ -93,7 +175,7 @@ export default function InflationCalculator() {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <label htmlFor="inf-nominal-input" className="font-medium text-slate-200">Nominal Annual Return (%)</label>
-              <span className="font-mono text-cyan-400 font-semibold">{nominal.toFixed(1)}%</span>
+              <span className="font-mono text-amber-400 font-semibold">{nominal.toFixed(1)}%</span>
             </div>
             <input
               id="inf-nominal-input"
@@ -132,7 +214,7 @@ export default function InflationCalculator() {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <label htmlFor="inf-years-input" className="font-medium text-slate-200">Horizon (Years)</label>
-                <span className="font-mono text-cyan-400 font-semibold">{years} Years</span>
+                <span className="font-mono text-amber-400 font-semibold">{years} Years</span>
               </div>
               <input
                 id="inf-years-input"
@@ -155,8 +237,8 @@ export default function InflationCalculator() {
               <span className="text-lg font-mono font-bold text-slate-200 tabular-nums">{formatINR(nominalFuture)}</span>
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-              <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">Real Purchasing Power Corpus</span>
-              <span className="text-2xl font-mono font-extrabold text-cyan-300 tabular-nums">{formatINR(realFuture)}</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-amber-400">Real Purchasing Power Corpus</span>
+              <span className="text-2xl font-mono font-extrabold text-amber-300 tabular-nums">{formatINR(realFuture)}</span>
             </div>
             <div className="flex items-center justify-between pt-1">
               <span className="text-xs font-semibold uppercase tracking-wider text-rose-400">Purchasing Power Eroded by Inflation</span>

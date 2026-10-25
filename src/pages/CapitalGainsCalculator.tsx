@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CalculatorLayout from '../components/CalculatorLayout';
+import { Link } from 'react-router-dom';
 
 export default function CapitalGainsCalculator() {
   const [assetType, setAssetType] = useState<string>('equity');
@@ -43,6 +44,16 @@ export default function CapitalGainsCalculator() {
       title="Mutual Fund & Equity Capital Gains Tax (LTCG / STCG) Estimator"
       subtitle="Estimate direct tax liability under restructured Section 111A (20% STCG) and Section 112A (12.5% LTCG above ₹1.25 Lakh exemption) enacted under Finance Act 2024."
       formula="Tax = ( Gross Gains - Statutory Exemption ) × Applicable Statutory Rate × 1.04 (Cess)"
+      whoItsFor={
+        <>
+          <p>
+            <strong>What It Computes:</strong> This securities tax calculator models capital gains taxes on transactions in listed equity shares, equity-oriented mutual funds, and debt funds. It automatically classifies holdings into Short-Term (STCG) vs Long-Term (LTCG), factors in the revised statutory ₹1,25,000 Section 112A annual exemption, applies the mandatory 4% Health & Education Cess, and computes your net post-tax take-home profit.
+          </p>
+          <p>
+            <strong>Target Audience:</strong> Designed for active stock traders, mutual fund SIP/lump-sum investors, angel investors, and portfolio allocators preparing advance tax installments (under Section 211) and financial year-end tax-loss harvesting plans.
+          </p>
+        </>
+      }
       mathematicalPrinciples={
         <>
           <p>
@@ -53,11 +64,63 @@ export default function CapitalGainsCalculator() {
           </p>
         </>
       }
+      formulaExplanation={
+        <>
+          <p>
+            The capital gains tax computation follows statutory tax code algorithms:
+          </p>
+          <ul className="list-disc pl-5 space-y-1 text-slate-300">
+            <li><strong>Gross Realized Capital Gain:</strong> <code className="text-amber-300">Sale Consideration - Full Value of Acquisition Cost</code> (net of transfer brokerage and STT).</li>
+            <li><strong>Equity LTCG (&gt; 12 Months):</strong> <code className="text-amber-300">Tax = (Gain - ₹1,25,000 Exemption) × 12.5% × 1.04</code>. Profits up to ₹1.25 Lakh per financial year across all equity holdings are 100% tax-exempt.</li>
+            <li><strong>Equity STCG (&le; 12 Months):</strong> <code className="text-amber-300">Tax = Gain × 20% × 1.04 (Effective 20.8%)</code>. Zero threshold exemption applies.</li>
+            <li><strong>Debt Funds (Section 50AA):</strong> Treated as deemed short-term capital gains and taxed at the assessee's marginal income slab rate without any indexation benefit.</li>
+          </ul>
+        </>
+      }
       variables={[
         { variable: 'STCG (Sec 111A)', name: 'Short-Term Rate', definition: '20% flat tax on equity held for 12 months or less, plus 4% health and education cess.' },
         { variable: 'LTCG (Sec 112A)', name: 'Long-Term Rate', definition: '12.5% flat tax on equity held over 12 months on profits surpassing ₹1,25,000 annually.' },
         { variable: 'Sec 50AA', name: 'Debt Fund Classification', definition: 'Specified debt mutual funds taxed at the assessee marginal income tax bracket without indexation.' },
       ]}
+      workedExample={
+        <>
+          <div className="font-semibold text-white mb-1">
+            Real-World Scenario: Selling ₹5,00,000 of Mutual Fund Units for ₹8,50,000 after 18 Months of Holding
+          </div>
+          <p className="text-xs text-slate-300">
+            Let us calculate the net tax for an equity mutual fund investor:
+          </p>
+          <div className="space-y-1.5 font-mono text-xs bg-slate-900/60 p-3 rounded border border-slate-800/80 mt-2">
+            <div>• Cost of Acquisition: ₹5,00,000</div>
+            <div>• Sale Consideration: ₹8,50,000</div>
+            <div>• Realized Gross Profit: ₹8,50,000 - ₹5,00,000 = ₹3,50,000</div>
+            <div>• Holding Duration: 18 Months (&gt; 12 Months → Section 112A LTCG)</div>
+            <div>• Statutory Exemption: ₹1,25,000</div>
+            <div>• Net Taxable Capital Gain: ₹3,50,000 - ₹1,25,000 = ₹2,25,000</div>
+            <div>• Base Tax @ 12.5%: ₹2,25,000 × 0.125 = ₹28,125</div>
+            <div>• + 4% Health & Education Cess: ₹28,125 × 0.04 = ₹1,125</div>
+            <div className="text-rose-400 font-bold pt-1 border-t border-slate-800">
+              • Total Tax Liability: ₹28,125 + ₹1,125 = ₹29,250 (Effective Tax Rate: 8.36%)
+            </div>
+            <div className="text-emerald-400 font-extrabold text-sm">
+              • Net Post-Tax Profit In Hand: ₹3,50,000 - ₹29,250 = ₹3,20,750
+            </div>
+          </div>
+          <p className="text-xs text-slate-400 mt-2">
+            <strong>Key Insight:</strong> Thanks to the statutory ₹1.25 Lakh tax-free bracket, the effective tax rate on a ₹3.5 Lakh capital gain is only <strong>8.36%</strong>, leaving over 91.6% of your profits in your pocket.
+          </p>
+        </>
+      }
+      howToReadResults={
+        <>
+          <p>
+            <strong>The Tax-Loss Harvesting Strategy:</strong> Every financial year, you can harvest up to ₹1,25,000 in long-term equity capital gains completely tax-free under Section 112A. Redeeming and immediately reinvesting equity units allows you to step up your acquisition cost base, eliminating future tax drag.
+          </p>
+          <p>
+            <strong>Advance Tax Calendar:</strong> If your total estimated net tax liability (after TDS) exceeds ₹10,000 in a financial year, remember to remit advance tax installments on capital gains realized during each quarter (by 15th June, 15th Sept, 15th Dec, and 15th March) to avoid Section 234C interest penalties.
+          </p>
+        </>
+      }
       statutoryNotes={
         <>
           <p><strong>Set-Off Rules (Section 70(3)):</strong> Long-term capital losses (LTCL) can only be set off against long-term capital gains. They cannot be adjusted against short-term capital gains or salary income.</p>
@@ -76,6 +139,28 @@ export default function CapitalGainsCalculator() {
           question: 'Are capital gains tax exemptions available for reinvestment under Section 54F?',
           answer: 'Yes. Assessees realizing long-term capital gains from equity securities can claim exemption under Section 54F if the entire net consideration is deployed into acquiring or constructing a residential house property in India within statutory time windows, subject to a ₹10 Crore statutory cap.',
         },
+        {
+          question: 'What is the taxation of unlisted equity shares in India?',
+          answer: 'Under the Finance Act 2024 revisions, unlisted shares (startups, pre-IPO stocks) have a 24-month holding period for LTCG and are taxed at 12.5% without indexation. STCG on unlisted shares is taxed at the assessee marginal income tax slab rate.',
+        },
+        {
+          question: 'How are capital losses carried forward to subsequent assessment years?',
+          answer: 'Under Section 74, unadjusted short-term and long-term capital losses can be carried forward for up to 8 assessment years, provided the income tax return is filed on or before the due date under Section 139(1).',
+        },
+      ]}
+      relatedArticles={[
+        {
+          title: 'SIP vs Lump Sum Investing: Rupee Cost Averaging and Market Volatility',
+          path: '/articles/sip-vs-lump-sum-investing',
+          readTime: '9 min',
+          summary: 'A rigorous comparative analysis of systematic monthly investing versus one-time lump-sum capital deployment.',
+        },
+        {
+          title: 'New vs Old Tax Regime in India: Slabs, Deductions, and Break-Even Salary Analysis',
+          path: '/articles/new-vs-old-tax-regime',
+          readTime: '10 min',
+          summary: 'A statutory guide for salaried and professional taxpayers navigating Section 115BAC.',
+        },
       ]}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -86,7 +171,7 @@ export default function CapitalGainsCalculator() {
               id="cg-asset-select"
               value={assetType}
               onChange={(e) => setAssetType(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-cyan-500 focus:outline-none"
+              className="w-full bg-slate-950 border border-slate-700 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-amber-500 focus:outline-none"
             >
               <option value="equity">Listed Equity Shares / Mutual Funds (&gt;65% equity)</option>
               <option value="debt">Debt Mutual Funds (Sec 50AA - Marginal Slab Rate)</option>
@@ -104,7 +189,7 @@ export default function CapitalGainsCalculator() {
                 step={10000}
                 min={0}
                 onChange={(e) => setBuyCost(Number(e.target.value))}
-                className="w-full bg-slate-950 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 font-mono text-sm focus:border-cyan-500 focus:outline-none"
+                className="w-full bg-slate-950 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 font-mono text-sm focus:border-amber-500 focus:outline-none"
               />
             </div>
             <div className="space-y-1.5">
@@ -117,7 +202,7 @@ export default function CapitalGainsCalculator() {
                 step={10000}
                 min={0}
                 onChange={(e) => setSalePrice(Number(e.target.value))}
-                className="w-full bg-slate-950 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 font-mono text-sm focus:border-cyan-500 focus:outline-none"
+                className="w-full bg-slate-950 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 font-mono text-sm focus:border-amber-500 focus:outline-none"
               />
             </div>
           </div>
@@ -125,7 +210,7 @@ export default function CapitalGainsCalculator() {
           <div className="space-y-1.5">
             <div className="flex justify-between text-xs text-slate-300">
               <label htmlFor="cg-holding-input" className="font-semibold uppercase">Holding Period (Months)</label>
-              <span className="text-cyan-400 font-mono font-bold">{holdingMonths} Months</span>
+              <span className="text-amber-400 font-mono font-bold">{holdingMonths} Months</span>
             </div>
             <input
               id="cg-holding-input"
@@ -152,7 +237,7 @@ export default function CapitalGainsCalculator() {
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Applicable Tax Classification</span>
-              <span className="text-sm font-mono font-bold text-cyan-400">{classification}</span>
+              <span className="text-sm font-mono font-bold text-amber-400">{classification}</span>
             </div>
             <div className="flex items-center justify-between border-b border-slate-800 pb-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-rose-400">Tax Liability (+4% Cess)</span>

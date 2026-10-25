@@ -163,12 +163,12 @@ export default function Contact() {
       />
       {/* Page Header */}
       <div className="mb-10 text-center sm:text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 text-cyan-300 border border-cyan-800 mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-950/40 text-amber-300 border border-amber-800/50 mb-3">
           <ShieldCheck className="w-3.5 h-3.5" />
           <span>Institutional Support & Mathematical Governance</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Contact FingTaj Support</h1>
-        <p className="mt-2 text-base text-slate-400 max-w-2xl">
+        <p className="mt-2 text-base text-zinc-400 max-w-2xl">
           Have an inquiry, statutory tax question, or mathematical feedback? Our engineering and financial modeling team is here to assist.
         </p>
       </div>
@@ -176,20 +176,20 @@ export default function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Direct Info Cards */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-6 shadow-lg">
+          <div className="bg-[#0F121A] border border-[#1E2433] rounded-xl p-6 shadow-lg">
             <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-              <Mail className="w-5 h-5 text-cyan-400" />
+              <Mail className="w-5 h-5 text-amber-400" />
               Direct Engineering Inquiries
             </h2>
             <div className="space-y-4 text-sm">
               <div>
-                <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold">Primary Support Email</span>
-                <div className="flex items-center justify-between gap-2 mt-1 p-2.5 bg-slate-950/90 border border-slate-800 rounded-lg">
-                  <span className="font-mono text-cyan-300 font-medium select-all">support@fingtaj.online</span>
+                <span className="text-zinc-400 block text-xs uppercase tracking-wider font-semibold">Primary Support Email</span>
+                <div className="flex items-center justify-between gap-2 mt-1 p-2.5 bg-[#06070B] border border-[#1E2433] rounded-lg">
+                  <span className="font-mono text-amber-300 font-medium select-all">support@fingtaj.online</span>
                   <button
                     type="button"
                     onClick={handleCopyEmail}
-                    className="p-1.5 rounded hover:bg-slate-800 text-slate-400 hover:text-white transition flex items-center gap-1 text-xs"
+                    className="p-1.5 rounded hover:bg-[#141824] text-zinc-400 hover:text-white transition flex items-center gap-1 text-xs cursor-pointer"
                     title="Copy Email Address"
                   >
                     {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
@@ -199,30 +199,30 @@ export default function Contact() {
               </div>
 
               <div>
-                <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold">Lead Systems Architect</span>
-                <p className="text-slate-200 font-medium mt-0.5">Ashutosh Kumar</p>
-                <p className="text-xs text-slate-400">Computational Finance & Full-Stack Systems</p>
+                <span className="text-zinc-400 block text-xs uppercase tracking-wider font-semibold">Lead Systems Architect</span>
+                <p className="text-zinc-200 font-medium mt-0.5">Ashutosh Kumar</p>
+                <p className="text-xs text-zinc-400">Computational Finance & Full-Stack Systems</p>
               </div>
 
-              <div className="flex items-start gap-3 pt-2 border-t border-slate-800">
-                <Clock className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 pt-2 border-t border-[#1E2433]">
+                <Clock className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-slate-300 font-medium text-xs block">Service Level Agreement (SLA)</span>
-                  <span className="text-xs text-slate-400">Response guaranteed within 24 to 48 business hours (Mon – Fri, 09:30 – 18:30 IST).</span>
+                  <span className="text-zinc-300 font-medium text-xs block">Service Level Agreement (SLA)</span>
+                  <span className="text-xs text-zinc-400">Response guaranteed within 24 to 48 business hours (Mon – Fri, 09:30 – 18:30 IST).</span>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 pt-2 border-t border-slate-800">
-                <MapPin className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 pt-2 border-t border-[#1E2433]">
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-slate-300 font-medium text-xs block">Operational Base & Jurisdiction</span>
-                  <span className="text-xs text-slate-400">Chennai, Tamil Nadu 600001, India</span>
+                  <span className="text-zinc-300 font-medium text-xs block">Operational Base & Jurisdiction</span>
+                  <span className="text-xs text-zinc-400">Chennai, Tamil Nadu 600001, India</span>
                 </div>
               </div>
 
               {/* Official Social Outlets */}
-              <div className="pt-3 border-t border-slate-800">
-                <span className="text-slate-400 block text-xs uppercase tracking-wider font-semibold mb-2">
+              <div className="pt-3 border-t border-[#1E2433]">
+                <span className="text-zinc-400 block text-xs uppercase tracking-wider font-semibold mb-2">
                   Official Channels & Community
                 </span>
                 <SocialLinks layout="icons-only" />
@@ -231,36 +231,36 @@ export default function Contact() {
           </div>
 
           {/* Zero Telemetry Guarantee Card */}
-          <div className="bg-cyan-950/20 border border-cyan-800/60 rounded-xl p-5 text-sm">
-            <div className="flex items-center gap-2 text-cyan-400 font-semibold mb-1">
-              <ShieldCheck className="w-4 h-4" />
+          <div className="bg-[#0F121A] border border-amber-500/20 rounded-xl p-5 text-sm">
+            <div className="flex items-center gap-2 text-amber-400 font-semibold mb-1">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>Zero-Log Communication Privacy</span>
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <p className="text-xs text-zinc-300 leading-relaxed">
               We never collect telemetry from our calculators. Information submitted through this contact form is used exclusively to answer your mathematical or platform inquiry.
             </p>
           </div>
 
           {/* Past Inquiries in this browser (if any) */}
           {history.length > 0 && (
-            <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 text-sm">
+            <div className="bg-[#0F121A] border border-[#1E2433] rounded-xl p-5 text-sm">
               <div className="flex items-center justify-between mb-3">
-                <span className="font-semibold text-slate-200 text-xs uppercase tracking-wider flex items-center gap-1.5">
-                  <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
+                <span className="font-semibold text-zinc-200 text-xs uppercase tracking-wider flex items-center gap-1.5">
+                  <MessageSquare className="w-3.5 h-3.5 text-amber-400" />
                   Recent Inquiries in this Browser ({history.length})
                 </span>
               </div>
               <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
                 {history.map((item) => (
-                  <div key={item.id} className="p-2.5 bg-slate-950/80 rounded border border-slate-800 text-xs">
-                    <div className="flex justify-between items-center font-mono text-cyan-300 mb-1">
+                  <div key={item.id} className="p-2.5 bg-[#06070B] rounded border border-[#1E2433] text-xs">
+                    <div className="flex justify-between items-center font-mono text-amber-300 mb-1">
                       <span>{item.id}</span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800 font-sans">
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-800/60 font-sans">
                         {item.status}
                       </span>
                     </div>
-                    <p className="text-slate-300 font-medium truncate">{item.subject}</p>
-                    <span className="text-slate-500 text-[10px]">{item.timestamp}</span>
+                    <p className="text-zinc-300 font-medium truncate">{item.subject}</p>
+                    <span className="text-zinc-500 text-[10px]">{item.timestamp}</span>
                   </div>
                 ))}
               </div>
@@ -270,33 +270,33 @@ export default function Contact() {
 
         {/* Right Column: Contact Form / Confirmation */}
         <div className="lg:col-span-7">
-          <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-6 sm:p-8 shadow-xl">
+          <div className="bg-[#0F121A] border border-[#1E2433] rounded-xl p-6 sm:p-8 shadow-xl">
             {submittedTicket ? (
               <div className="py-4 space-y-6">
                 <div className="flex items-center gap-3 text-emerald-400">
                   <CheckCircle2 className="w-8 h-8 shrink-0" />
                   <div>
                     <h3 className="text-xl font-bold text-white">Inquiry Successfully Registered</h3>
-                    <p className="text-sm text-emerald-300">Ticket Reference: <strong className="font-mono text-cyan-300">{submittedTicket.id}</strong></p>
+                    <p className="text-sm text-emerald-300">Ticket Reference: <strong className="font-mono text-amber-300">{submittedTicket.id}</strong></p>
                   </div>
                 </div>
 
-                <div className="p-4 bg-slate-950 border border-slate-800 rounded-lg space-y-2 text-sm">
-                  <div className="flex justify-between border-b border-slate-800/80 pb-2">
-                    <span className="text-slate-400">Sender:</span>
-                    <span className="text-slate-200 font-medium">{submittedTicket.name} ({submittedTicket.email})</span>
+                <div className="p-4 bg-[#06070B] border border-[#1E2433] rounded-lg space-y-2 text-sm">
+                  <div className="flex justify-between border-b border-[#1E2433] pb-2">
+                    <span className="text-zinc-400">Sender:</span>
+                    <span className="text-zinc-200 font-medium">{submittedTicket.name} ({submittedTicket.email})</span>
                   </div>
-                  <div className="flex justify-between border-b border-slate-800/80 pb-2">
-                    <span className="text-slate-400">Category:</span>
-                    <span className="text-cyan-300">{submittedTicket.category}</span>
+                  <div className="flex justify-between border-b border-[#1E2433] pb-2">
+                    <span className="text-zinc-400">Category:</span>
+                    <span className="text-amber-300">{submittedTicket.category}</span>
                   </div>
-                  <div className="flex justify-between border-b border-slate-800/80 pb-2">
-                    <span className="text-slate-400">Subject:</span>
-                    <span className="text-slate-200">{submittedTicket.subject}</span>
+                  <div className="flex justify-between border-b border-[#1E2433] pb-2">
+                    <span className="text-zinc-400">Subject:</span>
+                    <span className="text-zinc-200">{submittedTicket.subject}</span>
                   </div>
                   <div className="pt-1">
-                    <span className="text-slate-400 block mb-1">Message Content:</span>
-                    <p className="text-slate-300 text-xs bg-slate-900 p-3 rounded border border-slate-800 whitespace-pre-wrap">
+                    <span className="text-zinc-400 block mb-1">Message Content:</span>
+                    <p className="text-zinc-300 text-xs bg-[#0F121A] p-3 rounded border border-[#1E2433] whitespace-pre-wrap">
                       {submittedTicket.message}
                     </p>
                   </div>
@@ -305,7 +305,7 @@ export default function Contact() {
                 <div className="space-y-3">
                   <a
                     href={createMailtoLink(submittedTicket)}
-                    className="w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-5 py-3 rounded-lg transition"
+                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-zinc-950 font-bold px-5 py-3 rounded-lg transition shadow-md shadow-amber-950/30 cursor-pointer"
                   >
                     <Send className="w-4 h-4" />
                     <span>Open in Email Client to Send Directly</span>
@@ -314,7 +314,7 @@ export default function Contact() {
                   <button
                     type="button"
                     onClick={handleResetForm}
-                    className="w-full py-2.5 text-center text-sm text-slate-400 hover:text-white transition"
+                    className="w-full py-2.5 text-center text-sm text-zinc-400 hover:text-white transition cursor-pointer"
                   >
                     Submit Another Inquiry
                   </button>
@@ -322,9 +322,9 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="border-b border-slate-800 pb-4 mb-4">
+                <div className="border-b border-[#1E2433] pb-4 mb-4">
                   <h2 className="text-lg font-bold text-white">Send Us a Direct Message</h2>
-                  <p className="text-xs text-slate-400 mt-1">
+                  <p className="text-xs text-zinc-400 mt-1">
                     All calculations are vetted by financial modeling engineers. Please provide specific parameters if inquiring about a tax or loan calculation.
                   </p>
                 </div>
@@ -338,8 +338,8 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                      Your Full Name <span className="text-cyan-400">*</span>
+                    <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1.5">
+                      Your Full Name <span className="text-amber-400">*</span>
                     </label>
                     <input
                       id="contact-name"
@@ -349,13 +349,13 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="e.g. Ramesh Krishnan"
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition"
+                      className="w-full bg-[#06070B] border border-[#22293A] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                      Your Email Address <span className="text-cyan-400">*</span>
+                    <label htmlFor="contact-email" className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1.5">
+                      Your Email Address <span className="text-amber-400">*</span>
                     </label>
                     <input
                       id="contact-email"
@@ -365,21 +365,21 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="e.g. ramesh@example.com"
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition"
+                      className="w-full bg-[#06070B] border border-[#22293A] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contact-category" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                    Inquiry Category <span className="text-cyan-400">*</span>
+                  <label htmlFor="contact-category" className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1.5">
+                    Inquiry Category <span className="text-amber-400">*</span>
                   </label>
                   <select
                     id="contact-category"
                     name="category"
                     value={formData.category}
                     onChange={handleInputChange}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition"
+                    className="w-full bg-[#06070B] border border-[#22293A] rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500 transition"
                   >
                     <option value="Calculation Verification / Question">Statutory Calculation Verification (Section 115BAC, EMI, SIP)</option>
                     <option value="Mathematical Discrepancy / Bug">Mathematical Discrepancy or Edge Case Report</option>
@@ -390,8 +390,8 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                    Subject Line <span className="text-cyan-400">*</span>
+                  <label htmlFor="contact-subject" className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1.5">
+                    Subject Line <span className="text-amber-400">*</span>
                   </label>
                   <input
                     id="contact-subject"
@@ -401,13 +401,13 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleInputChange}
                     placeholder="Brief summary of your question or issue"
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition"
+                    className="w-full bg-[#06070B] border border-[#22293A] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                    Detailed Query <span className="text-cyan-400">*</span>
+                  <label htmlFor="contact-message" className="block text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-1.5">
+                    Detailed Query <span className="text-amber-400">*</span>
                   </label>
                   <textarea
                     id="contact-message"
@@ -417,7 +417,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Include relevant parameters (e.g. Annual Income ₹15,00,000, Old vs New Regime, Loan Principal, Tenure) so our team can evaluate the mathematical formula."
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition"
+                    className="w-full bg-[#06070B] border border-[#22293A] rounded-lg px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-amber-500 transition"
                   ></textarea>
                 </div>
 
@@ -425,7 +425,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 disabled:bg-cyan-800 text-slate-950 font-bold px-6 py-3 rounded-lg transition shadow-lg cursor-pointer"
+                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-50 text-zinc-950 font-bold px-6 py-3 rounded-lg transition shadow-md shadow-amber-950/30 cursor-pointer"
                   >
                     {isSubmitting ? (
                       <span>Validating & Dispatching Ticket...</span>
@@ -436,7 +436,7 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-                  <p className="text-center text-[11px] text-slate-500 mt-2">
+                  <p className="text-center text-[11px] text-zinc-500 mt-2">
                     🔒 Zero personal data is shared with third parties. Transmission is encrypted.
                   </p>
                 </div>
@@ -447,13 +447,13 @@ export default function Contact() {
       </div>
 
       {/* Structured FAQ Section */}
-      <div className="mt-16 pt-10 border-t border-slate-800">
+      <div className="mt-16 pt-10 border-t border-[#1E2433]">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-2xl font-bold text-white flex items-center justify-center gap-2">
-            <HelpCircle className="w-6 h-6 text-cyan-400" />
+            <HelpCircle className="w-6 h-6 text-amber-400" />
             Frequently Asked Support Questions
           </h2>
-          <p className="text-sm text-slate-400 mt-1">
+          <p className="text-sm text-zinc-400 mt-1">
             Answers to common queries regarding calculations, privacy guarantees, and updates.
           </p>
         </div>
@@ -464,18 +464,18 @@ export default function Contact() {
             return (
               <div
                 key={idx}
-                className="border border-slate-800 bg-slate-900/60 rounded-xl overflow-hidden transition"
+                className="border border-[#1E2433] bg-[#0F121A] rounded-xl overflow-hidden transition"
               >
                 <button
                   type="button"
                   onClick={() => setActiveFaq(isOpen ? null : idx)}
-                  className="w-full text-left px-5 py-4 flex items-center justify-between text-sm font-semibold text-slate-200 hover:text-cyan-400 transition"
+                  className="w-full text-left px-5 py-4 flex items-center justify-between text-sm font-semibold text-zinc-200 hover:text-amber-400 transition cursor-pointer"
                 >
                   <span>{faq.q}</span>
-                  <span className="text-cyan-400 text-lg ml-4">{isOpen ? '−' : '+'}</span>
+                  <span className="text-amber-400 text-lg ml-4">{isOpen ? '−' : '+'}</span>
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 bg-slate-950/40">
+                  <div className="px-5 pb-5 pt-1 text-sm text-zinc-300 leading-relaxed border-t border-[#1E2433] bg-[#0A0C13]">
                     {faq.a}
                   </div>
                 )}

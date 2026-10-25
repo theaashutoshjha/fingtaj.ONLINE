@@ -1,7 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#020617" stroke="#0891b2" stroke-width="1.5"/>
-  <path d="M8 22L14 14L18 18L24 10" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="24" cy="10" r="2" fill="#22d3ee"/>
-  <path d="M8 10H16" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-  <path d="M8 14H12" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141824" />
+      <stop offset="100%" stop-color="#08090D" />
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded Geometric Obsidian Seal -->
+  <rect x="1.5" y="1.5" width="45" height="45" rx="12" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+  
+  <!-- Sovereign Crown & Geometric F-T Pillar Hybrid -->
+  <!-- Upper Pediment / Crown Crest of the Taj -->
+  <path d="M12 14L24 8L36 14H12Z" fill="url(#goldGrad)" opacity="0.9" />
+  
+  <!-- Interlocking F and T Monogram & Growth Curve -->
+  <!-- Horizontal Lintel Bar of 'T' -->
+  <rect x="11" y="16.5" width="26" height="3" rx="1.5" fill="url(#goldGrad)" />
+  
+  <!-- Central Sovereign Pillar of 'T' -->
+  <rect x="22.5" y="19" width="3" height="19" rx="1.5" fill="url(#goldGrad)" />
+  
+  <!-- Left 'F' Branch & Rupee Compounding Trajectory -->
+  <path d="M14 24H21" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M14 30H19" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Upward Compounding Exponential Curve & Bullion Diamond -->
+  <path d="M25.5 35C27.5 33 30.5 28.5 35 24" stroke="#FDE68A" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="0.1 0" />
+  <polygon points="35,21 38,24 35,27 32,24" fill="url(#goldGrad)" />
 </svg>
