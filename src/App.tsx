@@ -7,6 +7,9 @@ import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Contact from './pages/Contact';
+import Disclaimer from './pages/Disclaimer';
+import CookiePolicy from './pages/CookiePolicy';
+import Methodology from './pages/Methodology';
 import NotFound from './pages/NotFound';
 import CookieConsent from './components/CookieConsent';
 
@@ -72,7 +75,10 @@ export default function App() {
             {/* Governance & Authority */}
             <Route path="/about" element={<About />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/methodology" element={<Methodology />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

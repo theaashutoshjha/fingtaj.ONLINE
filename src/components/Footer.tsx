@@ -147,17 +147,26 @@ export default function Footer() {
           {/* Col 5: Governance & Author */}
           <div className="space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-200">
-              Governance & Legal
+              Governance & Compliance
             </h3>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link to="/about" className="hover:text-amber-400 transition-colors">About Us & Methodology</Link>
+                <Link to="/about" className="hover:text-amber-400 transition-colors">About Us</Link>
+              </li>
+              <li>
+                <Link to="/methodology" className="hover:text-amber-400 transition-colors">Calculation Methodology</Link>
               </li>
               <li>
                 <Link to="/privacy-policy" className="hover:text-amber-400 transition-colors">Privacy Policy (AdSense & GDPR)</Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="hover:text-amber-400 transition-colors">Terms of Service & Disclaimer</Link>
+                <Link to="/cookie-policy" className="hover:text-amber-400 transition-colors">Cookie Policy & Preferences</Link>
+              </li>
+              <li>
+                <Link to="/disclaimer" className="hover:text-amber-400 transition-colors">Financial & Legal Disclaimer</Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service" className="hover:text-amber-400 transition-colors">Terms of Service</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-amber-400 transition-colors">Contact Support & SLA</Link>
@@ -180,14 +189,22 @@ export default function Footer() {
         {/* Bottom Bar: Legal Disclaimers & Copyright */}
         <div className="pt-8 space-y-4 text-xs text-zinc-500">
           <p className="leading-relaxed text-justify">
-            <strong className="text-zinc-300">Statutory YMYL Notice:</strong> FingTaj (<a href="https://fingtaj.online" className="text-zinc-300 hover:text-amber-400 underline">https://fingtaj.online</a>) is an independent financial engineering utility. Calculations, estimates, and schedules are provided solely for educational, self-planning, and computational modeling purposes and do not constitute formal investment, tax, or legal advisory services. Users must consult a certified Chartered Accountant or SEBI-registered investment advisor prior to executing binding financial agreements.
+            <strong className="text-zinc-300">Statutory YMYL Notice:</strong> FingTaj (<a href="https://fingtaj.online" className="text-zinc-300 hover:text-amber-400 underline">https://fingtaj.online</a>) is an independent financial engineering utility. Calculations, estimates, and schedules are provided solely for educational, self-planning, and computational modeling purposes and do not constitute formal investment, tax, or legal advisory services. Users must consult a certified Chartered Accountant or SEBI-registered investment advisor prior to executing binding financial agreements. Review our <Link to="/disclaimer" className="text-amber-400 hover:underline">Disclaimer</Link>, <Link to="/privacy-policy" className="text-amber-400 hover:underline">Privacy Policy</Link>, and <Link to="/cookie-policy" className="text-amber-400 hover:underline">Cookie Policy</Link>.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 border-t border-[#141824] text-[11px] text-zinc-500">
             <div>
               © {new Date().getFullYear()} FingTaj. All statutory computation engines run strictly in-memory on the client machine.
             </div>
-            <div className="flex items-center gap-4">
-              <span>Chennai, Tamil Nadu, India</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <Link to="/privacy-policy" className="hover:text-amber-400 transition">Privacy</Link>
+              <span>•</span>
+              <Link to="/cookie-policy" className="hover:text-amber-400 transition">Cookies</Link>
+              <span>•</span>
+              <Link to="/disclaimer" className="hover:text-amber-400 transition">Disclaimer</Link>
+              <span>•</span>
+              <Link to="/terms-of-service" className="hover:text-amber-400 transition">Terms</Link>
+              <span>•</span>
+              <Link to="/methodology" className="hover:text-amber-400 transition">Methodology</Link>
               <span>•</span>
               <a href="mailto:support@fingtaj.online" className="hover:text-amber-400 transition">support@fingtaj.online</a>
             </div>

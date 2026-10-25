@@ -74,11 +74,15 @@ export default function CookieConsent() {
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                FingTaj operates with a <strong className="text-amber-300">zero-telemetry architecture</strong>—your financial calculations never leave your browser memory. We and our advertising partners (including Google AdSense) use standard cookies to serve relevant ads, measure ad performance, and maintain security in compliance with GDPR, CCPA, and India DPDPA. Read our{' '}
+                FingTaj operates with a <strong className="text-amber-300">zero-telemetry architecture</strong>—your financial calculations never leave your browser memory. We and our advertising partners (including Google AdSense) use cookies to serve relevant ads, measure performance, and prevent fraud in compliance with GDPR, CCPA, and India DPDPA. Read our{' '}
+                <Link to="/cookie-policy" className="text-amber-400 underline hover:text-amber-300 font-medium">
+                  Cookie Policy
+                </Link>{' '}
+                and{' '}
                 <Link to="/privacy-policy" className="text-amber-400 underline hover:text-amber-300 font-medium">
                   Privacy Policy
                 </Link>{' '}
-                for full statutory disclosures.
+                for full disclosures.
               </p>
             </div>
 
