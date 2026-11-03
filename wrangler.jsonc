@@ -2,6 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "fingtaj-online",
   "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "fingtaj.online", "custom_domain": true },
+    { "pattern": "www.fingtaj.online", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
