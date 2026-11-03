@@ -29,8 +29,8 @@ Every guide has an "In brief" summary, table of contents, worked examples, FAQs 
 
 * AdSense: `<meta name="google-adsense-account" content="ca-pub-3594420471814241">` + the `adsbygoogle.js?client=ca-pub-3594420471814241` script on every page; `ads.txt` with `google.com, pub-3594420471814241, DIRECT, f08c47fec0942fa0`.
 * Google Analytics `G-GRXC5MH7PC` (loaded after the page has loaded, with Consent Mode v2 defaults — denied only for EEA/UK/CH until accepted).
-* IndexNow key `c7e2b8f64a1d9e5b3f0c8e2a1b4d7f9e` — key file is generated at `https://fingtaj.online/c7e2b8f64a1d9e5b3f0c8e2a1b4d7f9e.txt`.
-* Sitemap: `https://fingtaj.online/sitemap.xml` (referenced in `robots.txt`).
+* IndexNow key `dd42d910f10e14978a7dd6380733ff08` — key file is generated at `https://www.fingtaj.online/dd42d910f10e14978a7dd6380733ff08.txt`.
+* Sitemap: `https://www.fingtaj.online/sitemap.xml` (referenced in `robots.txt`).
 * Search Console: if you verified with the *HTML tag* method, paste the `content="…"` value into `gscVerification` in `site.config.mjs`. Domain/DNS verification needs nothing.
 
 Contact email: `contact@fingtaj.online` (set in `site.config.mjs`).

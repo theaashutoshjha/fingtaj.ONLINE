@@ -1,7 +1,7 @@
 // Single place for site-wide settings. Edit here, then run `npm run build`.
 export default {
   name: 'Fingtaj',
-  url: 'https://fingtaj.online',
+  url: 'https://www.fingtaj.online',
   locale: 'en_IN',
   tagline: 'Measure twice. Build once. Calculators and guides for Indian homes',
   description: '30 free calculators and 72 practical guides on land measurement, building materials, house construction cost, property registration, solar and home maintenance in India.',
@@ -16,7 +16,7 @@ export default {
   bingVerification: '',
 
   // ---- Instant indexing (IndexNow: Bing, Yandex, Seznam, Naver, Yep) ----
-  indexNowKey: 'c7e2b8f64a1d9e5b3f0c8e2a1b4d7f9e',
+  indexNowKey: 'dd42d910f10e14978a7dd6380733ff08',
 
   founder: 'Ashutosh Jha',
   team: 'Fingtaj Editorial Team',
