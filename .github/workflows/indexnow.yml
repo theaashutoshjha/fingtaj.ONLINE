@@ -1,0 +1,24 @@
+﻿# After Cloudflare Pages deploys a push to main, wait for the new version to be live and ping IndexNow
+# (Bing, Yandex, etc.) with only the new/changed URLs.
+name: IndexNow
+on:
+  push:
+    branches: [main]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm ci
+      - run: node scripts/build.mjs
+      - run: node scripts/indexnow.mjs --wait
+      - name: Save submission state
+        run: |
+          git config user.name "indexnow-bot"
+          git config user.email "indexnow-bot@users.noreply.github.com"
+          git add indexnow-state.json
+          git diff --cached --quiet || (git commit -m "chore: update IndexNow state [skip ci]" && git push)
