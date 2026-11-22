@@ -2,7 +2,7 @@ import cfg from '../../site.config.mjs';
 import { esc } from './layout.mjs';
 
 const M = cfg.email;
-const mail = `<a href="mailto:${M}">${M}</a>`;
+const mail = `<!--email_off--><a href="mailto:${M}">${M}</a><!--/email_off-->`;
 const L = (u, t) => `<a href="${u}">${t}</a>`;
 
 export const STATIC_PAGES = [
@@ -255,7 +255,7 @@ export const STATIC_PAGES = [
 </ul>
 
 <h2>Form Fallback and Email Guidance</h2>
-<p>To preserve reader privacy and avoid collecting personal contact data on our servers, Fingtaj intentionally does not use an embedded contact form. If your default desktop email client does not open automatically when clicking our email link, please manually copy our address (<code>contact@fingtaj.online</code>) into your webmail provider (Gmail, Outlook, Yahoo, or Apple Mail). If sending attachments (such as official gazettes, land survey sketches, or municipal bye-law PDFs), please restrict file formats to PDF, PNG, or JPEG under 10 MB.</p>
+<p>To preserve reader privacy and avoid collecting personal contact data on our servers, Fingtaj intentionally does not use an embedded contact form. If your default desktop email client does not open automatically when clicking our email link, please manually copy our address (<code><!--email_off-->${M}<!--/email_off--></code>) into your webmail provider (Gmail, Outlook, Yahoo, or Apple Mail). If sending attachments (such as official gazettes, land survey sketches, or municipal bye-law PDFs), please restrict file formats to PDF, PNG, or JPEG under 10 MB.</p>
 
 <h2>Editorial Scope and What We Cannot Provide</h2>
 <p>To avoid misunderstandings, please review the boundaries of our correspondence:</p>
@@ -557,7 +557,7 @@ export const STATIC_PAGES = [
       ['How does Fingtaj make money and are any articles sponsored?', 'Fingtaj is funded entirely through automated digital display advertising via Google AdSense. We do not publish sponsored posts, accept paid product placements from cement or steel brands, or collect referral commissions from property builders, brokers, or lenders. Advertisers have zero editorial influence.'],
       ['Are my calculator inputs or plot dimensions stored on your servers?', 'No. All calculations run client-side in your web browser using vanilla JavaScript. The numbers, measurements, and loan figures you input never leave your device and are never sent to or stored in any remote server or database.'],
       ['Which Indian Standards and building codes do you reference?', 'We cite primary national standards including IS 456:2000 (Concrete), IS 1786:2008 (TMT Steel), IS 269 (OPC), IS 1489 (PPC), IS 383 (Aggregates), IS 1077 (Clay Bricks), IS 1200 (Measurement of Works), and the National Building Code of India 2016 (NBC 2016). See our Standards and Sources page for complete citations.'],
-      ['How do I report a factual error, calculation bug, or outdated rate?', 'Email our editorial desk at contact@fingtaj.online with the page URL, details of the discrepancy, and an authoritative source citation (such as an official gazette or BIS code). Confirmed corrections are verified and published on our public Corrections Log within 48 to 72 business hours.'],
+      ['How do I report a factual error, calculation bug, or outdated rate?', `Email our editorial desk at <!--email_off-->${M}<!--/email_off--> with the page URL, details of the discrepancy, and an authoritative source citation (such as an official gazette or BIS code). Confirmed corrections are verified and published on our public Corrections Log within 48 to 72 business hours.`],
       ['Can builders, material brands, or contractors pay to be listed on Fingtaj?', 'No. We maintain a strict policy against commercial placements. We do not sell featured spots, publish sponsored reviews, or accept fees to promote contractors or building material brands.'],
       ['How frequently are the calculators and guides reviewed and updated?', 'Content is reviewed whenever relevant statutory codes, circle rate schedules, solar subsidies (such as PM Surya Ghar), or discom tariffs are revised. Every page displays verifiable published and modified dates reflecting its editorial timeline.'],
       ['What should I do if my land records and sale deed show different plot areas?', 'Do not pay the purchase balance until the discrepancy is resolved. Hire an independent licensed land surveyor to conduct a physical total station survey, check the survey map and revenue khasra/khatauni, and if necessary, file an application with the local tehsildar or revenue office for boundary correction before registration.'],

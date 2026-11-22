@@ -26,7 +26,7 @@ const header = (path, ctx) => `<div class="strip"><div class="wrap"><span><b>Fre
 const footer = (ctx) => `<footer class="ftr"><div class="wrap">
 <div class="ftr-top"><h2>Measure twice. <em>Build once.</em></h2><a class="btn" href="/calculators">Open the calculators ${icon('arrow', 18)}</a></div>
 <div class="fgrid">
-<div>${BRAND}<p class="about">Free calculators and plain-English guides for people building, buying and looking after a home in India. Independent, supported by ads, never sponsored by builders or brands.</p><p class="about"><a href="mailto:${cfg.email}">${cfg.email}</a></p></div>
+<div>${BRAND}<p class="about">Free calculators and plain-English guides for people building, buying and looking after a home in India. Independent, supported by ads, never sponsored by builders or brands.</p><p class="about"><!--email_off--><a href="mailto:${cfg.email}">${cfg.email}</a><!--/email_off--></p></div>
 <div><div class="fh">Calculators</div><ul>${ctx.calcCats.map((k) => `<li><a href="/calculators#${k.id}">${esc(k.name)}</a></li>`).join('')}</ul></div>
 <div><div class="fh">Guides</div><ul>${ctx.topics.map((t) => `<li><a href="/topics/${t.id}">${esc(t.name)}</a></li>`).join('')}</ul></div>
 <div><div class="fh">About</div><ul><li><a href="/about">Our story</a></li><li><a href="/editorial-policy">Editorial policy</a></li><li><a href="/how-we-calculate">How we calculate</a></li><li><a href="/sources">Standards &amp; sources</a></li><li><a href="/corrections">Corrections log</a></li><li><a href="/faq">FAQ</a></li><li><a href="/contact">Contact</a></li></ul></div>
@@ -50,7 +50,7 @@ export function page(opts, ctx) {
   const crumbsLd = opts.crumbs && opts.crumbs.length > 1 ? json({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: opts.crumbs.map(([n, p], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: abs(p) })) }) : '';
   const crumbsHtml = opts.crumbs && opts.crumbs.length > 1 ? `<nav class="crumbs" aria-label="Breadcrumb">${opts.crumbs.map(([n, p], i) => (i === opts.crumbs.length - 1 ? `<span aria-current="page" style="margin:0;opacity:1;color:var(--ink)">${esc(n)}</span>` : `<a href="${p}">${esc(n)}</a><span>/</span>`)).join('')}</nav>` : '';
   // gtag.js is injected after the page has loaded (and the browser is idle) so analytics never competes with first paint.
-  const ga = cfg.gaId ? `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',region:${JSON.stringify(EEA)}});gtag('js',new Date());gtag('config','${cfg.gaId}');addEventListener('load',function(){var l=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${cfg.gaId}';document.head.appendChild(s)};'requestIdleCallback' in window?requestIdleCallback(l,{timeout:2500}):setTimeout(l,1500)});</script>` : '';
+  const ga = cfg.gaId ? `<script data-cfasync="false">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',region:${JSON.stringify(EEA)}});gtag('js',new Date());gtag('config','${cfg.gaId}');addEventListener('load',function(){var l=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${cfg.gaId}';document.head.appendChild(s)};'requestIdleCallback' in window?requestIdleCallback(l,{timeout:2500}):setTimeout(l,1500)});</script>` : '';
   return `<!doctype html>
 <html lang="en-IN">
 <head>
@@ -87,7 +87,7 @@ ${opts.type === 'article' ? `<meta property="article:published_time" content="${
 ${cfg.gaId ? '<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>' : ''}
 <link rel="stylesheet" href="/assets/site.css?v=${ASSET_V.css}">
 ${ga}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${cfg.adsensePub}" crossorigin="anonymous"></script>
+<script data-cfasync="false" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${cfg.adsensePub}" crossorigin="anonymous"></script>
 ${(opts.jsonld || []).map(json).join('\n')}
 ${crumbsLd}
 ${opts.extraHead || ''}
