@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import cfg from '../site.config.mjs';
+import AUTHORS, { getAuthor } from '../authors.config.mjs';
 import { page, esc, abs, ASSET_V } from './lib/layout.mjs';
 import { icon } from './lib/icons.mjs';
 import { loadGuides, relatedGuides, guidesForCalc, TOPICS } from './lib/guides.mjs';
@@ -41,7 +42,7 @@ const ctx = { topics: TOPICS, calcCats };
 const pages = [], searchIndex = [];
 const emit = (rel, opts) => {
   write(rel === '/' ? 'index.html' : rel.replace(/^\//, '') + '.html', page(opts, ctx));
-  if (!opts.noindex) pages.push({ path: rel, lastmod: (opts.modified || cfg.buildDate).slice(0, 10) });
+  if (!opts.noindex) pages.push({ path: rel, lastmod: (opts.modified || cfg.lastModified || '2026-11-22').slice(0, 10) });
 };
 
 // ---------- shared JSON-LD ----------
@@ -49,7 +50,6 @@ const orgLd = { '@type': 'Organization', '@id': cfg.url + '/#org', name: cfg.nam
 const websiteLd = { '@type': 'WebSite', '@id': cfg.url + '/#website', url: cfg.url, name: cfg.name, description: cfg.tagline, inLanguage: 'en-IN', publisher: { '@id': cfg.url + '/#org' } };
 const faqLd = (faqs) => ({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) });
 const faqHtml = (faqs) => `<div class="faq">${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
-const DISCLAIMER = `<div class="disc"><b>General information, not professional advice.</b> Building codes, duties, tariffs, subsidies and prices differ by state and change often. Check with your local authority and consult a licensed structural engineer, architect, lawyer or tax professional before you build, buy or sign. See our <a href="/disclaimer">disclaimer</a> and <a href="/editorial-policy">editorial policy</a>.</div>`;
 
 const guideCard = (g) => `<a class="card gcard" style="--hue:${g.topic.hue}" href="${g.urlPath}"><span class="tag">${icon(g.topic.icon, 16)} ${esc(g.topic.name)}</span><h3>${esc(g.title)}</h3><p>${esc(trimTo(g.desc, 130))}</p><span class="go">Read the guide ${icon('arrow', 16)}<span class="meta" style="margin-left:auto;font-weight:400">${g.readMin} min</span></span></a>`;
 const calcCard = (c) => { const k = catOf(c); return `<a class="card ccard" style="--hue:${k.hue}" href="/${c.slug}"><span class="ico">${icon(k.icon, 24)}</span><h3>${esc(c.title)}</h3><p>${esc(trimTo(c.short, 112))}</p><span class="go">Open calculator ${icon('arrow', 16)}</span></a>`; };
@@ -77,10 +77,12 @@ for (const c of CALCS) {
   const res = c.compute(defaults(c)), cat = catOf(c), pathName = '/' + c.slug;
   const relCalcs = CALCS.filter((x) => x !== c && x.category === c.category).slice(0, 4);
   const relGuides = guidesForCalc(guides, c, 4);
-  const example = `Using the default values — ${c.inputs.filter((f) => f.kind !== 'text').map((f) => `${f.label.toLowerCase()}: ${fmtIn(f, f.def)}`).join('; ')} — the calculator returns <strong>${esc(res.primary.label.toLowerCase())}: ${esc(res.primary.value)}</strong>${res.metrics.length ? '. ' + res.metrics.slice(0, 4).map((m) => `${esc(m.label)}: ${esc(m.value)}`).join('; ') : ''}. Change any value above and the result updates instantly.`;
+  const example = `With baseline inputs (${c.inputs.filter((f) => f.kind !== 'text').map((f) => `${f.label.toLowerCase()}: ${fmtIn(f, f.def)}`).join('; ')}), the output is <strong>${esc(res.primary.label.toLowerCase())}: ${esc(res.primary.value)}</strong>${res.metrics.length ? ' (' + res.metrics.slice(0, 4).map((m) => `${esc(m.label)}: ${esc(m.value)}`).join(', ') + ')' : ''}.`;
+  const calcMod = c.modified || '2026-11-03';
+  const calcPub = c.published || '2026-11-03';
   const body = `<div class="wrap">
 <header class="calc-head narrow" style="max-width:860px"><span class="tag" style="--hue:${cat.hue}">${icon(cat.icon, 16)} ${esc(cat.name)}</span><h1>${esc(c.title)}</h1><p class="lead">${esc(c.short)}</p>
-<p class="meta">Updated ${cfg.updatedLabel} · Reviewed by the ${esc(cfg.team)} · Free, no sign-up — your numbers never leave your browser</p></header>
+<p class="meta">Updated ${fmtDate(calcMod)} · Researched by <a href="/authors/ashutosh-jha">Ashutosh Jha</a> · ${esc(cat.name)} interactive planning tool</p></header>
 <div class="calc"><form class="panel" id="calc-form" data-slug="${c.slug}" data-cat="${c.category}" aria-label="${esc(c.title)} inputs">${c.inputs.map(fieldHtml).join('')}<div class="actions"><button type="button" class="btn sm" id="calc-reset">Reset</button><button type="button" class="btn sm ghost" id="calc-share">Copy link to these numbers</button></div></form>
 <div class="panel" id="calc-result" aria-live="polite">${renderResult(res)}</div></div>
 <noscript><p class="result-note">JavaScript is needed to recalculate. The result above uses the default values.</p></noscript>
@@ -88,15 +90,15 @@ for (const c of CALCS) {
 ${c.intro.map((p) => `<p>${esc(p)}</p>`).join('')}
 <h2>How this calculator works</h2><div class="formula">${esc(c.formula)}</div><ul>${c.how.map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
 <h2>Worked example</h2><p>${example}</p>
-<h2>Assumptions and limits</h2><ul>${c.assumptions.map((h) => `<li>${esc(h)}</li>`).join('')}<li>Results are planning estimates, not a quotation, design or bill of quantities. See <a href="/how-we-calculate">how we build and test our calculators</a>.</li></ul>
+<h2>Assumptions and limits</h2><ul>${c.assumptions.map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
 ${relGuides.length ? `<h2>Guides that go with this calculator</h2><ul>${relGuides.map((g) => `<li><a href="${g.urlPath}">${esc(g.title)}</a></li>`).join('')}</ul>` : ''}
 <h2>Frequently asked questions</h2>${faqHtml(c.faqs)}
 </div>
 <section class="sec tight"><div class="sec-head"><h2>More in ${esc(cat.name)}</h2><a class="more" href="/calculators#${cat.id}">See all</a></div><div class="grid">${relCalcs.map(calcCard).join('')}</div></section>
-<div class="narrow">${DISCLAIMER}</div></div>`;
+</div>`;
   emit(pathName, {
-    title: calcTitle(c.title), rawTitle: true, desc: trimTo(c.short, 158), path: pathName, body, crumbs: [['Home', '/'], ['Calculators', '/calculators'], [c.title, pathName]], modified: cfg.buildDate,
-    jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd, { '@type': 'WebApplication', '@id': cfg.url + pathName + '#app', name: c.title, url: abs(pathName), description: c.short, applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any', browserRequirements: 'Requires JavaScript', inLanguage: 'en-IN', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, publisher: { '@id': cfg.url + '/#org' }, dateModified: cfg.buildDate }] }, faqLd(c.faqs)],
+    title: calcTitle(c.title), rawTitle: true, desc: trimTo(c.short, 158), path: pathName, body, crumbs: [['Home', '/'], ['Calculators', '/calculators'], [c.title, pathName]], modified: calcMod, published: calcPub,
+    jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd, { '@type': 'WebApplication', '@id': cfg.url + pathName + '#app', name: c.title, url: abs(pathName), description: c.short, applicationCategory: 'UtilitiesApplication', operatingSystem: 'Any', browserRequirements: 'Requires JavaScript', inLanguage: 'en-IN', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' }, publisher: { '@id': cfg.url + '/#org' }, datePublished: calcPub, dateModified: calcMod }] }, faqLd(c.faqs)],
     scripts: [`<script type="module" src="/assets/calc-ui.js?v=${uiV}"></script>`],
   });
   searchIndex.push({ t: c.title, u: pathName, c: 'c', k: c.tags.join(' ') + ' ' + c.short, p: topSlugs.includes(c.slug) ? 1 : 0 });
@@ -108,19 +110,22 @@ for (const g of guides) {
   const rel = relatedGuides(guides, g, 3), rc = g.calcs.map((s) => CALCS.find((c) => c.slug === s));
   const tocHtml = `<nav class="panel toc" aria-label="Table of contents"><b>In this guide</b><ol>${g.toc.map((t) => `<li><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}<li><a href="#faq">Frequently asked questions</a></li></ol></nav>`;
   const calcBox = rc.length ? `<div class="panel toc" style="background:var(--dk);border-color:var(--dk);color:var(--on-dk)"><b style="color:var(--on-dk)">Run your own numbers</b><ul style="margin:10px 0 0;padding-left:1.1em">${rc.map((c) => `<li style="margin-bottom:7px"><a style="color:#f6c3ae" href="/${c.slug}">${esc(c.title)}</a></li>`).join('')}</ul></div>` : '';
+  const author = getAuthor(g.author || 'ashutosh-jha');
+  const reviewText = (g.reviewedBy && g.reviewedBy.name && !g.reviewedBy.name.includes('['))
+    ? `<span>Reviewed by <strong>${esc(g.reviewedBy.name)}</strong>${g.reviewedBy.credential ? ', ' + esc(g.reviewedBy.credential) : ''}</span>`
+    : '';
   const body = `<div class="wrap"><div class="article"><article>
 <header><a class="tag" style="--hue:${g.topic.hue};text-decoration:none" href="/topics/${g.topic.id}">${icon(g.topic.icon, 16)} ${esc(g.topic.name)}</a>
 <h1>${esc(g.title)}</h1>
-<div class="byline"><span>By <strong>${esc(cfg.team)}</strong></span><span>Updated <time datetime="${g.upd}">${fmtDate(g.upd)}</time></span><span>${g.readMin} min read</span></div>
+<div class="byline"><span>By <a href="/authors/${author.slug}"><strong>${esc(author.name)}</strong></a></span>${reviewText}<span>Updated <time datetime="${g.upd}">${fmtDate(g.upd)}</time></span><span>${g.readMin} min read</span></div>
 <div class="answer"><b>In brief</b><p>${esc(g.desc)}</p></div></header>
 <div class="prose">${g.html}<h2 id="faq">Frequently asked questions</h2>${g.faqHtml}</div>
-${DISCLAIMER}
 </article><aside class="aside">${tocHtml}${calcBox}</aside></div>
 <section class="sec tight"><div class="sec-head"><h2>Keep reading</h2><a class="more" href="/topics/${g.topic.id}">More on ${esc(g.topic.name)}</a></div><div class="grid wide">${rel.map(guideCard).join('')}</div></section></div>`;
   emit(g.urlPath, {
     title: guideTitle(g.title), rawTitle: true, ogTitle: g.title, desc: trimTo(g.desc, 158), path: g.urlPath, body, type: 'article', published: g.pub + 'T08:00:00+05:30', modified: g.upd + 'T08:00:00+05:30', section: g.topic.name, image: `/img/og-${g.topic.id}.png`, imageAlt: g.title,
-    author: cfg.team, crumbs: [['Home', '/'], ['Guides', '/guides'], [g.topic.name, '/topics/' + g.topic.id], [g.title, g.urlPath]],
-    jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd, { '@type': 'Article', '@id': abs(g.urlPath) + '#article', headline: trimTo(g.title, 110), description: g.desc, image: [`${cfg.url}/img/og-${g.topic.id}.png`], datePublished: g.pub + 'T08:00:00+05:30', dateModified: g.upd + 'T08:00:00+05:30', author: { '@type': 'Organization', name: cfg.team, url: cfg.url + '/about' }, publisher: { '@id': cfg.url + '/#org' }, mainEntityOfPage: abs(g.urlPath), articleSection: g.topic.name, wordCount: g.words, inLanguage: 'en-IN', isAccessibleForFree: true, isPartOf: { '@id': cfg.url + '/#website' } }] }, faqLd(g.faqs)],
+    author: author.name, crumbs: [['Home', '/'], ['Guides', '/guides'], [g.topic.name, '/topics/' + g.topic.id], [g.title, g.urlPath]],
+    jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd, { '@type': 'Article', '@id': abs(g.urlPath) + '#article', headline: trimTo(g.title, 110), description: g.desc, image: [`${cfg.url}/img/og-${g.topic.id}.png`], datePublished: g.pub + 'T08:00:00+05:30', dateModified: g.upd + 'T08:00:00+05:30', author: { '@type': 'Person', name: author.name, url: cfg.url + '/authors/' + author.slug }, publisher: { '@id': cfg.url + '/#org' }, mainEntityOfPage: abs(g.urlPath), articleSection: g.topic.name, wordCount: g.words, inLanguage: 'en-IN', isAccessibleForFree: true, isPartOf: { '@id': cfg.url + '/#website' } }] }, faqLd(g.faqs)],
   });
   searchIndex.push({ t: g.title, u: g.urlPath, c: 'g', k: g.topic.name + ' ' + g.tags.join(' ') + ' ' + g.desc, p: 0 });
 }
@@ -146,7 +151,7 @@ ${DISCLAIMER}
 <div class="rows">${br.metrics.slice(0, 4).map((m) => `<div class="row"><span>${esc(m.label)}</span><b>${esc(m.value)}</b></div>`).join('')}</div></div></div></section>
 <div class="wrap"><div class="ruler"></div></div>`;
   const stepNames = ['Know your land', 'Choose your materials', 'Build the house', 'Buy and register', 'Power and water', 'Interiors and upkeep'];
-  const stepText = ['Units, plot measurement, carpet area, FSI and land records — before you pay a token amount.', 'Cement, steel, bricks, sand, concrete grades and paint: what to pick and how much to order.', 'Budgets, contractors, foundations, approvals and the inspection checklist that saves rework.', 'Stamp duty, RERA, title checks, mutation and the real total cost of a flat or plot.', 'Electricity bills, solar, inverters, AC sizing, water tanks and rainwater harvesting.', 'Staircases, kitchens, ceilings, flooring, damp and leakage, and renovating in the right order.'];
+  const stepText = ['Units, plot measurement, carpet area, FSI and land records — before you pay a token amount.', 'Cement, steel, bricks, sand, concrete grades and paint: what to pick and how much to order.', 'Budgets, contractors, foundations, approvals and the inspection checklist that saves rework.', 'Stamp duty, RERA, title checks, mutation and the real total cost of a flat or plot.', 'Electricity bills, solar, inverters, AC sizing, water tanks and rainwater harvesting.', 'Staircases, kitchens, ceilings, flooring, roofing, damp and leakage, and renovating in the right order.'];
   const journey = TOPICS.map((t, i) => `<div class="step" style="--hue:${t.hue}"><span class="num">0${i + 1}</span><h3>${stepNames[i]}</h3><p>${stepText[i]}</p><ul>${guides.filter((g) => g.topic === t).slice(0, 3).map((g) => `<li><a href="${g.urlPath}">${esc(trimTo(g.title.replace(/:.*$/, ''), 58))}</a></li>`).join('')}</ul><a class="go" href="/topics/${t.id}">All ${guides.filter((g) => g.topic === t).length} guides ${icon('arrow', 16)}</a></div>`).join('');
   const picks = ['steps-to-build-a-house-in-india', 'land-measurement-units-in-india', 'hidden-costs-of-buying-a-flat', 'carpet-vs-built-up-vs-super-built-up-area', 'tmt-steel-grades-fe500-fe500d-fe550', 'rooftop-solar-for-home-complete-guide'].map((s) => guides.find((g) => g.slug === s));
   const body = `<div class="wrap">
@@ -157,24 +162,24 @@ ${DISCLAIMER}
 <div class="promise"><div><span class="n">01</span><b>Standards first</b><p>Technical content follows Indian Standards and the National Building Code. See <a href="/sources">standards and sources</a>.</p></div><div><span class="n">02</span><b>Your numbers, not ours</b><p>Duties, tariffs and bigha sizes vary by state, so calculators ask for your local value. <a href="/how-we-calculate">How we calculate</a>.</p></div><div><span class="n">03</span><b>Nobody pays to be mentioned</b><p>No builder, brand or contractor sponsors a page. Ads are our only income. <a href="/editorial-policy">Editorial policy</a>.</p></div></div></section>
 <div class="wrap"><section class="sec narrow"><div class="sec-head"><h2>Questions people ask us</h2></div>${faqHtml(faqs)}</section>
 <section class="sec tight"><div class="cta-band"><div><h2>Can’t find the calculator you need?</h2><p>Tell us what you are trying to work out and we may build it.</p></div><a class="btn accent" href="/contact">Suggest a calculator ${icon('arrow', 18)}</a></div></section></div>`;
-  emit('/', { title: `${cfg.name} – Home Building & Buying Calculators for India`, rawTitle: true, ogTitle: 'Know your numbers before you build, buy or renovate', desc: '30 free calculators and 72 plain-English guides on land, bricks, cement, steel, house cost, stamp duty, solar and home upkeep in India.', path: '/', body, hero, modified: cfg.buildDate, crumbs: [], jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd] }, faqLd(faqs)] });
+  emit('/', { title: `${cfg.name} – Home Building & Buying Calculators for India`, rawTitle: true, ogTitle: 'Know your numbers before you build, buy or renovate', desc: '30 free calculators and 72 plain-English guides on land, bricks, cement, steel, house cost, stamp duty, solar and home upkeep in India.', path: '/', body, hero, modified: cfg.lastModified || '2026-11-22', published: cfg.launchDate || '2026-11-03', crumbs: [], jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd] }, faqLd(faqs)] });
 }
 
 // ================= HUBS =================
-emit('/calculators', { title: `30 Free Construction & Property Calculators | ${cfg.name}`, rawTitle: true, desc: 'Land area converter, brick, cement and steel calculators, house cost, stamp duty, home loan, solar, electricity bill and more. Free, accurate and private.', path: '/calculators', modified: cfg.buildDate, crumbs: [['Home', '/'], ['Calculators', '/calculators']],
+emit('/calculators', { title: `30 Free Construction & Property Calculators | ${cfg.name}`, rawTitle: true, desc: 'Land area converter, brick, cement and steel calculators, house cost, stamp duty, home loan, solar, electricity bill and more. Free, accurate and private.', path: '/calculators', modified: cfg.lastModified || '2026-11-22', published: cfg.launchDate || '2026-11-03', crumbs: [['Home', '/'], ['Calculators', '/calculators']],
   body: `<div class="wrap"><header style="padding:24px 0 4px;max-width:820px"><span class="kicker">Calculators</span><h1>Thirty tools for the numbers behind a home.</h1><p class="lead">Land and area, building materials, construction cost, property and home loans, and power, solar and water. Each page shows the formula, the assumptions, a worked example and answers to common questions.</p></header>
 <div class="pills">${calcCats.map((k) => `<a class="pill" style="--hue:${k.hue}" href="#${k.id}">${icon(k.icon, 16)} ${esc(k.name)}</a>`).join('')}</div>
 ${calcCats.map((k) => `<section class="sec tight" id="${k.id}" style="--hue:${k.hue}"><div class="sec-head"><div><span class="tag">${icon(k.icon, 16)} ${CALCS.filter((c) => c.category === k.id).length} calculators</span><h2 style="margin-top:8px">${esc(k.name)}</h2></div><p class="lead" style="margin:0;max-width:30em">${esc(k.desc)}</p></div><div class="grid">${CALCS.filter((c) => c.category === k.id).map(calcCard).join('')}</div></section>`).join('')}</div>`,
   jsonld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Construction and property calculators', url: abs('/calculators'), isPartOf: { '@id': cfg.url + '/#website' }, mainEntity: { '@type': 'ItemList', itemListElement: CALCS.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: abs('/' + c.slug), name: c.title })) } }] });
 
 const topicPills = `<div class="pills">${TOPICS.map((t) => `<a class="pill" style="--hue:${t.hue}" href="/topics/${t.id}">${icon(t.icon, 16)} ${esc(t.name)}</a>`).join('')}</div>`;
-emit('/guides', { title: `${guides.length} Guides on Building, Buying & Maintaining a Home | ${cfg.name}`, rawTitle: true, desc: 'Practical guides on land units, building materials, house construction, stamp duty and RERA, solar power, water and home maintenance in India.', path: '/guides', modified: cfg.buildDate, crumbs: [['Home', '/'], ['Guides', '/guides']],
+emit('/guides', { title: `${guides.length} Guides on Building, Buying & Maintaining a Home | ${cfg.name}`, rawTitle: true, desc: 'Practical guides on land units, building materials, house construction, stamp duty and RERA, solar power, water and home maintenance in India.', path: '/guides', modified: cfg.lastModified || '2026-11-22', published: cfg.launchDate || '2026-11-03', crumbs: [['Home', '/'], ['Guides', '/guides']],
   body: `<div class="wrap"><header style="padding:24px 0 4px;max-width:820px"><span class="kicker">Guides</span><h1>${guides.length} guides, written for the person signing the cheque.</h1><p class="lead">Six topics, written from Indian standards and official sources, with worked examples and a matching calculator wherever a number is involved.</p></header>${topicPills}${TOPICS.map((t) => `<section class="sec tight" id="${t.id}" style="--hue:${t.hue}"><div class="sec-head"><div><span class="tag">${icon(t.icon, 16)} ${guides.filter((g) => g.topic === t).length} guides</span><h2 style="margin-top:8px">${esc(t.name)}</h2></div><a class="more" href="/topics/${t.id}">Open topic</a></div><div class="grid wide">${guides.filter((g) => g.topic === t).map(guideCard).join('')}</div></section>`).join('')}</div>`,
   jsonld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Guides', url: abs('/guides'), isPartOf: { '@id': cfg.url + '/#website' } }] });
 for (const t of TOPICS) {
   const list = guides.filter((g) => g.topic === t);
-  emit('/topics/' + t.id, { title: `${t.name} Guides for India | ${cfg.name}`, rawTitle: true, desc: trimTo(t.desc, 158), path: '/topics/' + t.id, modified: cfg.buildDate, crumbs: [['Home', '/'], ['Guides', '/guides'], [t.name, '/topics/' + t.id]],
-    body: `<div class="wrap"><header style="padding:24px 0 4px;max-width:820px;--hue:${t.hue}"><span class="tag">${icon(t.icon, 16)} ${list.length} guides</span><h1 style="margin-top:12px">${esc(t.name)}</h1><p class="lead">${esc(t.desc)}</p></header>${topicPills}<div class="grid wide">${list.map(guideCard).join('')}</div></div>`,
+  emit('/topics/' + t.id, { title: `${t.name} Guides for India | ${cfg.name}`, rawTitle: true, desc: trimTo(t.desc, 158), path: '/topics/' + t.id, modified: cfg.lastModified || '2026-11-22', published: cfg.launchDate || '2026-11-03', crumbs: [['Home', '/'], ['Guides', '/guides'], [t.name, '/topics/' + t.id]],
+    body: `<div class="wrap"><header style="padding:24px 0 4px;max-width:820px;--hue:${t.hue}"><span class="tag">${icon(t.icon, 16)} ${list.length} guides</span><h1 style="margin-top:12px">${esc(t.name)}</h1><p class="lead">${esc(t.desc)}</p><p style="margin-top:14px;color:var(--ink-mid,#4a5568);line-height:1.65">${esc(t.overview)}</p></header>${topicPills}<div class="grid wide">${list.map(guideCard).join('')}</div></div>`,
     jsonld: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: t.name, url: abs('/topics/' + t.id), isPartOf: { '@id': cfg.url + '/#website' }, mainEntity: { '@type': 'ItemList', itemListElement: list.map((g, i) => ({ '@type': 'ListItem', position: i + 1, url: abs(g.urlPath), name: g.title })) } }] });
 }
 
@@ -182,11 +187,56 @@ for (const t of TOPICS) {
 for (const sp of STATIC_PAGES) {
   const ld = [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd, ...(sp.type ? [{ '@type': sp.type, '@id': abs(sp.path) + '#page', url: abs(sp.path), name: sp.title, isPartOf: { '@id': cfg.url + '/#website' } }] : [])] }];
   if (sp.faqs) ld.push(faqLd(sp.faqs));
-  emit(sp.path, { title: sp.title, desc: sp.desc, path: sp.path, modified: cfg.buildDate, crumbs: [['Home', '/'], [sp.title, sp.path]], jsonld: ld,
+  emit(sp.path, { title: sp.title, desc: sp.desc, path: sp.path, modified: sp.modified || cfg.lastModified || '2026-11-22', published: sp.published || cfg.launchDate || '2026-11-03', crumbs: [['Home', '/'], [sp.title, sp.path]], jsonld: ld,
     body: `<div class="wrap"><article class="narrow prose" style="padding:12px 0 0"><span class="kicker">${esc(sp.kicker || 'About Fingtaj')}</span><h1>${esc(sp.h1 || sp.title)}</h1><p class="meta">Last updated ${cfg.updatedLabel}</p>${sp.html}</article></div>` });
 }
-emit('/sitemap', { title: 'Site Map – All Calculators and Guides', desc: 'Every page on Fingtaj: calculators, guides, topics and policies in one place.', path: '/sitemap', modified: cfg.buildDate, crumbs: [['Home', '/'], ['Site map', '/sitemap']],
-  body: `<div class="wrap"><article class="narrow prose"><span class="kicker">Everything</span><h1>Site map</h1><h2>Calculators</h2><ul>${CALCS.map((c) => `<li><a href="/${c.slug}">${esc(c.title)}</a></li>`).join('')}</ul>${TOPICS.map((t) => `<h2><a href="/topics/${t.id}">${esc(t.name)}</a></h2><ul>${guides.filter((g) => g.topic === t).map((g) => `<li><a href="${g.urlPath}">${esc(g.title)}</a></li>`).join('')}</ul>`).join('')}<h2>About &amp; policies</h2><ul>${STATIC_PAGES.map((s) => `<li><a href="${s.path}">${esc(s.h1 || s.title)}</a></li>`).join('')}</ul></article></div>` });
+
+// ================= AUTHOR PAGES =================
+for (const author of AUTHORS) {
+  const authorGuides = guides.filter((g) => (g.author || 'ashutosh-jha') === author.slug);
+  const authorPath = `/authors/${author.slug}`;
+  const authorLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': cfg.url + authorPath + '#author',
+    name: author.name,
+    jobTitle: author.role,
+    description: author.bio,
+    url: abs(authorPath),
+    worksFor: { '@id': cfg.url + '/#org' },
+  };
+  const body = `<div class="wrap"><article class="narrow prose" style="padding:16px 0 0">
+    <span class="kicker">Author Profile</span>
+    <h1>${esc(author.name)}</h1>
+    <p class="lead" style="font-size:1.15rem;font-weight:600;color:var(--accent,#2f6b57)">${esc(author.role)} at ${cfg.name}</p>
+    <div class="panel" style="margin:20px 0;padding:20px;border-left:4px solid var(--accent,#2f6b57)">
+      <p style="margin:0 0 10px 0"><strong>Experience &amp; Background:</strong> ${esc(author.experience)}</p>
+      <p style="margin:0"><strong>Editorial Focus Areas:</strong> ${author.areas.join(' · ')}</p>
+    </div>
+    <h2>About ${esc(author.name.split(' ')[0])}</h2>
+    <p>${esc(author.bio)}</p>
+    <p>Ashutosh researches statutory land documentation, circle rate valuations, reducing-balance loan mechanics, and municipal approval processes, referencing primary standards from the Bureau of Indian Standards (BIS), National Building Code (NBC 2016), and state revenue gazettes.</p>
+    <p>To report an error, submit a calculation inquiry, or propose a topic, contact our desk via the <a href="/contact">contact page</a> or email <a href="mailto:${cfg.email}">${cfg.email}</a>.</p>
+    <h2>Guides Researched &amp; Authored by ${esc(author.name)} (${authorGuides.length})</h2>
+    <div class="grid wide" style="margin-top:20px">
+      ${authorGuides.map(guideCard).join('')}
+    </div>
+  </article></div>`;
+  emit(authorPath, {
+    title: `${author.name} – ${author.role} at ${cfg.name}`,
+    rawTitle: true,
+    desc: trimTo(author.bio, 158),
+    path: authorPath,
+    modified: cfg.lastModified || '2026-11-22',
+    published: cfg.launchDate || '2026-11-03',
+    crumbs: [['Home', '/'], ['Authors', authorPath], [author.name, authorPath]],
+    jsonld: [{ '@context': 'https://schema.org', '@graph': [websiteLd, orgLd, authorLd] }],
+    body,
+  });
+}
+
+emit('/sitemap', { title: 'Site Map – All Calculators and Guides', desc: 'Every page on Fingtaj: calculators, guides, topics and policies in one place.', path: '/sitemap', modified: cfg.lastModified || '2026-11-22', published: cfg.launchDate || '2026-11-03', crumbs: [['Home', '/'], ['Site map', '/sitemap']],
+  body: `<div class="wrap"><article class="narrow prose"><span class="kicker">Everything</span><h1>Site map</h1><h2>Calculators</h2><ul>${CALCS.map((c) => `<li><a href="/${c.slug}">${esc(c.title)}</a></li>`).join('')}</ul>${TOPICS.map((t) => `<h2><a href="/topics/${t.id}">${esc(t.name)}</a></h2><ul>${guides.filter((g) => g.topic === t).map((g) => `<li><a href="${g.urlPath}">${esc(g.title)}</a></li>`).join('')}</ul>`).join('')}<h2>Authors</h2><ul>${AUTHORS.map((a) => `<li><a href="/authors/${a.slug}">${esc(a.name)} (${esc(a.role)})</a></li>`).join('')}</ul><h2>About &amp; policies</h2><ul>${STATIC_PAGES.map((s) => `<li><a href="${s.path}">${esc(s.h1 || s.title)}</a></li>`).join('')}</ul></article></div>` });
 write('404.html', page({ title: 'Page not found', desc: 'This page could not be found.', path: '/404', noindex: true, body: `<div class="wrap narrow" style="padding:56px 0"><span class="kicker">Error 404</span><h1>That page has moved out.</h1><p class="lead">The page you were looking for doesn’t exist or has moved. Try one of these:</p><div class="pills"><a class="pill" href="/calculators">All calculators</a><a class="pill" href="/guides">All guides</a><a class="pill" href="/sitemap">Site map</a><button class="pill" data-search type="button">${icon('search', 16)} Search</button></div></div>` }, ctx));
 
 // ================= MACHINE-READABLE FILES =================
@@ -200,6 +250,12 @@ User-agent: Mediapartners-Google
 Allow: /
 
 User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
 Allow: /
 
 User-agent: Bingbot
@@ -229,13 +285,15 @@ write('llms.txt', `# ${cfg.name}
 
 > ${cfg.description}
 
-${cfg.name} is an independent, ad-supported educational site for Indian home builders, buyers and owners, founded by ${cfg.founder} and written by the ${cfg.team}. It is not a builder, broker or lender and gives no engineering, legal or tax advice. Calculators run client-side and collect no user data. Technical content follows Indian standards (IS 456, IS 1786, National Building Code) and official sources; figures that differ by state (stamp duty, tariffs, bigha size) are user inputs. Last review: ${cfg.updatedLabel}. When citing, please link to the specific page.
+${cfg.name} is an independent, ad-supported educational site for Indian home builders, buyers and owners, founded by ${cfg.founder} and written by ${cfg.founder}. It is not a builder, broker or lender and gives no engineering, legal or tax advice. Calculators run client-side and collect no user data. Technical content follows Indian standards (IS 456, IS 1786, National Building Code) and official sources; figures that differ by state (stamp duty, tariffs, bigha size) are user inputs. Last review: ${cfg.updatedLabel}. When citing, please link to the specific page.
 
 ## Key pages
 - [About](${cfg.url}/about)
+- [Author: ${cfg.founder}](${cfg.url}/authors/ashutosh-jha)
 - [Editorial policy](${cfg.url}/editorial-policy)
 - [How we calculate](${cfg.url}/how-we-calculate): constants, formulas and testing
 - [Standards and sources](${cfg.url}/sources)
+- [Corrections log](${cfg.url}/corrections)
 
 ## Calculators (${CALCS.length})
 ${CALCS.map((c) => `- [${c.title}](${abs('/' + c.slug)}): ${c.short} Formula: ${c.formula}`).join('\n')}
