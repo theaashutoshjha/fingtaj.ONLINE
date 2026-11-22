@@ -1,7 +1,7 @@
 // Guides: Building Materials
 export default [
   {
-    slug: 'types-of-cement-opc-ppc-psc', title: 'Types of Cement in India: OPC, PPC and PSC — Which One to Use?', date: '2026-10-17',
+    slug: 'types-of-cement-opc-ppc-psc', title: 'Types of Cement in India: OPC, PPC and PSC — Which One to Use?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Compare OPC 43, OPC 53, PPC and PSC cement: strength, setting, heat, durability and the right use for foundations, slabs, plaster and masonry.',
     tags: ['cement', 'opc', 'ppc', 'psc', 'grade'], calcs: ['concrete-calculator', 'plaster-calculator'],
     sections: [
@@ -15,7 +15,7 @@ export default [
     faqs: [['Is PPC weaker than OPC?', 'PPC gains strength more slowly in the first days but reaches similar or higher strength later and has better durability.'], ['Can I use OPC and PPC together?', 'Avoid mixing different types in the same batch. Use one type per pour.'], ['How long can I store cement?', 'In dry, raised storage for up to about 3 months; strength drops with age.']],
   },
   {
-    slug: 'how-to-check-cement-quality-at-site', title: 'How to Check Cement Quality at Site: Simple Tests and Storage Rules', date: '2026-10-18',
+    slug: 'how-to-check-cement-quality-at-site', title: 'How to Check Cement Quality at Site: Simple Tests and Storage Rules', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Easy site checks for cement quality — colour, lumps, packing date, hand test, float test — and storage rules that stop bags from going bad.',
     tags: ['cement', 'quality', 'storage', 'site test'], calcs: ['concrete-calculator'],
     sections: [
@@ -28,7 +28,7 @@ export default [
     faqs: [['Can I use cement with small lumps?', 'Soft lumps that crumble by finger are usually acceptable for non-structural work, but hard lumps mean the cement has partly set and should be rejected.'], ['How can I tell fake cement?', 'Buy from authorised dealers, check the packing and batch details and be wary of bags that look re-stitched. A lab test is the only certain way.'], ['Does water-cement ratio matter?', 'Yes. Too much water weakens concrete. Use only enough to make it workable.']],
   },
   {
-    slug: 'tmt-steel-grades-fe500-fe500d-fe550', title: 'TMT Steel Grades Explained: Fe500, Fe500D, Fe550 and Bar Weights', date: '2026-10-19',
+    slug: 'tmt-steel-grades-fe500-fe500d-fe550', title: 'TMT Steel Grades Explained: Fe500, Fe500D, Fe550 and Bar Weights', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'What Fe500, Fe500D and Fe550D mean, how to choose TMT bars for a house, a table of bar weights per metre and how to check genuine steel.',
     tags: ['tmt', 'steel', 'fe500', 'fe500d', 'rebar', 'weight'], calcs: ['steel-weight-calculator', 'material-thumb-rule-estimator'],
     sections: [
@@ -42,7 +42,7 @@ export default [
     faqs: [['Is Fe500D worth the extra cost?', 'The premium is usually small. The added ductility is valuable in seismic zones, so many engineers prefer it.'], ['How much steel does a house need?', 'Roughly 3 to 4.5 kg per sq ft of built-up area for typical residential buildings; the structural design gives the exact figure.'], ['Can I weld TMT bars?', 'Welding can weaken TMT bars; use lap splices or mechanical couplers unless the engineer approves a specific method.']],
   },
   {
-    slug: 'brick-types-compared-red-fly-ash-aac-concrete', title: 'Brick Types Compared: Red Clay, Fly Ash, AAC and Concrete Blocks', date: '2026-10-20',
+    slug: 'brick-types-compared-red-fly-ash-aac-concrete', title: 'Brick Types Compared: Red Clay, Fly Ash, AAC and Concrete Blocks', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Compare common walling units in India by strength, weight, insulation, cost and use, with notes on mortar and size to help you pick the right one.',
     tags: ['brick', 'fly ash', 'aac', 'concrete block', 'walling'], calcs: ['brick-quantity-calculator'],
     sections: [
@@ -56,7 +56,7 @@ export default [
     faqs: [['Which brick is best for a house?', 'It depends on the structure and climate; there is no single best. Good-quality units from a reliable supplier matter more than type.'], ['Are fly ash bricks strong?', 'Good ones are strong and uniform, but quality varies between makers. Insist on test certificates.'], ['Why are AAC blocks popular?', 'They are light, insulating and fast to install, which saves time and structure weight.']],
   },
   {
-    slug: 'aac-blocks-vs-red-bricks', title: 'AAC Blocks vs Red Bricks: Cost, Strength, Heat and Speed Compared', date: '2026-10-21',
+    slug: 'aac-blocks-vs-red-bricks', title: 'AAC Blocks vs Red Bricks: Cost, Strength, Heat and Speed Compared', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'A direct comparison of AAC blocks and red bricks for house walls: weight, insulation, strength, wall thickness, labour speed, plastering and total cost.',
     tags: ['aac', 'red brick', 'comparison', 'wall'], calcs: ['brick-quantity-calculator'],
     sections: [
@@ -70,7 +70,7 @@ export default [
     faqs: [['Does plaster crack on AAC?', 'It can if applied directly without a bonding coat or mesh at joints between different materials. Follow the manufacturer’s plastering guidance.'], ['Can I hang a TV on an AAC wall?', 'Yes, with fasteners made for AAC, not ordinary nails or plugs.'], ['Is AAC earthquake-safe?', 'In framed structures designed for seismic loads, its light weight helps. The frame design is what matters.']],
   },
   {
-    slug: 'river-sand-vs-m-sand-for-construction', title: 'River Sand vs M-Sand: Which Is Better for Construction?', date: '2026-10-22',
+    slug: 'river-sand-vs-m-sand-for-construction', title: 'River Sand vs M-Sand: Which Is Better for Construction?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare river sand and manufactured sand (M-sand) for concrete and plaster, with field tests for silt and fineness and tips for quality and cost.',
     tags: ['sand', 'm-sand', 'river sand', 'plaster', 'quality'], calcs: ['concrete-calculator', 'plaster-calculator'],
     sections: [
@@ -84,7 +84,7 @@ export default [
     faqs: [['Is M-sand safe for RCC?', 'Yes, when it conforms to the Indian standard and is well graded and washed.'], ['Why is river sand banned in some places?', 'To protect riverbeds and ecology from over-mining.'], ['Can I use sea sand?', 'No — salts corrode steel. Use only washed, salt-free sand.']],
   },
   {
-    slug: 'coarse-aggregate-sizes-and-uses', title: 'Coarse Aggregate Sizes and Uses: 10 mm, 20 mm and 40 mm', date: '2026-10-23',
+    slug: 'coarse-aggregate-sizes-and-uses', title: 'Coarse Aggregate Sizes and Uses: 10 mm, 20 mm and 40 mm', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Understand aggregate sizes in concrete, where 10, 20 and 40 mm stone is used, how shape and grading matter and how to check delivered material.',
     tags: ['aggregate', 'stone', 'concrete', 'metal'], calcs: ['concrete-calculator'],
     sections: [
@@ -97,7 +97,7 @@ export default [
     faqs: [['Which size aggregate for a slab?', '20 mm is standard for slabs and beams with normal reinforcement spacing; use 10–12.5 mm in dense bar congestion.'], ['What is “nominal size”?', 'The largest size that passes through the sieve, for example 20 mm aggregate is mostly retained on 10 mm and passes 20 mm.'], ['Can brick bats replace stone?', 'Only for non-structural fills like floor bases, never for structural concrete.']],
   },
   {
-    slug: 'concrete-grades-m15-m20-m25-explained', title: 'Concrete Grades M15, M20, M25 Explained: Mix Ratios and Where to Use Them', date: '2026-10-24',
+    slug: 'concrete-grades-m15-m20-m25-explained', title: 'Concrete Grades M15, M20, M25 Explained: Mix Ratios and Where to Use Them', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'What concrete grade means, nominal mix ratios, cement per cubic metre, which grade suits which part of a house and why design mix is used above M20.',
     tags: ['concrete', 'm20', 'm25', 'mix ratio', 'grade'], calcs: ['concrete-calculator'],
     sections: [
@@ -111,7 +111,7 @@ export default [
     faqs: [['Is M20 enough for a house slab?', 'It is the code minimum for RCC; many engineers choose M25. Follow the structural drawing.'], ['Can I mix M25 on site?', 'It is best made as a design mix or purchased as ready-mix. Nominal M25 ratios are not recommended by the code.'], ['What water-cement ratio should I use?', 'Typically about 0.45 to 0.55 for structural concrete; your engineer or mix design specifies it.']],
   },
   {
-    slug: 'curing-concrete-why-and-how', title: 'Curing Concrete: Why It Matters, How Long and Which Method to Use', date: '2026-10-25',
+    slug: 'curing-concrete-why-and-how', title: 'Curing Concrete: Why It Matters, How Long and Which Method to Use', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Proper curing makes concrete stronger and crack-free. Learn the duration, methods for slabs, columns and walls, and mistakes to avoid in hot weather.',
     tags: ['curing', 'concrete', 'slab', 'cracks'], calcs: ['concrete-calculator'],
     sections: [
@@ -125,7 +125,7 @@ export default [
     faqs: [['Can I use sprinklers on a slab?', 'Yes; ponding is better, but sprinkling several times daily is acceptable if the surface never dries.'], ['Do walls need curing?', 'Yes, plastered walls should be kept damp for about 7 to 10 days.'], ['What if it rains?', 'Rain can wash fresh concrete; cover it with plastic while it sets and cure normally afterwards.']],
   },
   {
-    slug: 'waterproofing-terrace-bathroom-basement', title: 'Waterproofing a House: Terrace, Bathroom and Basement Methods Compared', date: '2026-10-26',
+    slug: 'waterproofing-terrace-bathroom-basement', title: 'Waterproofing a House: Terrace, Bathroom and Basement Methods Compared', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare cementitious, liquid, bitumen and crystalline waterproofing for terraces, bathrooms and basements, with application steps and a ponding test.',
     tags: ['waterproofing', 'terrace', 'bathroom', 'basement', 'leakage'], calcs: ['concrete-calculator'],
     sections: [
@@ -139,7 +139,7 @@ export default [
     faqs: [['How long does waterproofing last?', 'Good systems last 7 to 15 years or more depending on the material and exposure. Check the manufacturer’s warranty.'], ['Is waterproofing needed in all bathrooms?', 'Yes, on every wet area floor and wall in contact with water.'], ['Who should apply it?', 'Use trained applicators approved by the product manufacturer to retain the warranty.']],
   },
   {
-    slug: 'wall-putty-and-primer-guide', title: 'Wall Putty and Primer: Types, Coats and the Right Order Before Painting', date: '2026-10-27',
+    slug: 'wall-putty-and-primer-guide', title: 'Wall Putty and Primer: Types, Coats and the Right Order Before Painting', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Cement-based vs acrylic wall putty, when to use primer, number of coats, drying times and surface preparation for a smooth, long-lasting paint finish.',
     tags: ['putty', 'primer', 'paint', 'wall'], calcs: ['paint-quantity-calculator'],
     sections: [
@@ -153,21 +153,42 @@ export default [
     faqs: [['Is putty necessary on new walls?', 'It is not always required but gives a smoother finish and better paint life, so it is recommended for most interiors.'], ['How long before painting after plaster?', 'Allow the plaster to cure and dry for about 3 to 4 weeks, longer in damp weather.'], ['Which is better — acrylic or cement putty?', 'Cement putty for exteriors and damp areas; acrylic for smooth interior walls.']],
   },
   {
-    slug: 'types-of-wall-paint-emulsion-distemper-enamel', title: 'Types of Wall Paint: Emulsion, Distemper, Enamel and Textured Finishes', date: '2026-10-28',
+    slug: 'types-of-wall-paint-emulsion-distemper-enamel', title: 'Types of Wall Paint: Emulsion, Distemper, Enamel and Textured Finishes', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Understand interior and exterior paints — distemper, plastic emulsion, acrylic, enamel and textured finishes — with finish types, durability and cost trade-offs.',
     tags: ['paint', 'emulsion', 'distemper', 'enamel', 'exterior'], calcs: ['paint-quantity-calculator'],
     sections: [
-      ['Choosing by room and exposure', 'Paint choice depends on where it goes. Interiors need washability and a pleasing finish; exteriors need weather and UV resistance; wood and metal need enamels. Costs rise with durability, but longer repaint cycles can offset the premium.'],
-      ['Main types', { table: [['Type', 'Typical use', 'Notes'], [['Distemper', 'Low-budget interiors, ceilings', 'Matt, water-based, not washable; lowest cost'], ['Acrylic emulsion', 'Interior walls', 'Washable; available in matt, satin, sheen; good value'], ['Premium / luxury emulsion', 'Living rooms, bedrooms', 'Smoother, stain-resistant, better colour retention'], ['Exterior emulsion', 'Outside walls', 'Weather, algae and UV resistance'], ['Enamel', 'Wood, doors, grills', 'Hard glossy finish; solvent-based, with a strong smell'], ['Texture paints', 'Feature walls, exteriors', 'Hide minor imperfections; higher cost and harder to repaint']].map((r) => r)] }],
-      ['Finish levels', 'Matt hides surface flaws and is common for living areas; satin and sheen are easier to clean and suit kitchens and children’s rooms; gloss is mostly for woodwork.'],
-      ['Reading the label', ['Coverage in sq ft per litre per coat, measured on a smooth surface.', 'Recommended number of coats.', 'Volatile organic compound (VOC) content — low-VOC is better indoors.', 'Warranty period for exterior paint.']],
-      ['Tips', ['Do not water down paint beyond the manufacturer’s recommendation.', 'Buy all the paint for a room at once so the batch colour matches.', 'Keep a litre for touch-ups.', 'Paint in dry weather with ventilation.']],
-      ['Quantity', 'The Paint Quantity Calculator estimates litres based on wall area, ceiling, coats and coverage.'],
+      ['Choosing by room and exposure', 'Selecting the appropriate wall paint formulation directly impacts both aesthetic quality and maintenance frequency in Indian homes. High humidity in coastal or monsoon regions promotes fungal and algal growth, while intense sunlight degrades exterior binders. Understanding the chemical and performance differences between distempers, standard emulsions, luxury acrylics, solvent enamels, and textured exterior coats ensures you achieve long-lasting finish quality without overspending.'],
+      ['Main types and comparative performance', { table: [['Paint Formulation', 'Primary Resin & Base', 'Durability & Washability', 'Ideal Application', 'Estimated Cost (₹/L)'], [
+        ['Traditional Distemper', 'Chalk / Lime + glue base', 'Low durability (1-2 yrs); not washable', 'Ceilings, rental properties, boundary interior', '₹40 - ₹80'],
+        ['Standard Acrylic Emulsion', 'Water-based acrylic polymer', 'Moderate (3-5 yrs); gently washable', 'Bedrooms, common hallways, rental flats', '₹150 - ₹280'],
+        ['Premium / Luxury Emulsion', 'Pure acrylic with silicone / teflon', 'High (6-8 yrs); scrub-resistant & stain-proof', 'Master bedrooms, living rooms, dining areas', '₹350 - ₹650'],
+        ['Exterior Weatherproof Emulsion', 'Modified acrylic with anti-algae biocide', 'High (5-7 yrs); UV and heavy rain resistant', 'External building facades, boundary walls', '₹280 - ₹550'],
+        ['Synthetic Enamel Paint', 'Oil / solvent-based alkyd resin', 'Very high; completely waterproof & hard', 'Wooden door frames, MS window grills, railings', '₹220 - ₹400'],
+        ['Textured Exterior Finishes', 'Coarse aggregates + acrylic binders', 'Extreme (7-10 yrs); covers masonry hairline flaws', 'Architectural elevation features, exterior pillars', '₹600 - ₹1,200'],
+      ]] }],
+      ['Sheen levels and functional trade-offs', 'Paint sheen levels dictate surface appearance and cleanability: (1) Matt finish reflects zero gloss, concealing uneven plaster undulations, making it ideal for ceilings and master bedrooms; (2) Satin and eggshell finishes offer a subtle silky sheen with balanced washability, well suited for living rooms; (3) Semi-gloss and gloss finishes reflect light brightly and resist moisture penetration, making them standard for kitchen wet areas, bathroom utility zones, and woodwork.'],
+      ['Mandatory surface preparation and primer application', { ol: [
+        'Check plaster moisture content: Never apply paint or wall putty to plaster that has not cured and dried for at least 21 to 28 days. Plaster moisture must register below 10% on a moisture meter, and surface pH must fall below 10.',
+        'Sand and dust off: Scrape loose mortar debris with a putty blade and sand the plaster with 80-grit sandpaper to create a sound mechanical bonding key.',
+        'Water-based masonry primer: Apply one thorough coat of alkali-resistant exterior or interior primer diluted strictly per manufacturer specifications (typically 1:1 with clean potable water).',
+        'Wall putty application: Apply two thin coats of white cement-based putty (maximum combined thickness 1.5 mm). Sand with 220-grit paper after complete drying to achieve an ultra-smooth finish.',
+        'Top coats: Apply two finish coats of chosen paint, observing mandatory 4-to-6-hour inter-coat drying intervals.',
+      ] }],
+      ['Critical tips for purchasing and application', [
+        'Coverage rates: Standard acrylic emulsions cover 120 to 140 sq ft per litre for two coats on primed surfaces. Use our Paint Quantity Calculator to estimate total litres before ordering.',
+        'Batch consistency: Purchase your entire estimated paint requirement in a single factory batch number to eliminate noticeable shade variations across large wall surfaces.',
+        'Avoid excessive thinning: Diluting emulsion paint with excess water reduces pigment opacity, diminishes washability, and leads to premature chalking.',
+      ]],
     ],
-    faqs: [['Distemper or emulsion?', 'Emulsion lasts longer and can be cleaned, so most homes now use it. Distemper is cheaper but fades and cannot be washed.'], ['How often should I repaint?', 'Interiors every 5 to 7 years; exteriors every 5 to 8 years depending on weather and paint quality.'], ['Is low-VOC paint worth it?', 'Yes for bedrooms and children’s rooms; it reduces smell and indoor air pollution.']],
+    faqs: [
+      ['Should I choose distemper or acrylic emulsion for a newly plastered home?', 'Acrylic emulsion is strongly recommended. While distemper has a lower upfront cost, it chalks off on contact, cannot be washed, and requires repainting every 2 years, making emulsion much cheaper over a 6-year period.'],
+      ['How long must I wait after cement plastering before painting?', 'Wait a minimum of 28 days for cement hydration to stabilize and free moisture to evaporate. Painting prematurely traps alkaline moisture, causing paint peeling, efflorescence salts, and blistering.'],
+      ['Are low-VOC (volatile organic compound) paints worth the extra expense?', 'Yes, particularly for interior bedrooms and children’s rooms. Low-VOC formulations emit negligible toxic solvent fumes, improving indoor air quality and eliminating harsh paint odors during application.'],
+      ['Is wall putty mandatory before painting new walls?', 'Putty is not strictly structural, but it fills microscopic surface pores and trowel imperfections in plaster. Skipping putty produces an uneven, patchy paint sheen on interior walls.'],
+    ],
   },
   {
-    slug: 'floor-tile-types-vitrified-ceramic-granite', title: 'Floor Tile Types in India: Vitrified, Ceramic, Granite, Kota and Marble', date: '2026-10-29',
+    slug: 'floor-tile-types-vitrified-ceramic-granite', title: 'Floor Tile Types in India: Vitrified, Ceramic, Granite, Kota and Marble', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare popular flooring materials for Indian homes by durability, maintenance, slip resistance, heat and cost, and find the right option for each room.',
     tags: ['tile', 'vitrified', 'ceramic', 'granite', 'marble', 'flooring'], calcs: ['tile-flooring-calculator'],
     sections: [
@@ -181,7 +202,7 @@ export default [
     faqs: [['Which is better — vitrified or ceramic?', 'Vitrified tiles are denser and stronger, so they suit floors; ceramic is fine for walls and light-use areas.'], ['How much wastage should I allow?', 'About 5 to 7 percent for straight layouts and 10 to 15 percent for diagonal or patterned layouts.'], ['Are polished tiles slippery?', 'Yes when wet. Choose matt or anti-skid finishes for wet areas.']],
   },
   {
-    slug: 'pipes-for-plumbing-cpvc-upvc-pvc-ppr', title: 'Plumbing Pipes Compared: CPVC, uPVC, PVC and PPR for Homes', date: '2026-10-30',
+    slug: 'pipes-for-plumbing-cpvc-upvc-pvc-ppr', title: 'Plumbing Pipes Compared: CPVC, uPVC, PVC and PPR for Homes', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Which pipe for which use: hot and cold water supply, drainage and soil lines. Compare CPVC, uPVC, PPR and PVC on temperature, joining method and cost.',
     tags: ['plumbing', 'cpvc', 'upvc', 'ppr', 'pipes'], calcs: ['water-tank-calculator'],
     sections: [

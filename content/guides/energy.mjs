@@ -1,7 +1,7 @@
 // Guides: Power, Solar & Water
 export default [
   {
-    slug: 'how-electricity-bill-is-calculated-in-india', title: 'How Your Electricity Bill Is Calculated in India: Slabs, Fixed Charges and Duty', date: '',
+    slug: 'how-electricity-bill-is-calculated-in-india', title: 'How Your Electricity Bill Is Calculated in India: Slabs, Fixed Charges and Duty', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Understand every line on a residential electricity bill — energy charge slabs, fixed charge, fuel adjustment, duty and taxes — and calculate it yourself.',
     tags: ['electricity bill', 'slab', 'tariff', 'units'], calcs: ['electricity-bill-calculator', 'appliance-energy-calculator'],
     sections: [
@@ -15,7 +15,7 @@ export default [
     faqs: [['Why is my bill higher in summer?', 'Air conditioners and coolers push consumption into higher slabs, which cost more per unit.'], ['What is sanctioned load?', 'The maximum power you are permitted to draw, which decides the fixed charge in many tariffs.'], ['Can I dispute a bill?', 'Yes. Contact your discom’s consumer helpline or forum with the meter reading evidence.']],
   },
   {
-    slug: 'ways-to-reduce-electricity-bill-at-home', title: '20 Ways to Reduce Your Electricity Bill at Home (With Real Numbers)', date: '',
+    slug: 'ways-to-reduce-electricity-bill-at-home', title: '20 Ways to Reduce Your Electricity Bill at Home (With Real Numbers)', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Practical steps to cut household power use: efficient AC use, LED and BLDC fans, smart habits, standby loads and solar, with a way to estimate each saving.',
     tags: ['reduce electricity bill', 'save power', 'ac', 'led', 'bldc fan'], calcs: ['appliance-energy-calculator', 'electricity-bill-calculator', 'solar-rooftop-calculator'],
     sections: [
@@ -30,7 +30,7 @@ export default [
     faqs: [['Which appliance uses the most electricity?', 'Air conditioners, geysers and room heaters when running; refrigerators use less power but run all day.'], ['Is a 5-star AC worth the extra cost?', 'For heavy use, usually yes; savings in electricity can offset the price difference within a few years.'], ['Do LED lights really save money?', 'Yes. They use far less power and last much longer than older bulbs.']],
   },
   {
-    slug: 'how-many-units-do-home-appliances-use', title: 'How Many Units Do Home Appliances Use? Wattage Guide and Cost Table', date: '',
+    slug: 'how-many-units-do-home-appliances-use', title: 'How Many Units Do Home Appliances Use? Wattage Guide and Cost Table', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Typical wattage and monthly units for AC, fan, fridge, geyser, TV, washing machine and lights in an Indian home, with a method to work out cost at your tariff.',
     tags: ['appliance', 'units', 'wattage', 'consumption'], calcs: ['appliance-energy-calculator', 'electricity-bill-calculator'],
     sections: [
@@ -43,7 +43,7 @@ export default [
     faqs: [['How many units does a fridge use in a month?', 'A modern frost-free 250-litre refrigerator typically uses 30 to 60 units a month depending on rating and ambient temperature.'], ['How many units does a 1.5 ton AC use in an hour?', 'About 1 to 1.5 units per hour, depending on the model, set temperature and room conditions.'], ['Is standby power significant?', 'It adds up across many devices, typically a few units per month per household.']],
   },
   {
-    slug: 'rooftop-solar-for-home-complete-guide', title: 'Rooftop Solar for Your Home: Cost, Size, Savings and What to Check', date: '',
+    slug: 'rooftop-solar-for-home-complete-guide', title: 'Rooftop Solar for Your Home: Cost, Size, Savings and What to Check', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'How rooftop solar works for a house, how to size a system from your bill, roof space, cost per kW, subsidy and payback, plus installer and warranty checks.',
     tags: ['solar', 'rooftop', 'payback', 'subsidy', 'net metering'], calcs: ['solar-rooftop-calculator', 'electricity-bill-calculator'],
     sections: [
@@ -57,7 +57,7 @@ export default [
     faqs: [['Will solar work in cloudy weather?', 'Output falls but does not stop; annual averages account for this.'], ['How big a system do I need for a 3BHK?', 'It depends on use; many families use 3 to 5 kW. Size from your own bills.'], ['Can I run my AC on solar?', 'Yes, on a grid-tied system during the day; at night you draw from the grid unless you have batteries.']],
   },
   {
-    slug: 'net-metering-explained', title: 'Net Metering Explained: How Rooftop Solar Credits Work', date: '',
+    slug: 'net-metering-explained', title: 'Net Metering Explained: How Rooftop Solar Credits Work', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'What net metering is, how import and export units are settled, typical process and paperwork, and what to check with your electricity distribution company.',
     tags: ['net metering', 'solar', 'export', 'discom'], calcs: ['solar-rooftop-calculator'],
     sections: [
@@ -71,7 +71,7 @@ export default [
     faqs: [['Do I need net metering for solar?', 'If your plant is grid-tied and you want to export surplus, yes. Off-grid plants do not need it.'], ['Will my bill become zero?', 'It can fall sharply, but fixed charges and minimum bills usually remain.'], ['How long does approval take?', 'It varies by discom; follow up with the portal and the vendor.']],
   },
   {
-    slug: 'how-to-size-an-inverter-and-battery-for-home', title: 'How to Size an Inverter and Battery for Your Home Backup', date: '',
+    slug: 'how-to-size-an-inverter-and-battery-for-home', title: 'How to Size an Inverter and Battery for Your Home Backup', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Step-by-step method to choose inverter capacity and battery size for power cuts, including load list, backup hours, tubular vs lithium and series-parallel banks.',
     tags: ['inverter', 'battery', 'backup', 'load', 'power cut'], calcs: ['inverter-battery-calculator', 'appliance-energy-calculator'],
     sections: [
@@ -85,7 +85,7 @@ export default [
     faqs: [['Can one inverter run the whole house?', 'It can if sized for the full load, but that requires a large inverter and bank; most people back up only essential circuits.'], ['How long does a tubular battery last?', 'Typically 4 to 7 years with proper maintenance.'], ['What does VA mean?', 'Volt-amperes; the apparent power rating of the inverter, which is higher than the real power in watts.']],
   },
   {
-    slug: 'solar-vs-inverter-for-power-backup', title: 'Solar Plant vs Inverter for Power Backup: Which Makes Sense?', date: '',
+    slug: 'solar-vs-inverter-for-power-backup', title: 'Solar Plant vs Inverter for Power Backup: Which Makes Sense?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare a conventional inverter, a grid-tied rooftop solar plant and a hybrid solar system for homes, with costs, backup behaviour and the best fit for each case.',
     tags: ['solar', 'inverter', 'backup', 'hybrid', 'power cut'], calcs: ['solar-rooftop-calculator', 'inverter-battery-calculator'],
     sections: [
@@ -98,7 +98,7 @@ export default [
     faqs: [['Does grid-tied solar work during a blackout?', 'No. It must shut down for safety unless it is a hybrid with a battery and backup circuit.'], ['Can I add batteries later?', 'Some inverters are battery-ready; ask for a hybrid-capable inverter if you may add storage.'], ['Which is cheaper over 10 years?', 'Grid-tied solar usually saves the most money because it cuts the bill, while inverters are only a cost for backup.']],
   },
   {
-    slug: 'how-to-choose-ac-size-and-type', title: 'How to Choose an Air Conditioner: Tonnage, Star Rating and Type', date: '',
+    slug: 'how-to-choose-ac-size-and-type', title: 'How to Choose an Air Conditioner: Tonnage, Star Rating and Type', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Pick the right AC capacity for your room, inverter vs fixed-speed, star rating, split vs window and installation tips for Indian homes.',
     tags: ['ac', 'tonnage', 'inverter ac', 'star rating', 'split ac'], calcs: ['ac-tonnage-calculator', 'appliance-energy-calculator'],
     sections: [
@@ -113,7 +113,7 @@ export default [
     faqs: [['Is 1.5 ton enough for a bedroom?', 'For a 120 to 180 sq ft bedroom, yes under normal conditions.'], ['Does a higher tonnage cool faster?', 'It cools faster but oversizing can cause humidity problems and waste energy.'], ['What temperature should I set?', '24 to 26 °C is comfortable and efficient for most people.']],
   },
   {
-    slug: 'water-tank-and-sump-planning-for-a-house', title: 'Water Tank and Sump Planning for a House: Sizes, Location and Cleaning', date: '',
+    slug: 'water-tank-and-sump-planning-for-a-house', title: 'Water Tank and Sump Planning for a House: Sizes, Location and Cleaning', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'How to size an overhead tank and underground sump, where to place them, materials, cover and overflow details, and how often to clean them.',
     tags: ['water tank', 'sump', 'overhead tank', 'plumbing', 'capacity'], calcs: ['water-tank-calculator'],
     sections: [
@@ -127,7 +127,7 @@ export default [
     faqs: [['What size overhead tank for a family of four?', 'About 500 to 700 litres for one day, so a 1,000-litre tank gives some extra buffer.'], ['Can I put the tank on a sloped roof?', 'Only on a properly designed platform; the structure must carry the load.'], ['Is a plastic tank safe for drinking water?', 'Yes if it is food-grade and kept clean and covered.']],
   },
   {
-    slug: 'rainwater-harvesting-for-homes', title: 'Rainwater Harvesting for Homes: Methods, Sizing, Cost and Maintenance', date: '',
+    slug: 'rainwater-harvesting-for-homes', title: 'Rainwater Harvesting for Homes: Methods, Sizing, Cost and Maintenance', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'How to collect rooftop rainwater for storage or groundwater recharge, including catchment, filters, first flush, recharge pits and how much you can collect.',
     tags: ['rainwater harvesting', 'recharge', 'roof', 'groundwater'], calcs: ['rainwater-harvesting-calculator', 'water-tank-calculator'],
     sections: [

@@ -1,7 +1,7 @@
 // Guides: Interiors, Maintenance & Renovation
 export default [
   {
-    slug: 'staircase-design-rules-and-dimensions', title: 'Staircase Design Rules: Riser, Tread, Width, Headroom and Safety', date: '',
+    slug: 'staircase-design-rules-and-dimensions', title: 'Staircase Design Rules: Riser, Tread, Width, Headroom and Safety', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Comfortable staircase dimensions for Indian homes — riser height, tread depth, width, landings, headroom and handrails — with worked examples.',
     tags: ['staircase', 'riser', 'tread', 'headroom', 'design'], calcs: ['staircase-calculator'],
     sections: [
@@ -15,7 +15,7 @@ export default [
     faqs: [['What is the ideal riser height?', 'Around 150 to 175 mm for comfort; do not exceed 190 mm in homes.'], ['How many steps for 10 ft height?', 'About 18 to 20 steps at 150 to 170 mm risers.'], ['Does the staircase count in built-up area?', 'Yes, for construction costing; for FSI it depends on local rules.']],
   },
   {
-    slug: 'modular-kitchen-cost-and-layouts', title: 'Modular Kitchen: Layouts, Materials and What Affects the Cost', date: '',
+    slug: 'modular-kitchen-cost-and-layouts', title: 'Modular Kitchen: Layouts, Materials and What Affects the Cost', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare straight, L-shaped, U-shaped, parallel and island layouts, carcass and shutter materials, countertops, hardware and how kitchen cost is calculated.',
     tags: ['modular kitchen', 'layout', 'countertop', 'cost', 'interior'], calcs: ['interior-cost-calculator'],
     sections: [
@@ -29,7 +29,7 @@ export default [
     faqs: [['How long does a modular kitchen take?', 'Typically 30 to 60 days after design approval, depending on manufacturing and site conditions.'], ['Is plywood better than HDHMR?', 'Both have uses; marine-grade plywood or properly treated boards perform better where moisture is high.'], ['Which countertop lasts longest?', 'Granite and quartz are hard-wearing and heat-resistant, while stainless steel is very durable.']],
   },
   {
-    slug: 'how-to-plan-a-home-interior-budget', title: 'How to Plan a Home Interior Budget Without Overspending', date: '',
+    slug: 'how-to-plan-a-home-interior-budget', title: 'How to Plan a Home Interior Budget Without Overspending', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'A step-by-step method to set an interior budget, allocate it by room, choose between designer and contractor, and control changes and extras.',
     tags: ['interior', 'budget', 'designer', 'carpentry'], calcs: ['interior-cost-calculator', 'house-budget-planner'],
     sections: [
@@ -43,7 +43,7 @@ export default [
     faqs: [['How much should I spend on interiors?', 'Many owners spend 8 to 15 percent of the total home cost; adjust to your finances.'], ['Can I do interiors in phases?', 'Yes. Start with the kitchen, wardrobes and essential lighting, and add the rest over time.'], ['How do I compare two quotes?', 'Convert both to the same scope and compare item by item, not just the total.']],
   },
   {
-    slug: 'false-ceiling-types-and-cost-factors', title: 'False Ceiling Types: Gypsum, POP, PVC and Grid Ceilings Compared', date: '',
+    slug: 'false-ceiling-types-and-cost-factors', title: 'False Ceiling Types: Gypsum, POP, PVC and Grid Ceilings Compared', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'What false ceilings do, the main types available in India, pros and cons, height and moisture considerations and what determines the cost per square foot.',
     tags: ['false ceiling', 'gypsum', 'pop', 'pvc', 'interior'], calcs: ['interior-cost-calculator'],
     sections: [
@@ -57,7 +57,7 @@ export default [
     faqs: [['Is a false ceiling necessary?', 'No. It is optional and mostly for appearance and concealed lighting.'], ['Can I install it on a rented house?', 'Only with the owner’s permission, and it is usually not removable without damage.'], ['Does a false ceiling reduce cooling cost?', 'It can slightly reduce the volume to be cooled and add insulation if filled, but the effect is modest.']],
   },
   {
-    slug: 'how-to-estimate-paint-for-a-house', title: 'How to Estimate Paint for a Whole House: Walls, Ceilings, Doors and Exterior', date: '',
+    slug: 'how-to-estimate-paint-for-a-house', title: 'How to Estimate Paint for a Whole House: Walls, Ceilings, Doors and Exterior', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'A room-by-room method to measure paintable area, estimate litres of primer, putty and paint, and check quotes from painters.',
     tags: ['paint estimate', 'house painting', 'litres', 'quote'], calcs: ['paint-quantity-calculator'],
     sections: [
@@ -71,7 +71,7 @@ export default [
     faqs: [['How much paint for a 1,000 sq ft flat?', 'Roughly 40 to 60 litres of emulsion for two coats, depending on ceiling height and the number of walls.'], ['How many coats should the painter apply?', 'Two coats of emulsion over primer for new walls; confirm in the quote.'], ['Should I buy all the paint at once?', 'Yes, buy from the same batch to avoid colour variation.']],
   },
   {
-    slug: 'damp-walls-causes-and-fixes', title: 'Damp Walls and Seepage: Causes, Diagnosis and Permanent Fixes', date: '',
+    slug: 'damp-walls-causes-and-fixes', title: 'Damp Walls and Seepage: Causes, Diagnosis and Permanent Fixes', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Why walls get damp — rising damp, leaking pipes, roof seepage and condensation — how to find the source and the right repair method for each.',
     tags: ['damp', 'seepage', 'leak', 'wall', 'waterproofing'], calcs: ['plaster-calculator'],
     sections: [
@@ -85,7 +85,7 @@ export default [
     faqs: [['How long should I wait before repainting?', 'Until the wall is fully dry, which may take several weeks after the leak is fixed.'], ['Is damp harmful?', 'Persistent damp can cause mould, which affects health, and damages plaster and steel.'], ['Can I fix rising damp myself?', 'Minor cases can be improved with drainage and special plaster, but a lasting fix usually needs a specialist treatment.']],
   },
   {
-    slug: 'bathroom-leakage-causes-and-repair', title: 'Bathroom Leakage: Causes and How to Repair It Properly', date: '',
+    slug: 'bathroom-leakage-causes-and-repair', title: 'Bathroom Leakage: Causes and How to Repair It Properly', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Why bathrooms leak into the room below, how to test for leaks, repair options without breaking everything and how to prevent a repeat.',
     tags: ['bathroom', 'leak', 'waterproofing', 'plumbing', 'repair'], calcs: ['tile-flooring-calculator'],
     sections: [
@@ -99,7 +99,7 @@ export default [
     faqs: [['Can I fix a leak without breaking the floor?', 'Injection grouting and surface coatings can work for minor cases, but a failed waterproof layer usually needs redoing.'], ['Who is responsible in a flat?', 'The owner of the flat where the leak starts, subject to the society’s rules and the cause.'], ['How long does a repair take?', 'A full redo takes 5 to 10 days including curing and the ponding test.']],
   },
   {
-    slug: 'flooring-options-compared-for-indian-homes', title: 'Flooring Options for Indian Homes: Cost, Heat, Maintenance and Where to Use Each', date: '',
+    slug: 'flooring-options-compared-for-indian-homes', title: 'Flooring Options for Indian Homes: Cost, Heat, Maintenance and Where to Use Each', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Vitrified tiles, marble, granite, Kota, wooden and vinyl flooring compared on durability, comfort, upkeep and best-use rooms, with a way to estimate quantity.',
     tags: ['flooring', 'marble', 'granite', 'wooden floor', 'vitrified'], calcs: ['tile-flooring-calculator'],
     sections: [
@@ -112,7 +112,7 @@ export default [
     faqs: [['Which flooring is coolest in summer?', 'Natural stones such as marble and Kota stay cooler than most tiles.'], ['Is wooden flooring suitable for India?', 'Engineered wood and well-sealed solid wood can work in dry rooms, but humidity and termites need attention.'], ['Which flooring is cheapest?', 'Cement and basic ceramic tiles are the lowest cost; vitrified tiles offer good value.']],
   },
   {
-    slug: 'sheet-vs-tile-sloped-roofs-materials-and-area', title: 'Sloped Roofs: Metal Sheets vs Clay Tiles vs Concrete Tiles and How to Measure the Area', date: '',
+    slug: 'sheet-vs-tile-sloped-roofs-materials-and-area', title: 'Sloped Roofs: Metal Sheets vs Clay Tiles vs Concrete Tiles and How to Measure the Area', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare common sloped roofing materials, minimum slopes, weight and cost, and learn how to measure true roof area and the number of sheets or tiles needed.',
     tags: ['roof', 'sloped roof', 'metal sheet', 'tile', 'area'], calcs: ['sloped-roof-area-calculator'],
     sections: [
@@ -126,7 +126,7 @@ export default [
     faqs: [['What slope is best for a metal roof?', 'Many sheet profiles work from about 10 degrees; ask your supplier for the minimum for the profile you choose.'], ['Why does a tin roof get hot?', 'Metal conducts heat quickly; insulation or reflective coatings reduce the effect.'], ['How do I convert pitch to degrees?', 'Take the rise per 12 inches of run, compute the arctangent of rise divided by 12.']],
   },
   {
-    slug: 'home-renovation-planning-order-of-work', title: 'Home Renovation: The Right Order of Work, Budget and Timeline', date: '',
+    slug: 'home-renovation-planning-order-of-work', title: 'Home Renovation: The Right Order of Work, Budget and Timeline', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Plan a renovation in the right order — civil, plumbing, electrical, waterproofing, ceilings, flooring, carpentry, paint — to avoid rework and overruns.',
     tags: ['renovation', 'order of work', 'budget', 'timeline', 'remodel'], calcs: ['interior-cost-calculator', 'tile-flooring-calculator', 'paint-quantity-calculator'],
     sections: [

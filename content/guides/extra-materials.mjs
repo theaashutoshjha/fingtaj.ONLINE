@@ -1,73 +1,218 @@
-// Additional sections appended to the materials guides.
+// Expanded sections for Building Materials flagship guides.
+import { DIAGRAMS } from './diagrams.mjs';
+
 export default {
   'types-of-cement-opc-ppc-psc': [
-    ['Which cement for which part of a house', { table: [['Element', 'Common choice', 'Reason'], [['Foundation and plinth', 'PPC or PSC', 'Better resistance to soil chemicals and moisture'], ['Columns, beams and slabs', 'PPC or OPC 43 as specified', 'Follow the structural engineer; use OPC when early strength is needed'], ['Brickwork and plaster', 'PPC', 'Cohesive, smoother mortar and less cracking'], ['Precast items and quick de-shuttering', 'OPC 53', 'Faster strength gain'], ['Water tanks and sumps', 'PPC or PSC with waterproofing', 'Lower permeability'], ['Tile fixing and grouting', 'Polymer-modified adhesive or white cement', 'Better bond than plain mortar']].map((r) => r)] }],
-    ['A quantity example', 'A 1,000 sq ft RCC slab at 5 inches (127 mm) has about 11.8 m³ of concrete. In M20 (1:1.5:3) with 5 percent wastage, that is about 12.4 m³ and roughly 100 bags of cement. Switching between OPC and PPC does not change the number of bags in a nominal mix, but PPC slabs usually need a day or two more before shuttering is removed, and curing for 10 days instead of 7.'],
-    ['Common questions at the dealer', ['Ask for the BIS licence number and manufacturing date; avoid stock older than three months.', 'Ask whether the bag is OPC or PPC; the type is printed on the bag.', 'Compare price per 50 kg bag from at least two dealers; transport and unloading charges can differ.', 'Do not mix brands in the same pour or the same batch of plaster.']],
+    ['Cement Types and Hydration Matrix', DIAGRAMS.cementTypes],
+    ['State-wise cement selection and environmental exposure (As on November 2026)',
+      { table: [
+        ['Region / State', 'Dominant Soil / Exposure Condition', 'Recommended Cement Type per IS 456', 'Key Construction Rationale'],
+        [
+          ['Coastal Maharashtra & Goa', 'Severe marine exposure, high salinity & humidity', 'Portland Slag Cement (PSC) or PPC', 'Prevents chloride attack on reinforcement rebar and reduces permeability.'],
+          ['Karnataka & Interior Deccan', 'Normal inland, hard granite bedrock', 'PPC (IS 1489 Part 1) or OPC 43/53', 'PPC provides superior long-term durability and cohesive plastering mortar.'],
+          ['Coastal Tamil Nadu & Kerala', 'High groundwater, tidal saline environment', 'PSC (IS 455) or Sulfate-Resistant PPC', 'Resists ground sulfate expansion and prevents concrete spalling.'],
+          ['Punjab, Haryana & UP', 'Alluvial plains, temperature extremes (0°C to 48°C)', 'PPC for general RCC; OPC 53 for winter cold pour', 'PPC prevents thermal cracking during intense summer hydration.'],
+          ['Rajasthan (Desert / Saline)', 'High sulfate alkaline soils, arid climate', 'Sulfate-Resisting Portland Cement or PPC', 'Protects substructure concrete footings from alkaline mineral expansion.']
+        ]
+      ] },
+      'Under IS 456:2000 (Table 4 and Table 5), environmental exposure is categorized from "Mild" to "Extreme". Coastal and aggressive soil conditions mandate blended cements (PPC/PSC) with low permeability rather than high-early-strength pure OPC.'
+    ],
+    ['Common mistakes when purchasing and storing cement',
+      [
+        'Using OPC 53 for general wall plastering and brickwork: High heat of hydration in OPC 53 causes rapid drying shrinkage, resulting in extensive map cracking on plastered surfaces.',
+        'Accepting cement bags manufactured more than 90 days earlier: Per IS 269 and IS 1489, cement strength drops by roughly 20% after 3 months of atmospheric storage.',
+        'Mixing different cement brands or grades in the same concrete slab or plaster batch, creating uneven setting rates and structural stress cracks.',
+        'Storing cement bags directly on bare concrete floors or against exterior walls: Always stack on wooden pallets raised at least 150mm above the ground and 300mm away from walls.',
+        'Stopping curing too early: Blended cements (PPC and PSC) hydrate more slowly and require a mandatory minimum of 10 to 14 days of wet curing compared to 7 days for OPC.'
+      ]
+    ],
+    ['Checklist for receiving cement bags at the construction site',
+      { ol: [
+        'Inspect the manufacturer packaging for the official BIS Standard Mark (ISI mark) and license CM/L number.',
+        'Check the printed date of manufacture (Week and Year) printed on the side edge of every bag; reject stock older than 60–90 days.',
+        'Verify the grade and type: "OPC 53", "OPC 43", "PPC (Fly Ash Based)", or "PSC".',
+        'Check bag condition: Reject torn, damp, or re-stitched bags, or bags containing hard lumps that cannot be powdered between your fingers.',
+        'Perform basic field quality tests: Insert your dry hand into a bag (it should feel cool, not warm) and pinch a sample (it should feel silky smooth without gritty sand).',
+        'Store in a completely weather-tight shed in stacks no higher than 10 bags to prevent warehouse set (compaction hardening).'
+      ] }
+    ],
+    ['Worked numerical example for a 1,200 sq ft RCC slab',
+      'Suppose an owner is casting a 1,200 sq ft residential roof slab of 5 inches (0.4167 ft) thickness using standard M20 nominal concrete mix (1:1.5:3). Let us calculate the exact number of cement bags required.',
+      'Step 1 (Calculate Wet Concrete Volume): Wet Volume = 1,200 sq ft × 0.4167 ft = 500 cubic feet = 14.16 cubic metres.',
+      'Step 2 (Apply Dry Volume Expansion Factor): As detailed on our How We Calculate page, concrete shrinks during mixing as water fills voids. The standard dry volume factor is 1.54. Dry Mix Volume = 14.16 m³ × 1.54 = 21.81 m³.',
+      'Step 3 (Calculate Cement Volume): In an M20 mix (1 part cement + 1.5 parts sand + 3 parts aggregate = 5.5 total parts), cement share = 1 ÷ 5.5 = 18.18% of dry volume. Cement Volume = 21.81 m³ × (1 / 5.5) = 3.965 m³.',
+      'Step 4 (Convert to 50 kg Bags): One standard 50 kg cement bag has a volume of 0.0347 m³ (based on density of 1,440 kg/m³). Number of Bags = 3.965 m³ ÷ 0.0347 m³/bag = 114.2 bags. Adding standard 5% on-site handling and shuttering wastage gives 114.2 × 1.05 = 120 bags.',
+      'Conclusion: For this 1,200 sq ft slab, order exactly 120 bags of cement. Whether you choose PPC or OPC, the volume calculation remains 120 bags, but PPC will demand at least 10 days of continuous water ponding.',
+      '<!-- [OWNER: add real photo of cement bag date stamping and site stacking on wooden pallets] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'IS 456:2000 (Reaffirmed 2021) – Plain and Reinforced Concrete: Code of Practice.',
+        'IS 269:2015 – Ordinary Portland Cement: Specification (33, 43 and 53 Grades).',
+        'IS 1489 (Part 1):2015 – Portland Pozzolana Cement: Specification (Fly Ash Based).',
+        'IS 455:2015 – Portland Slag Cement: Specification.',
+        'CPWD Specifications 2019 (Volume 1) – Section 3: Mortar and Section 4: Concrete Work.'
+      ]
+    ]
   ],
-  'how-to-check-cement-quality-at-site': [
-    ['How strength drops with age', 'Cement is hygroscopic, meaning it absorbs moisture from air even in a closed bag. As a rough guide, strength can fall by about 20 percent after three months of storage, about 30 percent after six months and about 40 percent after twelve. These are indicative figures from construction practice and vary with storage conditions; the lesson is simply to buy only what you will use within weeks and rotate stock so the oldest bags go first.'],
-    ['A step-by-step receiving routine', { ol: ['Count the bags and check the delivery challan against your order.', 'Open one bag in ten for a quick look at colour and lumps.', 'Weigh at least five bags on a platform scale to verify 50 kg.', 'Photograph the bag details, including batch number and packing date.', 'Place bags on a raised platform immediately, not on the bare floor or wet ground.', 'Record the date of arrival on the stack and use first-in-first-out.'] }],
-    ['If you find a problem', 'Do not accept bags with hard lumps, wetness, torn packaging or a past manufacturing date. Return them with a written note to the supplier the same day. For large purchases, you can send a sample to an accredited lab for physical tests such as fineness, setting time and compressive strength. For ordinary house construction, concrete cube tests from the actual pour are usually the most practical check.'],
-  ],
+
   'tmt-steel-grades-fe500-fe500d-fe550': [
-    ['Worked example: ordering steel for a small slab', 'A 12 ft × 15 ft slab uses 10 mm bars at 6 inches both ways. Bars along the 15 ft length number about 25 (12 ft ÷ 0.5 ft + 1), each 15 ft plus laps; bars the other way about 31. Allow roughly 5 percent for laps and cuts, so total length ≈ (25 × 15 + 31 × 12) × 1.05 ≈ 784 ft ≈ 239 m. Weight is 239 × 0.617 ≈ 147 kg. Use the Steel Weight Calculator to try different diameters and spacings, but always follow the engineer’s bar bending schedule.'],
-    ['Cover, lap and spacing basics', ['Concrete cover protects steel from corrosion; typical clear cover is 20 to 25 mm for slabs, 40 mm for columns and 50 mm for footings, as specified by the engineer.', 'Lap length depends on bar diameter and grade; it is often 40 to 60 times the bar diameter.', 'Tie bars firmly at crossings and use cover blocks, not stones or broken bricks.', 'Never cut or relocate bars on site without approval.']],
-    ['Spotting poor-quality steel', 'Under-weight bars are common: a 12 mm bar that weighs 0.82 kg per metre instead of 0.889 is about 8 percent lighter. Weigh a sample length (for example one metre cut from a bar) and compare. Check that the manufacturer’s mark, grade and size are rolled on the bar and that ribs are uniform. Ask the supplier for mill test certificates and keep the bills with batch numbers.'],
+    ['TMT Bar Cross-Section and Mass Formula', DIAGRAMS.tmtSteel],
+    ['State-wise seismic zoning and recommended TMT steel grades (As on November 2026)',
+      { table: [
+        ['State / Territory', 'Primary Seismic Zone (IS 1893)', 'Mandatory / Recommended Steel Grade', 'Key Structural Hazard Factor'],
+        [
+          ['Delhi / NCR', 'Zone IV (Severe Seismic Risk)', 'Fe 500D or Fe 550D only', 'High earthquake vulnerability requires minimum 16% elongation to absorb lateral ground shocks without brittle rebar fracture.'],
+          ['Uttarakhand & Himachal', 'Zone IV & Zone V (Very Severe)', 'Fe 500D (Ductile Grade)', 'Tectonic fault lines require high ductility rebars that deform plastically during tremors.'],
+          ['Maharashtra (Mumbai/Pune)', 'Zone III (Moderate Seismic Risk)', 'Fe 500 or Fe 500D', 'Zone III RCC frames require ductile detailing per IS 13920.'],
+          ['Tamil Nadu & Karnataka', 'Zone II & Zone III (Low to Moderate)', 'Fe 500 or Fe 550', 'General residential frame design; Fe 500 provides standard structural strength.'],
+          ['Gujarat (Kutch / Saurashtra)', 'Zone IV & Zone V (Bhuj fault zone)', 'Fe 500D or Corrosion-Resistant (CRS)', 'High seismic risk combined with coastal salinity demands ductile, corrosion-resistant steel.']
+        ]
+      ] },
+      'The "D" designation in Fe 500D stands for "Ductile". Per IS 1786:2008, standard Fe 500 requires a minimum elongation of 12%, whereas Fe 500D mandates a minimum elongation of 16% with tightly controlled phosphorus and sulphur limits (maximum 0.040% each).'
+    ],
+    ['Common mistakes when purchasing and inspecting TMT steel',
+      [
+        'Buying commercial re-rolled steel instead of primary primary-producer TMT: Secondary re-rolled bars often fail elongation and tensile strength tests and lack uniform ribbed bonding.',
+        'Purchasing steel without verifying weight per metre (rolling margin): Under-weight bars may save upfront cost but violate structural engineering safety tolerances.',
+        'Allowing steel to rust heavily on bare earth: Light brownish surface patina is normal, but deep pitting flaking weakens the effective structural cross-section.',
+        'Using broken bricks or stones instead of certified concrete/PVC cover blocks: Improper cover exposes rebars to rapid moisture corrosion and concrete spalling.',
+        'Bending bars cold beyond 90 degrees and re-straightening them on site: Re-bending severely weakens the crystalline structure of high-strength steel.'
+      ]
+    ],
+    ['Checklist for on-site TMT steel verification',
+      { ol: [
+        'Inspect the rolled marking on the bar surface: Confirm brand name, diameter (e.g. 12mm), and grade ("Fe 500D") are embossed at 1-metre intervals.',
+        'Demand the manufacturer’s Test Certificate (MTC) for the specific batch, checking yield stress (minimum 500 N/mm²) and elongation (minimum 16%).',
+        'Cut a precise 1.0-metre sample from a delivery bundle and weigh it on a calibrated platform scale.',
+        'Compare measured weight against the theoretical standard formula: `Weight = d² ÷ 162.28 kg/m`. Check that it falls within BIS rolling tolerances (±7% for 8-10mm, ±4% for 16mm+).',
+        'Ensure rebar is stored on elevated wooden or concrete sleepers at least 200mm above ground, covered with waterproof tarpaulins.'
+      ] }
+    ],
+    ['Worked numerical example using our Steel Weight Calculator',
+      'Suppose a structural drawing specifies reinforcement for 10 RCC columns, each 10 feet (3.048 m) high. Each column requires 4 vertical main bars of 16mm diameter, and 8mm stirrups (lateral ties) spaced at 6 inches (150 mm) c/c with a perimeter of 40 inches (1.016 m) per tie. Let us compute the total steel weight.',
+      'Step 1 (Calculate Main Vertical Rebars): 10 columns × 4 bars = 40 bars of 16mm. Length per bar (including 40d foundation lap) = 10 ft + (40 × 0.052 ft) ≈ 12 ft (3.66 m). Total length = 40 × 3.66 m = 146.4 metres. Using formula `d²/162`: 16² ÷ 162 = 1.580 kg/m. Total 16mm weight = 146.4 m × 1.580 kg/m = 231.3 kg.',
+      'Step 2 (Calculate 8mm Stirrups): Number of ties per 10-ft column = 20 ties. Total ties for 10 columns = 200 ties. Length per tie (including 135° seismic hooks) = 1.016 m + 0.15 m = 1.166 m. Total 8mm length = 200 × 1.166 m = 233.2 metres. Using formula `8²/162` = 0.395 kg/m. Total 8mm weight = 233.2 m × 0.395 kg/m = 92.1 kg.',
+      'Step 3 (Total Weight and Procurement): Total structural weight = 231.3 kg (16mm) + 92.1 kg (8mm) = 323.4 kg. Adding standard 5% cutting and bend wastage gives 323.4 × 1.05 = 339.6 kg (0.34 tonnes).',
+      'Conclusion: Our Steel Weight Calculator accurately establishes the bill of quantities before placing orders with distributors, preventing contractor over-ordering or steel theft.',
+      '<!-- [OWNER: add real photo of TMT steel rebar inspection showing embossed grade and digital weighbridge slip] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'IS 1786:2008 (Reaffirmed 2018) – High Strength Deformed Steel Bars and Wires for Concrete Reinforcement.',
+        'IS 13920:2016 – Ductile Design and Detailing of Reinforced Concrete Structures Subjected to Seismic Forces.',
+        'IS 456:2000 – Section 5.6: Reinforcement Specifications and Section 26: Detailing Rules.',
+        'SP 34:1987 – Handbook on Concrete Reinforcement and Detailing (BIS).',
+        'National Building Code of India 2016 (Part 6: Structural Design, Section 5: Concrete).'
+      ]
+    ]
   ],
+
   'brick-types-compared-red-fly-ash-aac-concrete': [
-    ['Worked example: a boundary wall', 'A 100 ft long, 6 ft high, 9-inch thick boundary wall with modular bricks has a volume of 100 × 6 × 0.75 = 450 cu ft, or 12.7 m³, and needs about 6,700 bricks including 5 percent wastage, with 1:6 mortar for the joints (the Brick Quantity Calculator gives the exact figure for your inputs). With AAC blocks 200 mm thick, the wall would need around 470 blocks (about 490 with wastage). Costs per wall must include foundation, plaster and labour, not only the unit price.'],
-    ['Matching unit to function', ['Load-bearing walls: solid bricks or solid concrete blocks, with engineer approval.', 'Infill walls in RCC buildings: AAC, hollow blocks or lighter bricks.', 'Compound walls: solid bricks or concrete blocks with piers and a coping.', 'Wet areas: dense bricks or blocks with waterproofing; AAC needs protection from constant moisture.', 'Fire-rated walls: AAC and solid masonry perform well.']],
-    ['Cracks and movement joints', 'Different materials expand and contract differently. Where masonry meets concrete columns and beams, fix a strip of wire mesh over the joint before plastering to stop hairline cracks. In long walls, leave expansion joints as shown in the drawings. Good curing of mortar and plaster is as important as the choice of brick.'],
+    ['Masonry Units Dimension and Property Comparison', DIAGRAMS.brickTypes],
+    ['State-wise wall masonry preferences and environmental norms (As on November 2026)',
+      { table: [
+        ['State / Region', 'Dominant Masonry Choice', 'Government Mandate / Environmental Rule', 'Key Technical Reason'],
+        [
+          ['Delhi & NCR', 'Fly Ash Bricks & AAC Blocks', 'Red clay brick manufacturing banned within NCR air quality zones', 'Environmental compliance (MoEFCC fly ash utilization notification); high dimensional uniformity.'],
+          ['Maharashtra (Mumbai/Pune)', 'AAC Blocks (600×200×150mm)', 'Standard in all mid-rise and high-rise RCC frames', '65% dead load reduction lowers structural column steel; faster laying in high-rises.'],
+          ['Karnataka (Bengaluru)', 'Solid Concrete Blocks & AAC', 'Concrete blocks dominate independent houses; AAC in apartments', 'Abundant aggregate quarry supply; high compressive strength (5 to 7.5 N/mm²).'],
+          ['Uttar Pradesh & Bihar', 'Traditional Red Clay Bricks (Class 1)', 'Widely available from fertile Gangetic alluvial soil kilns', 'High local mason familiarity; economical for load-bearing single-storey homes.'],
+          ['Tamil Nadu (Chennai/Coimbatore)', 'Fly Ash Bricks & Hollow Concrete Blocks', 'Thermal power plant fly ash utilization mandated', 'Smooth surfaces require only 10–12mm plastering compared to 15–20mm for uneven clay bricks.']
+        ]
+      ] },
+      'The Ministry of Environment, Forest and Climate Change (MoEFCC) mandates the progressive utilization of fly ash bricks within a 300 km radius of thermal power plants to preserve agricultural topsoil.'
+    ],
+    ['Common mistakes during wall masonry work',
+      [
+        'Using AAC blocks for structural load-bearing walls without RCC frame support: AAC blocks are infill masonry units and lack the point-load capacity required for load-bearing walls.',
+        'Failing to soak traditional red clay bricks in clean water for at least 2 hours before laying: Dry clay bricks instantly suck water out of fresh cement mortar, preventing proper hydration and causing weak, powdery joints.',
+        'Using thick 15mm cement mortar beds for AAC blocks instead of specialized 2–3mm polymer-modified thin-bed adhesive.',
+        'Skipping horizontal RCC bond beams (patli) in 4-inch partition walls exceeding 8 feet in height or 10 feet in length, resulting in wall buckling.',
+        'Omitting galvanized wire mesh (chicken mesh) over the junction where brickwork meets RCC columns before plastering, leading to unavoidable settlement cracks.'
+      ]
+    ],
+    ['Checklist for inspecting wall masonry during construction',
+      { ol: [
+        'Confirm that the foundation or RCC floor slab is thoroughly cleaned and dampened before laying the first masonry course.',
+        'Check verticality of every course using a mason’s plumb bob (sahul) and verify horizontal alignment with a spirit level and taut string line.',
+        'Ensure uniform joint thickness: 10mm to 12mm for clay and fly ash bricks; 2mm to 3mm for AAC block adhesive.',
+        'Verify that frog (indentation) on red bricks is placed facing UPWARDS so it fills completely with mortar to create a mechanical shear key.',
+        'Stagger vertical joints (perpend alignment) by at least one-quarter brick length to maintain proper structural bond.',
+        'Ensure continuous wet curing of brick masonry joints for a minimum of 7 consecutive days.'
+      ] }
+    ],
+    ['Worked numerical example using our Brick Quantity Calculator',
+      'Suppose you are constructing a 9-inch (230 mm) thick exterior boundary wall that is 50 feet long and 8 feet high, with one gate opening of 10 ft × 8 ft. Let us calculate the number of standard modular bricks (190×90×90 mm) and mortar bags required.',
+      'Step 1 (Calculate Net Wall Area): Gross wall area = 50 ft × 8 ft = 400 sq ft. Deduct gate opening = 10 ft × 8 ft = 80 sq ft. Net wall area = 400 − 80 = 320 sq ft.',
+      'Step 2 (Calculate Masonry Volume): Wall thickness = 9 inches = 0.75 ft. Net masonry volume = 320 sq ft × 0.75 ft = 240 cubic feet = 6.796 cubic metres.',
+      'Step 3 (Calculate Brick Count): Nominal modular brick size with mortar joint is 200 mm × 100 mm × 100 mm (0.2m × 0.1m × 0.1m = 0.002 m³). Bricks per m³ = 1 ÷ 0.002 = 500 bricks. Total bricks = 6.796 m³ × 500 = 3,398 bricks. Adding 5% on-site breakage and cutting wastage gives 3,398 × 1.05 = 3,568 bricks.',
+      'Step 4 (Calculate Mortar Quantity): In 9-inch brickwork, mortar occupies approximately 25% to 28% of total masonry volume (approx 1.80 m³). Using a standard 1:6 cement-to-sand mix, this requires approximately 7 bags of cement and 58 cubic feet of sand.',
+      'Conclusion: Our Brick Quantity Calculator produces these verified counts instantly, enabling accurate procurement and avoiding material overages.',
+      '<!-- [OWNER: add real photo of brick masonry laying showing plumb bob check and frog facing up] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'IS 1077:1992 – Common Burnt Clay Building Bricks: Specification.',
+        'IS 2185 (Part 3):1984 – Concrete Masonry Units: Autoclaved Cellular (Aerated) Concrete Blocks.',
+        'IS 12894:2002 – Pulverized Fuel Ash-Lime Bricks: Specification.',
+        'IS 2212:1991 – Code of Practice for Brickwork (BIS).',
+        'CPWD Specifications 2019 (Volume 1) – Section 6: Brick Work.'
+      ]
+    ]
   ],
-  'aac-blocks-vs-red-bricks': [
-    ['A cost comparison method', 'To compare cost for a 1,000 sq ft wall face, list these items for each system: units (bricks or blocks), mortar or adhesive, labour per sq ft, plaster thickness and material, and any structural saving. For example, an AAC wall 200 mm thick can reduce wall dead load by about two-thirds compared with a 230 mm brick wall, which may reduce steel and concrete in columns and foundations slightly in a multi-storey frame. Ask your engineer whether the design allows it, and get quotes for both systems on the same wall schedule.'],
-    ['Practical points on site', ['AAC needs a levelled first course with cement mortar before thin-bed laying.', 'Cutting is easy with a hand saw, but dust control and eye protection are needed.', 'Fix door and window frames with fasteners made for AAC.', 'Apply plaster after the walls are dry and use a bonding coat or mesh at junctions.', 'Brick walls need soaking before laying to prevent them from drawing water from the mortar.']],
-    ['Which is better for a small house?', 'For a ground-plus-one house in a hot city with a framed structure, AAC with proper detailing performs well and saves time. For a small load-bearing house where good bricks are cheap, brickwork remains economical and familiar to local masons. Master mason skill and quality control often decide results more than the material.'],
-  ],
-  'river-sand-vs-m-sand-for-construction': [
-    ['Understanding sand grading', 'Sand is classified by particle size into zones I to IV, with Zone I the coarsest and Zone IV the finest. Most concrete works best with Zone II or III. Plastering sand should be finer. A good sand has a range of sizes so that small grains fill the gaps between large ones and less cement paste is needed. Poorly graded sand, with mostly one size, needs more cement and gives weaker, more porous mortar.'],
-    ['Worked example: sand for plaster', 'A 1,000 sq ft wall at 12 mm plaster in a 1:5 mix needs about 1.56 m³ of dry mix including 10 percent wastage, of which five-sixths is sand, so about 1.3 m³, roughly 46 cu ft or about 2.1 tonnes. If your supplier sells by the brass (100 cu ft), that is under half a brass. Use the Plaster Calculator to match your own area and thickness.'],
-    ['Quality checklist when buying', ['Visit the supplier or stockpile and look for clay lumps and organic matter.', 'Ask the M-sand plant for a recent sieve analysis and silt content test.', 'Avoid sand mixed with crusher dust that has excess fines above the allowed limit.', 'Buy washed, plastering-grade sand for walls and a coarser grade for concrete.', 'Check the moisture; wet sand weighs more and bulks differently, so measure carefully.']],
-  ],
-  'coarse-aggregate-sizes-and-uses': [
-    ['Worked example: aggregate for a footing', 'A 4 ft × 4 ft × 1 ft isolated footing is 16 cu ft, or 0.45 m³. In M20 (1:1.5:3), dry volume is 0.45 × 1.54 = 0.70 m³, and aggregate is 3/5.5 of that, or 0.38 m³ (about 13.4 cu ft, around 0.57 tonnes). For ten footings, order about 6 tonnes of 20 mm aggregate with a small allowance. The Concrete Calculator gives these figures for your own dimensions.'],
-    ['Why shape and grading matter', 'Cubical, well-graded aggregate packs tightly and needs less paste. Flaky and elongated pieces, which have one dimension much smaller than the others, are weaker and make the mix harder to compact. Crushers set to produce more cubical particles give better concrete. For pumped concrete, a smaller maximum size, often 20 mm, is used to prevent blockages.'],
-    ['Storage and handling', ['Keep different sizes in separate heaps with a bund between them.', 'Place them on a hard clean base so soil does not mix in.', 'Cover during rain if the mix design assumes dry material.', 'Bulk density is typically 1,450 to 1,550 kg/m³, so a tipper of 6 m³ carries about 9 tonnes.']],
-  ],
+
   'concrete-grades-m15-m20-m25-explained': [
-    ['Worked example: a small slab', 'A 15 ft × 12 ft room slab at 5 inches thick has about 2.1 m³ of concrete (180 sq ft × 0.4167 ft = 75 cu ft). With 5 percent wastage in M20, use roughly 2.2 m³ of wet concrete, which needs about 18 bags of cement, 0.94 m³ (33 cu ft) of sand and 1.9 m³ (66 cu ft) of 20 mm aggregate, based on the dry-volume method. Try the Concrete Calculator with your own sizes and compare M20 with M25.'],
-    ['Quality control on site', ['Measure ingredients by volume using gauge boxes, and do not guess by shovel.', 'Use a mechanical mixer and mix for at least 1.5 to 2 minutes.', 'Check slump for workability and do not add extra water on site.', 'Compact with a needle vibrator, taking care not to over-vibrate.', 'Cast cubes: one set of 3 for each batch or slab pour, as advised by the engineer.', 'Cure properly for at least 7 to 10 days.']],
-    ['What cube test results mean', 'A cube made from the actual concrete is crushed after 7 and 28 days. At 7 days, strength is typically about 65 to 70 percent of the 28-day value. If cubes fail to reach the specified grade, the engineer may order further tests or strengthening. Without cube tests, you cannot prove that the structure reached the designed strength, which can matter when selling or insuring the building.'],
-  ],
-  'curing-concrete-why-and-how': [
-    ['What happens without curing', 'Concrete that dries too fast loses water needed for hydration, develops shrinkage cracks in the first days and ends up weaker and more permeable at the surface. Surface layers, which protect steel from corrosion, are especially affected. Properly cured concrete is noticeably stronger and less permeable at the surface than poorly cured concrete of the same mix. That is a large gain for the cost of some water and labour.'],
-    ['A practical curing plan for a slab', { ol: ['Cover the slab with wet gunny bags or start ponding as soon as the surface has hardened enough not to be marred, usually 10 to 12 hours after pouring.', 'Create small bunds with mortar and keep a layer of water on the slab.', 'Top up water every day, morning and evening in hot weather.', 'Continue for at least 7 days for OPC and 10 days for PPC; extend to 14 days in hot, dry weather.', 'Delay loading and the removal of props as directed by the engineer.'] }],
-    ['Curing for other elements', ['Columns: wrap with wet hessian and keep it wet, or use a curing compound.', 'Brick walls: sprinkle water twice daily for at least 7 days.', 'Plaster: keep damp for 7 to 10 days.', 'Floors: cover with sand and wet it, or pond for 7 days.', 'Vertical formwork left in place helps retain moisture, but strip as directed and then cure.']],
-  ],
-  'waterproofing-terrace-bathroom-basement': [
-    ['Worked example: a 1,000 sq ft terrace', 'The terrace slab area is 1,000 sq ft with a parapet of 2 ft height and 130 ft perimeter, so the surface to treat is about 1,000 + 260 = 1,260 sq ft. A typical liquid or cementitious system needs two to three coats; at an example consumption of 1 kg per sq ft for all coats, that is about 1,260 kg of material. Costs vary widely by system and city, so ask three applicators to quote per sq ft with a written warranty period and the specific brand.'],
-    ['Brick-bat coba and slopes', 'Many Indian terraces use brickbat coba, a lightweight lean concrete laid to slope towards drains, before the waterproofing layer. The recommended slope is about 1 in 100. After the coba cures, apply a cement-sand screed, then the waterproofing, then a protective screed and tiles. Make sure outlets are at the lowest points and covered with grating to stop blockages.'],
-    ['Maintaining a waterproofed terrace', ['Clear drains before every monsoon.', 'Inspect for cracks at wall junctions and parapets each year.', 'Avoid drilling or hammering through the membrane.', 'Do not store heavy items on unprotected membrane.', 'Reapply the top coat at the interval recommended by the manufacturer, often 5 to 7 years.']],
-  ],
-  'wall-putty-and-primer-guide': [
-    ['Worked example: putty for a room', 'A room with 480 sq ft of wall area needs two coats of putty. At an example coverage of 15 sq ft per kg per coat, that is 480 × 2 ÷ 15 = 64 kg, so two 20 kg bags plus a smaller one. Primer for the same area at 120 sq ft per litre needs 4 litres. Check the data sheet for the actual brand’s coverage because it varies with surface roughness, which is why walls with rough plaster consume much more.'],
-    ['Surface preparation tips', ['Cure plaster properly and let it dry; use a moisture meter if available.', 'Scrape loose paint and wash off efflorescence (white salt deposits).', 'Fill holes and cracks with a repair compound before putty.', 'Apply putty with a steel blade in thin layers, not one thick coat.', 'Sand with medium then fine paper and dust the surface before priming.']],
-    ['Troubleshooting', 'If paint peels in sheets, the surface was probably damp or dusty when it was painted. If paint bubbles, there may be moisture behind the wall; find and fix the source before repainting. Patchy colour after painting usually means uneven putty absorption or too little primer. White powder on walls is efflorescence from water carrying salts out of the wall and calls for dry brushing and sealing the moisture source.'],
-  ],
-  'types-of-wall-paint-emulsion-distemper-enamel': [
-    ['Worked example: cost per year', 'Suppose a distemper job costs ₹30 per sq ft and lasts about 3 years, while a premium emulsion job costs ₹55 per sq ft and lasts 7 years (illustrative figures). Cost per sq ft per year: distemper ₹10, emulsion ₹7.9. Even though emulsion costs more upfront, it is cheaper per year of use, and you avoid repainting dust and disruption. Always use local quotes for your own comparison.'],
-    ['How many coats and how long to wait', ['Primer: one coat, dry 2 to 4 hours or as per the product.', 'Emulsion: two coats with at least 4 hours between coats.', 'Enamel on wood or metal: primer plus two coats, with light sanding between coats.', 'Exterior paint: primer plus two coats; avoid painting in direct sun or rain.', 'Texture finishes: follow the specific manufacturer system.']],
-    ['Health and safety', 'Open windows when painting, and keep children and pets away from wet paint. Solvent-based enamels have strong odours; choose water-based options for interiors when possible. Wear a dust mask when sanding putty. Dispose of leftover paint properly and never pour it into drains.'],
-  ],
-  'floor-tile-types-vitrified-ceramic-granite': [
-    ['Worked example: a living room', 'A 16 ft × 14 ft living room is 224 sq ft. With 600 × 600 mm vitrified tiles (3.88 sq ft each) and 8 percent wastage, you need 224 ÷ 3.88 × 1.08 ≈ 63 tiles. At 4 tiles per box that is 16 boxes. If the tile costs ₹70 per sq ft, the material is about 16 × 4 × 3.88 × 70 ≈ ₹17,400, before adhesive, labour and skirting. The Tile and Flooring Calculator does this for any room size.'],
-    ['Reading a tile box', ['Size and thickness in millimetres.', 'Finish: glossy, matt, satin, textured or anti-skid.', 'Slip resistance rating where given; wet areas need a higher rating.', 'PEI or abrasion rating for ceramic, indicating how much foot traffic it can take.', 'Shade and batch numbers: buy all tiles from the same batch and check them in daylight.']],
-    ['Installation details that matter', 'Use polymer tile adhesive on a flat, cured and clean substrate. Keep joints uniform (2 to 3 mm for rectified vitrified tiles), and fill with epoxy or cement-based grout. In bathrooms, give the floor a slope of at least 1 in 100 towards the drain. Never walk on fresh tiling for 24 hours, and keep heavy loads off for a few days.'],
-  ],
-  'pipes-for-plumbing-cpvc-upvc-pvc-ppr': [
-    ['Sizing and layout basics', ['Common supply pipe sizes in homes are 15 mm and 20 mm for branches and 25 mm for risers.', 'Drainage lines are usually 75 mm for basins and showers, 110 mm for toilets and main stacks.', 'Slope drain lines at about 1 in 40 so waste flows without sitting.', 'Keep hot and cold lines separated or insulated to avoid heat transfer.', 'Provide a vent stack to equalise pressure and stop traps from siphoning.']],
-    ['Testing before you close the wall', 'Pressure-test supply lines after installation and before plaster or tiles cover them, at the pressure and duration recommended by the pipe manufacturer (commonly about 1.5 times the working pressure), held for several hours. Any drop in pressure points to a leak. For drainage, fill lines with water and check joints. Photograph the pipe layout before covering so future repairs are easy.'],
-    ['Why quality matters for concealed pipes', 'Concealed pipes are in walls and floors you will not open for years. A cheap uncertified pipe that cracks can cause damage far costing more than the savings. Use BIS-certified pipes and fittings, consistent brands, and skilled plumbers. Keep the invoice and warranty details, and note the pipe routes on a drawing for the future.'],
-  ],
+    ['Concrete Grades & Nominal Mix Hierarchy', DIAGRAMS.concreteGrades],
+    ['State-wise concrete mix practices and testing standards (As on November 2026)',
+      { table: [
+        ['State / Agency', 'Minimum Structural RCC Grade', 'Nominal Mix vs Design Mix Policy', 'Official Testing Authority'],
+        [
+          ['CPWD (All India)', 'M25 for all RCC structural members', 'Nominal mixes restricted to M20; M25 and above strictly design mix', 'CPWD Specifications 2019 (cpwd.gov.in)'],
+          ['Maharashtra (BMC / PWD)', 'M20 minimum; M25 coastal / high-rise', 'Ready Mix Concrete (RMC) mandatory in municipal corporation limits', 'BMC Building Proposal Dept / PWD Maharashtra'],
+          ['Karnataka (BBMP / PWD)', 'M20 for G+1; M25 for G+2 and above', 'Batching plant / weigh-batcher mandatory on commercial pours', 'Karnataka PWD Specifications'],
+          ['Uttar Pradesh PWD', 'M20 for rural/semi-urban; M25 urban', 'Gauge box (farmi) volumetric batching permitted only under 50 m³', 'UP PWD Schedule of Rates'],
+          ['Tamil Nadu PWD', 'M20 minimum; M25 for all water-retaining sumps', 'Continuous cube compressive testing mandated per 15 m³ batch', 'TNPWD Building Division']
+        ]
+      ] },
+      'Per IS 456:2000 Clause 6.1, concrete grades are designated by "M" (for Mix) followed by the characteristic compressive strength in N/mm² (MPa) tested on a 150mm cube at 28 days of wet curing.'
+    ],
+    ['Common mistakes during concrete batching, pouring and curing',
+      [
+        'Adding excess water on site to increase workability: Increasing water-cement ratio from 0.45 to 0.65 reduces 28-day concrete compressive strength by nearly 40% and causes severe surface dusting.',
+        'Batching ingredients by arbitrary shovel counts instead of standardized wooden gauge boxes (farmi): Shovel measurement causes wild fluctuations in cement-sand proportions.',
+        'Pouring concrete from a height exceeding 1.5 metres: Free-fall pouring causes immediate segregation, where heavy coarse aggregates separate from cement slurry.',
+        'Over-vibrating with needle vibrators: Vibrating beyond 10–15 seconds per insertion forces aggregates to sink to the bottom and pumps weak cement laitance to the top.',
+        'Removing slab formwork props prematurely: Stripping props before the specified period (7 days for slabs up to 4.5m span; 14 days for beams) causes structural micro-cracking and excessive deflection.'
+      ]
+    ],
+    ['Checklist for RCC slab casting day quality control',
+      { ol: [
+        'Inspect shuttering formwork: Verify that centering plates are watertight, props are plumb and braced, and form oil has been applied evenly.',
+        'Check reinforcement rebar placement against structural drawings: Verify bar diameter, spacing, cranked bars, and cover blocks (20mm for slabs).',
+        'Ensure electrical conduit pipes and fan boxes are securely wired to rebars and sealed with tape to prevent cement slurry ingress.',
+        'Prepare standardized wooden gauge boxes (farmi: 300mm × 300mm × 385mm = 34.7 litres = 1 cement bag volume) for volumetric batching.',
+        'Cast at least 6 standard test cubes (150×150×150 mm) during the pour: 3 cubes to be crushed at 7 days and 3 cubes at 28 days.',
+        'Commence continuous water curing (ponding method with mortar bunds) within 12 to 14 hours after the slab has set.'
+      ] }
+    ],
+    ['Worked numerical example using our Concrete Calculator',
+      'Suppose an owner is casting an RCC ground beam and column footing batch requiring 5.0 cubic metres of compacted wet concrete using an M20 nominal mix (1:1.5:3). Let us calculate the exact quantities of cement bags, sand, and 20mm crushed stone aggregate.',
+      'Step 1 (Dry Volume Calculation): Wet volume = 5.0 m³. Applying standard IS 456 dry volume coefficient of 1.54: Dry volume = 5.0 × 1.54 = 7.70 m³.',
+      'Step 2 (Cement Requirement): Sum of mix parts = 1 + 1.5 + 3 = 5.5. Cement volume = 7.70 × (1 ÷ 5.5) = 1.40 m³. Since 1 cement bag = 0.0347 m³, Bags = 1.40 ÷ 0.0347 = 40.35 bags. Adding 5% site wastage = 42 bags.',
+      'Step 3 (Sand Requirement): Sand volume = 7.70 × (1.5 ÷ 5.5) = 2.10 m³. Converting to cubic feet (1 m³ = 35.3147 cu ft): Sand = 2.10 × 35.3147 = 74.16 cu ft (approx 0.74 brass; ~3.3 tonnes).',
+      'Step 4 (Coarse Aggregate Requirement): Aggregate volume = 7.70 × (3 ÷ 5.5) = 4.20 m³. In cubic feet: 4.20 × 35.3147 = 148.32 cu ft (approx 1.48 brass; ~6.3 tonnes of 20mm aggregate).',
+      'Conclusion: Our Concrete Calculator computes these proportions automatically. By measuring dry ingredients with a farmi box rather than shovels, the concrete achieves its full 20 N/mm² design strength without cracking.',
+      '<!-- [OWNER: add real photo of concrete cube casting and slump cone test on site] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'IS 456:2000 (Reaffirmed 2021) – Plain and Reinforced Concrete: Code of Practice.',
+        'IS 516:1959 (Reaffirmed 2018) – Methods of Tests for Strength of Concrete.',
+        'IS 1199:2018 (Parts 1 to 7) – Methods of Sampling and Analysis of Concrete (Slump & Workability).',
+        'IS 10262:2019 – Concrete Mix Proportioning: Guidelines (Design Mix Standards).',
+        'IS 383:2016 – Coarse and Fine Aggregate for Concrete: Specification.'
+      ]
+    ]
+  ]
 };

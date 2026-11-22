@@ -2,7 +2,7 @@
 // block = 'paragraph' | ['bullet', ...] | {ol:[...]} | {table:[headers, rows]} | {note:'callout'}
 export default [
   {
-    slug: 'land-measurement-units-in-india', title: 'Land Measurement Units in India: Bigha, Guntha, Cent, Kanal and More', date: '2026-10-05',
+    slug: 'land-measurement-units-in-india', title: 'Land Measurement Units in India: Bigha, Guntha, Cent, Kanal and More', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'A plain guide to the land units used across India — acre, hectare, guntha, cent, kanal, marla, bigha, katha and gaj — with conversions and where each is used.',
     tags: ['land', 'unit', 'bigha', 'guntha', 'cent', 'acre'], calcs: ['land-area-converter'],
     sections: [
@@ -15,7 +15,7 @@ export default [
     faqs: [['How many guntha are in an acre?', 'Forty guntha make one acre, and one guntha is 1,089 square feet.'], ['Is a cent the same in every state?', 'Yes. One cent is 435.6 square feet and 100 cents make an acre, wherever the unit is used.'], ['Why does a bigha differ between states?', 'Because it was a customary unit defined locally. States later recorded their own values and none were unified, so always use the local record.']],
   },
   {
-    slug: 'how-many-square-feet-in-an-acre', title: 'How Many Square Feet Are in an Acre, Guntha, Cent and Hectare?', date: '2026-10-06',
+    slug: 'how-many-square-feet-in-an-acre', title: 'How Many Square Feet Are in an Acre, Guntha, Cent and Hectare?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Quick reference for converting acre, hectare, guntha, cent, are and gaj into square feet and square metres, with worked examples for common plot sizes.',
     tags: ['acre', 'hectare', 'guntha', 'cent', 'square feet'], calcs: ['land-area-converter', 'land-price-calculator'],
     sections: [
@@ -28,7 +28,7 @@ export default [
     faqs: [['How many square feet are in 1 hectare?', 'About 107,639 square feet, equal to 2.471 acres.'], ['How many square feet is 1 cent?', '435.6 square feet.'], ['How many gaj is 1 acre?', '4,840 gaj, since one gaj equals one square yard.']],
   },
   {
-    slug: 'why-one-bigha-is-not-the-same-everywhere', title: 'Why One Bigha Is Not the Same Everywhere (And How to Find Your Local Value)', date: '2026-10-07',
+    slug: 'why-one-bigha-is-not-the-same-everywhere', title: 'Why One Bigha Is Not the Same Everywhere (And How to Find Your Local Value)', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'The bigha varies widely between states and even districts. Learn why, how to find the correct local value, and how to avoid disputes when buying or selling.',
     tags: ['bigha', 'katha', 'biswa', 'land record'], calcs: ['land-area-converter'],
     sections: [
@@ -41,7 +41,7 @@ export default [
     faqs: [['Is there an official national bigha value?', 'No. States and sometimes districts define it differently, so there is no single national value.'], ['What is a biswa?', 'Usually one-twentieth of a bigha, but because the bigha varies, so does the biswa.'], ['What should I do if the deed and record disagree?', 'Resolve it before paying. Ask for a fresh survey and, if needed, get the record corrected through the revenue office.']],
   },
   {
-    slug: 'how-to-measure-a-plot-correctly', title: 'How to Measure a Plot Correctly: Tools, Steps and Common Errors', date: '2026-10-08',
+    slug: 'how-to-measure-a-plot-correctly', title: 'How to Measure a Plot Correctly: Tools, Steps and Common Errors', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'A step-by-step method to measure a plot with a tape, check corners with the 3-4-5 rule, record results and know when to call a licensed surveyor.',
     tags: ['plot', 'measure', 'survey', 'boundary'], calcs: ['plot-area-calculator'],
     sections: [
@@ -55,7 +55,7 @@ export default [
     faqs: [['How accurate is a tape measurement?', 'With care, within a few centimetres per 30 m. That is enough to detect gross errors, not to settle boundary disputes.'], ['Can I measure with a phone app?', 'Apps are useful for rough checks only; use a tape for anything you rely on.'], ['What is the 3-4-5 rule?', 'A triangle with sides 3, 4 and 5 units has a right angle between the 3 and 4 sides, a quick field test for square corners.']],
   },
   {
-    slug: 'how-to-calculate-area-of-an-irregular-plot', title: 'How to Calculate the Area of an Irregular Plot', date: '2026-10-09',
+    slug: 'how-to-calculate-area-of-an-irregular-plot', title: 'How to Calculate the Area of an Irregular Plot', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Split any four-sided or multi-sided plot into triangles, use Heron’s formula and add them up. Includes a worked example and tips for curved boundaries.',
     tags: ['irregular plot', 'area', 'triangle', 'heron'], calcs: ['plot-area-calculator'],
     sections: [
@@ -69,7 +69,7 @@ export default [
     faqs: [['Can I use the shoelace formula instead?', 'Yes, if you have coordinates of the corners. With only a tape, Heron’s formula on triangles is easier.'], ['What if the triangle does not “close”?', 'The measurements are inconsistent; remeasure the shorter sides and the diagonal.'], ['Is a drone survey better?', 'Drone and total-station surveys are more accurate for large or complex plots and are often accepted for official purposes.']],
   },
   {
-    slug: 'square-feet-vs-square-yard-vs-gaj', title: 'Square Feet vs Square Yard vs Gaj: Converting Plot Sizes and Rates', date: '2026-10-10',
+    slug: 'square-feet-vs-square-yard-vs-gaj', title: 'Square Feet vs Square Yard vs Gaj: Converting Plot Sizes and Rates', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'One gaj is one square yard, which is 9 square feet. Learn to convert plot sizes and rates between sq ft, sq yd, gaj and sq m without getting cheated.',
     tags: ['gaj', 'sq yd', 'sq ft', 'rate'], calcs: ['land-price-calculator', 'land-area-converter'],
     sections: [
@@ -83,7 +83,7 @@ export default [
     faqs: [['Is 1 gaj equal to 9 sq ft?', 'Yes, because one gaj is one square yard, which is 3 ft by 3 ft.'], ['How many gaj in 1,000 sq ft?', 'About 111 gaj.'], ['How do I convert a per-gaj price to per sq ft?', 'Divide by 9.']],
   },
   {
-    slug: 'carpet-vs-built-up-vs-super-built-up-area', title: 'Carpet Area vs Built-up Area vs Super Built-up Area (RERA Explained)', date: '2026-10-11',
+    slug: 'carpet-vs-built-up-vs-super-built-up-area', title: 'Carpet Area vs Built-up Area vs Super Built-up Area (RERA Explained)', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Understand carpet, built-up and super built-up area, what RERA says, how loading works and how to compare flat prices on a like-for-like basis.',
     tags: ['carpet area', 'super built-up area', 'rera', 'loading', 'flat'], calcs: ['carpet-area-calculator'],
     sections: [
@@ -96,7 +96,7 @@ export default [
     faqs: [['Is super built-up area legal?', 'It is still used in marketing, but under RERA the agreement for sale must state carpet area and price is meant to be linked to it.'], ['What loading is normal?', 'About 25 to 35 percent is common in apartment projects; above 40 percent deserves questions.'], ['Does carpet area include the balcony?', 'No. RERA excludes exclusive balconies from carpet area.']],
   },
   {
-    slug: 'what-is-fsi-far-and-ground-coverage', title: 'FSI, FAR and Ground Coverage: What They Mean for Your Plot', date: '2026-10-12',
+    slug: 'what-is-fsi-far-and-ground-coverage', title: 'FSI, FAR and Ground Coverage: What They Mean for Your Plot', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'FSI (FAR) and ground coverage decide how much you can build on a plot. Learn what they mean, how to calculate them and where to check local limits.',
     tags: ['fsi', 'far', 'ground coverage', 'plot', 'bye-laws'], calcs: ['plot-area-calculator', 'construction-cost-calculator'],
     sections: [
@@ -110,7 +110,7 @@ export default [
     faqs: [['Do balconies and staircases count in FSI?', 'It depends on the local rules; some exclude certain areas from FSI. Check the bye-laws or ask your architect.'], ['Can I buy extra FSI?', 'Some cities allow premium FSI or transferable development rights for a fee. Availability depends on the local authority.'], ['Is an approved plan mandatory?', 'Yes in most urban areas. Building without sanction risks penalties, demolition and trouble getting utilities or loans.']],
   },
   {
-    slug: 'plot-size-and-setbacks-for-house-planning', title: 'Plot Size and Setbacks: How Much Can You Actually Build?', date: '2026-10-13',
+    slug: 'plot-size-and-setbacks-for-house-planning', title: 'Plot Size and Setbacks: How Much Can You Actually Build?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'See how setbacks, ground coverage and staircase space reduce the buildable area, with a worked example on a 30×40 plot and tips for planning rooms.',
     tags: ['setback', 'plot size', 'house plan', '30x40'], calcs: ['plot-area-calculator', 'construction-cost-calculator'],
     sections: [
@@ -123,7 +123,7 @@ export default [
     faqs: [['Are setbacks the same everywhere?', 'No. They depend on the city, plot size and road width. Ask your architect or the municipal office.'], ['Can I build right up to the boundary?', 'Only where bye-laws allow zero margins, such as some row-house layouts. Otherwise, the minimum setbacks apply.'], ['Does the staircase count towards built-up area?', 'Yes, for costing; for FAR it depends on local rules.']],
   },
   {
-    slug: 'how-to-read-land-records-in-india', title: 'How to Read Land Records in India: Khasra, 7/12, Patta, RTC and Jamabandi', date: '2026-10-14',
+    slug: 'how-to-read-land-records-in-india', title: 'How to Read Land Records in India: Khasra, 7/12, Patta, RTC and Jamabandi', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'What the main state land records are called, what each tells you about ownership and area, and how to find and verify them on official portals.',
     tags: ['land record', '7/12', 'khasra', 'patta', 'jamabandi', 'ownership'], calcs: ['land-area-converter'],
     sections: [
@@ -136,7 +136,7 @@ export default [
     faqs: [['Is a land record proof of ownership?', 'It is strong evidence of possession and records of rights, but title is established by registered documents. Check both.'], ['Where can I get records online?', 'Most states run a land-records portal; search for the state name with “land records” or “Bhulekh”.'], ['What is mutation?', 'The entry in the revenue record that changes the owner’s name after a sale or inheritance.']],
   },
   {
-    slug: 'circle-rate-guidance-value-explained', title: 'Circle Rate, Guidance Value and Ready Reckoner Rate Explained', date: '2026-10-15',
+    slug: 'circle-rate-guidance-value-explained', title: 'Circle Rate, Guidance Value and Ready Reckoner Rate Explained', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'What circle rate is, why governments set it, how it affects stamp duty and capital gains, and why paying below it does not reduce your duty.',
     tags: ['circle rate', 'guidance value', 'stamp duty', 'ready reckoner'], calcs: ['stamp-duty-calculator'],
     sections: [
@@ -149,7 +149,7 @@ export default [
     faqs: [['Is circle rate the same as market value?', 'No. It is the government’s minimum for registration, and market prices can be higher or lower.'], ['Can I pay stamp duty on the lower value?', 'Generally not; most states charge on the higher of the two values.'], ['How often does circle rate change?', 'Often once a year, but timing is set by each state.']],
   },
   {
-    slug: 'agricultural-land-vs-residential-land-what-to-check', title: 'Agricultural vs Residential Land: What to Check Before You Buy', date: '2026-10-16',
+    slug: 'agricultural-land-vs-residential-land-what-to-check', title: 'Agricultural vs Residential Land: What to Check Before You Buy', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Land use classification decides what you may build. Learn the risks of buying agricultural land, the idea of conversion, and the due-diligence checks to run first.',
     tags: ['agricultural land', 'land conversion', 'residential plot', 'due diligence'], calcs: ['land-price-calculator'],
     sections: [

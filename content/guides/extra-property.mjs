@@ -1,63 +1,236 @@
-// Additional sections appended to the property guides.
+// Expanded sections for Property Buying & Registration flagship guides.
+import { DIAGRAMS } from './diagrams.mjs';
+
 export default {
   'stamp-duty-and-registration-explained': [
-    ['Worked example', 'A flat is sold for ₹75 lakh and the circle-rate value is ₹70 lakh. In a state that charges 6 percent stamp duty plus 1 percent local duty and a 1 percent registration fee on the higher value, duty is on ₹75 lakh: stamp duty ₹4.5 lakh, local duty ₹0.75 lakh, registration ₹0.75 lakh, total ₹6 lakh, which is 8 percent of the price. If the buyer is eligible for a 1 percent concession on stamp duty, the total falls by ₹0.75 lakh. Your state’s numbers will differ, so enter them into the calculator rather than copying this example.'],
-    ['Documents for registration day', ['Stamped sale deed signed by both parties.', 'Identity and address proof of buyer and seller, with PAN.', 'Passport-size photographs and biometric capture at the sub-registrar’s office.', 'Two witnesses with identity proof, if your state requires them.', 'Latest property tax receipt and title documents.', 'Payment receipts for stamp duty and registration fee.'], 'Book the registration slot online where available, and arrive early with all originals.'],
-    ['Common mistakes', ['Assuming duty is on the agreement value when it is on the circle rate.', 'Forgetting additional levies such as metro cess or local-body duty.', 'Buying stamp paper from unauthorised vendors.', 'Registering late and incurring penalties in some states.', 'Not checking the e-stamp certificate details such as party names and property description.']],
+    ['Anatomy of Stamp Duty & Registration Expenses', DIAGRAMS.stampDutyComponents],
+    ['State-wise stamp duty and registration fee schedules (As on November 2026)',
+      { table: [
+        ['State / Territory', 'Male Buyer Stamp Duty', 'Female Buyer Stamp Duty', 'Registration Fee', 'Official Source Portal'],
+        [
+          ['Maharashtra (Mumbai/Pune)', '6% (5% Base + 1% Metro Cess)', '5% (1% Concession on residential)', '1% (Capped at ₹30,000 for residential)', 'IGR Maharashtra (igrmaharashtra.gov.in)'],
+          ['Karnataka (Urban Bengaluru)', '5% Base + 10% Surcharge + 2% Urban Cess (~5.6%)', 'Same as male (concessions only <= ₹45L)', '1% of property consideration', 'Kaveri 2.0 (kavyashodana.karnataka.gov.in)'],
+          ['Uttar Pradesh (Noida/Lucknow)', '7% of circle rate or market value', '6% (1% Rebate up to ₹10 Lakh valuation)', '1% of property valuation', 'IGRS UP (igrsup.gov.in)'],
+          ['Tamil Nadu (Chennai)', '7% Base Stamp Duty', '7% (No gender concession)', '2% (Revised registration fee)', 'TNREGINET (tnreginet.gov.in)'],
+          ['Delhi (NCT)', '6% of circle rate valuation', '4% (2% Concession for women; 5% joint)', '1% + ₹100 pasting fee', 'DORIS Delhi (esearch.delhigovt.nic.in)']
+        ]
+      ] },
+      'Stamp duty is a statutory state tax levied under the Indian Stamp Act, 1899 (or state-specific stamp acts) on instruments of conveyance, while the registration fee is governed by the Registration Act, 1908. Failure to pay adequate stamp duty renders the sale deed inadmissible as evidence in court under Section 35 of the Indian Stamp Act.'
+    ],
+    ['Common mistakes during stamp duty and registration payment',
+      [
+        'Paying stamp duty on the declared sale agreement value when the official circle rate (guidance value) is higher: The sub-registrar will impound the deed and demand penalty charges.',
+        'Ignoring Section 56(2)(x) of the Income Tax Act: When buying below circle rate by more than 10%, the difference between circle rate and purchase price is taxed as income in the hands of the buyer.',
+        'Overlooking local municipal surcharges: In Maharashtra, an additional 1% Metro Cess applies in Mumbai, Pune, Thane, and Nagpur; in Karnataka, municipal and transport cesses add roughly 0.6% to the 5% base rate.',
+        'Forgetting that female buyer concessions apply only when the property is registered solely in the woman’s name or joint ownership as specified by state rules.',
+        'Making offline cash payments for stamp duty: Virtually all states now mandate electronic payment via e-Stamping (Stock Holding Corporation of India / GRAS / Kaveri 2.0).'
+      ]
+    ],
+    ['Step-by-step checklist for property registration day',
+      { ol: [
+        'Compute the official Guidance Value / Circle Rate from the state registration portal.',
+        'Calculate total stamp duty and registration fees using our Stamp Duty Calculator.',
+        'Generate and pay the e-Stamp / GRAS challan online through authorized net banking or SHCIL portal.',
+        'Draft the final Sale Deed through an experienced conveyancing advocate, ensuring schedule boundaries and PAN details match identity proofs.',
+        'Book an appointment slot on the sub-registrar office (SRO) portal.',
+        'Carry two identity proofs (Aadhaar and PAN card) of buyer, seller, and two witnesses with original title deeds and tax paid receipts to the SRO.',
+        'Verify thumb impressions and web camera photographs during biometric capture and collect the registered deed token.'
+      ] }
+    ],
+    ['Worked numerical example using our Stamp Duty Calculator',
+      'Suppose a buyer is acquiring a residential property in Delhi with an agreed consideration of ₹80,00,000. The property has a plot area of 100 sq m in a Category C colony where the residential circle rate is ₹64,000 per sq m. Let us calculate the stamp duty for a male buyer versus a female buyer.',
+      'Step 1 (Determine Statutory Base Value): Circle rate valuation = 100 sq m × ₹64,000/sq m = ₹64,00,000. Agreed market consideration = ₹80,00,000. Because ₹80,00,000 is higher than circle rate valuation, duty attaches to ₹80,00,000.',
+      'Step 2 (Calculate for Male Buyer): In Delhi, male stamp duty is 6%. Stamp duty = 6% of ₹80,00,000 = ₹4,80,000. Registration fee = 1% of ₹80,00,000 = ₹80,000. Total outgo = ₹4,80,000 + ₹80,000 + ₹100 = ₹5,60,100.',
+      'Step 3 (Calculate for Female Buyer): Female buyer stamp duty in Delhi is 4%. Stamp duty = 4% of ₹80,00,000 = ₹3,20,000. Registration fee = 1% = ₹80,00,000 × 1% = ₹80,000. Total outgo = ₹3,20,000 + ₹80,000 + ₹100 = ₹4,00,100.',
+      'Conclusion: Registering the property in the name of a female family member saves exactly ₹1,60,000 in immediate cash taxes on this transaction. Our Stamp Duty Calculator enables you to evaluate these gender concessions instantly.',
+      '<!-- [OWNER: add real photo of sub-registrar office registration token slip and e-stamp certificate] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'Indian Stamp Act, 1899 – Sections 3, 27, 35, and 47A (Valuation and Impounding).',
+        'Registration Act, 1908 – Sections 17 (Compulsory Documents) and 49 (Effect of Non-Registration).',
+        'Income Tax Act, 1961 – Section 50C and Section 56(2)(x).',
+        'Inspector General of Registration State Portals: IGR Maharashtra, Kaveri 2.0 Karnataka, IGRS UP, TNREGINET, DORIS Delhi.',
+        'Stock Holding Corporation of India Limited (SHCIL) – E-Stamping Guidelines and Verification Services.'
+      ]
+    ]
   ],
+
   'hidden-costs-of-buying-a-flat': [
-    ['Worked example', 'A buyer is offered a flat at ₹70 lakh base price, under construction. GST at 5 percent is ₹3.5 lakh. Stamp duty and registration at 7 percent are ₹4.9 lakh. Parking, club and other charges add ₹3 lakh, and the maintenance deposit and legal fees add ₹1 lakh. The all-in cost is ₹82.4 lakh, 17.7 percent above the headline price. A buyer who budgeted ₹75 lakh would be short by more than ₹7 lakh. The Total Property Purchase Cost Calculator reproduces this arithmetic with your inputs.'],
-    ['What to ask the builder in writing', { ol: ['A cost sheet listing base price, floor rise, preferred location charge, parking, club, development and other charges.', 'Maintenance charge per sq ft per month and the period it is collected for in advance.', 'Whether GST is payable by stage and the amount at each stage.', 'The exact carpet area and the area on which each charge is levied.', 'The corpus fund or sinking fund contribution, if any.'] }],
-    ['Costs after you move in', ['Monthly maintenance.', 'Property tax.', 'Home insurance.', 'Society charges for repairs, sinking fund and transfer.', 'Interiors and furniture, if not included.'], 'Include these in your monthly budget alongside your EMI, so that the home remains comfortable to carry.'],
+    ['Hidden Buying Costs Beyond Flat Price', DIAGRAMS.hiddenCosts],
+    ['State-wise ancillary flat purchase costs (As on November 2026)',
+      { table: [
+        ['Cost Component', 'Typical Rate / Charge Range', 'Statutory / Developer Levied', 'Key Legal Reference / Warning'],
+        [
+          ['Goods and Services Tax (GST)', '5% (Non-affordable); 1% (Affordable <= ₹45L & <= 60/90 sq m)', 'Statutory (Central & State GST)', 'Applies only to under-construction flats. Ready-to-move flats with Occupancy Certificate (OC) are 100% exempt from GST.'],
+          ['Covered / Stilt Car Parking', '₹2,50,000 to ₹7,00,000 per bay', 'Developer Allotment Charge', 'Supreme Court (Nahalchand case) ruled builders cannot sell open parking spaces; only stilt/covered garages can be allotted.'],
+          ['Advance Maintenance & Sinking Fund', '₹1.50 to ₹3.50 per sq ft/month (1 to 2 yrs advance)', 'Developer / Society Transfer', 'Held in escrow until registered Resident Welfare Association (RWA) takes over building maintenance.'],
+          ['Clubhouse & Amenity Membership', '₹1,50,000 to ₹5,00,000 lump sum', 'Developer Agreement Charge', 'Mandatory condition in most large township agreements.'],
+          ['Electricity / Water Infrastructure & Meter', '₹50,000 to ₹1,50,000 per apartment', 'Discom & Water Board Charges', 'Developer pro-rata recovery of transformer, substation, and water board feeder main deposits.']
+        ]
+      ] },
+      'Many first-time home buyers budget only for the advertised base rate (e.g. ₹6,000/sq ft) and are blindsided when final demand letters demand an additional 15% to 22% in statutory taxes, parking allotments, and upfront maintenance deposits.'
+    ],
+    ['Common financial traps when budgeting a flat purchase',
+      [
+        'Assuming GST applies to all properties: Buying a ready flat with a valid municipal Occupancy Certificate (OC) saves 5% straight away because completed real estate is not a "service".',
+        'Paying unvetted "documentation and legal fees" of ₹30,000 to ₹50,000 directly to builder panel advocates without independent representation.',
+        'Failing to verify whether the base price includes floor-rise charges (PLC) and preferential facing premiums (e.g. park facing or corner flat).',
+        'Overlooking the 1% TDS deduction under Section 194-IA: The buyer must deduct 1% from the total consideration (including parking and amenity fees) and deposit via Form 26QB.',
+        'Underestimating annual municipal property taxes and ongoing society maintenance dues in high-amenity complexes.'
+      ]
+    ],
+    ['Checklist to calculate the true all-inclusive purchase cost',
+      { ol: [
+        'Request the complete cost sheet ("All-Inclusive Cost Breakdown") from the developer, refusing verbal quotes.',
+        'Verify if the project has received an Occupancy Certificate (OC) to determine if 5% GST is applicable.',
+        'Check RERA registered carpet area and confirm parking allotment is explicitly named in the draft Agreement for Sale.',
+        'Use our Total Property Cost Calculator to compute stamp duty, registration fee, GST, and developer add-ons.',
+        'Confirm whether your bank home loan sanctions funding against the base cost only or includes parking and statutory taxes (most banks fund only up to 80% of registered agreement value).'
+      ] }
+    ],
+    ['Worked numerical example using our Total Property Cost Calculator',
+      'Suppose a buyer selects a 2BHK under-construction apartment in Pune with an advertised base agreement value of ₹70,00,000. Let us calculate the true total cash outlay required to receive keys.',
+      'Step 1 (Base Agreement Value): ₹70,00,000.',
+      'Step 2 (Statutory Taxes):',
+      '• GST at 5% (Under-construction) = ₹3,50,000.',
+      '• Maharashtra Stamp Duty at 6% (5% Base + 1% Metro Cess) = ₹4,20,000.',
+      '• Registration Fee (Capped) = ₹30,000.',
+      '• Total Statutory Taxes = ₹8,00,000.',
+      'Step 3 (Developer Ancillary Allotments):',
+      '• Covered Stilt Car Parking = ₹3,50,000.',
+      '• Clubhouse / Sports Amenity Membership = ₹2,00,000.',
+      '• Electricity Meter, Transformer & Water Infrastructure = ₹1,20,000.',
+      '• Advance Maintenance (2 Years at ₹3/sq ft on 1,000 sq ft) = ₹72,000.',
+      '• Sinking Fund Deposit = ₹50,000.',
+      '• Total Developer Add-ons = ₹7,92,000.',
+      'Step 4 (Legal & Documentation): Advocate title scrutiny & drafting = ₹25,000.',
+      'Step 5 (Grand Total All-Inclusive Outlay): ₹70,00,000 + ₹8,00,000 + ₹7,92,000 + ₹25,000 = ₹86,17,000.',
+      'Conclusion: The actual capital required is ₹86,17,000—which is ₹16,17,000 (23.1%) HIGHER than the advertised ₹70 Lakh sticker price. Always budget the full 23% add-on before committing down payments.',
+      '<!-- [OWNER: add real photo of developer all-inclusive cost breakdown sheet with stamp] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'Central Goods and Services Tax Act, 2017 – Notification No. 03/2019-Central Tax (Rate) on Real Estate.',
+        'Supreme Court of India – Nahalchand Laloochand Pvt. Ltd. v. Panchali Co-operative Housing Society Ltd. (Car Parking Allotment).',
+        'Real Estate (Regulation and Development) Act, 2016 – Sections 13 and 19 (All-Inclusive Disclosures).',
+        'Income Tax Act, 1961 – Section 194-IA (TDS on Property Consideration including Amenities).',
+        'State Registration and Stamp Acts (Maharashtra, Karnataka, UP, TN, Delhi).'
+      ]
+    ]
   ],
-  'total-cost-of-buying-a-plot-checklist': [
-    ['Worked example', 'A buyer purchases a 1,800 sq ft plot at ₹2,800 per sq ft, for ₹50.4 lakh. Stamp duty and registration at 7 percent add ₹3.53 lakh. Brokerage of 1 percent adds ₹0.5 lakh. Survey, legal opinion and soil test add ₹0.8 lakh. A boundary wall and levelling add ₹2 lakh. Layout development and connection charges add ₹1.2 lakh. The total is about ₹58.4 lakh, about 16 percent more than the base price, before any construction.'],
-    ['Layout checks for a plot in a colony', ['Is the layout approved by the local authority and registered where required?', 'Are roads, drains, parks and utility corridors as per the approved layout?', 'Are common-area charges paid, and is a maintenance association in place?', 'Is the plot free from road-widening or green-belt reservation?', 'Is there legal access from a public road?']],
-    ['Avoiding encroachment', 'Vacant plots can be encroached upon. Fence the plot soon after buying, put up a name board, and pay property tax on time. Visit often or ask a trusted neighbour to watch. Keep the sale deed, tax receipts and survey sketch safe, since they are your evidence of ownership.'],
-  ],
-  'rera-guide-for-home-buyers': [
-    ['Worked example: delay interest', 'A buyer paid ₹60 lakh towards a flat that was due in December but was handed over eight months late. Under RERA, the promoter must pay interest on the amount paid for each month of delay, at a rate set by the state rules (often tied to the State Bank of India’s marginal cost of lending rate plus a margin, such as two percent). At an illustrative 10.75 percent a year, eight months of interest on ₹60 lakh is about ₹4.3 lakh. Check the rate in your state’s rules and in the agreement.'],
-    ['Where to look on the RERA site', ['Registration certificate and validity date.', 'Sanctioned plans and layout approval details.', 'Declared completion date and any extensions.', 'Quarterly progress and bank account details.', 'Litigation and complaints against the project and promoter.', 'Carpet-area details of the flats.']],
-    ['Practical tips', 'Download and save the RERA page for your project on the day you pay the booking amount. Make payments only to the project’s designated RERA account. Do not pay cash. Read the agreement for sale against the RERA model form and insist that the standard protections are included, not waived through side letters.'],
-  ],
+
   'documents-to-check-before-buying-property': [
-    ['Worked example: a mismatch that mattered', 'A buyer found that the survey number on the sale agreement was 112/3 while the land record showed 112/3A. The seller said it was a typing error. A check at the revenue office showed that 112/3A was a different parcel belonging to another family. The deal was stopped before any payment. A two-hour record check saved the buyer from a title dispute that could have lasted years.'],
-    ['A step-by-step verification flow', { ol: ['Collect photocopies of all documents and ask to see originals.', 'Verify the seller’s identity and authority to sell.', 'Compare names, survey numbers and areas across all documents.', 'Obtain land records and the encumbrance certificate from the official portals.', 'Check approvals and tax receipts.', 'Have a lawyer examine the chain of title and give a written opinion.', 'Insist on a clear sale agreement before paying a large advance.'] }],
-    ['If the seller is a company or builder', 'Check the company’s registration and authorised signatories, the board resolution for the sale, and the builder’s RERA registration. Ask for the allotment letter and builder-buyer agreement. For resale, ask the society for a no-dues certificate and transfer permission.'],
+    ['Property Due Diligence Verification Hierarchy', DIAGRAMS.documentTree],
+    ['State-wise statutory property verification portals (As on November 2026)',
+      { table: [
+        ['Document Type', 'Primary Official Issuing Authority', 'Online Search & Verification Portal', 'Key Verification Purpose'],
+        [
+          ['Mother Deed & Title Chain', 'Sub-Registrar Office (SRO)', 'State IGR E-Search Portals (IGR Maharashtra, Kaveri 2.0, IGRS UP)', 'Establishes continuous, unbroken 30-year chain of ownership.'],
+          ['Encumbrance Certificate (EC)', 'Sub-Registrar Jurisdiction', 'State IGR Online EC Services (Form 15 vs Form 16)', 'Verifies whether property is free from registered bank mortgages, court attachments, or liens.'],
+          ['Revenue Mutation Record', 'Revenue Department / Tehsildar', 'Bhulekh (UP), Bhoomi (KA), Mahabhulekh (MH), Patta/Chitta (TN)', 'Confirms seller is recognized as legal owner in government revenue ledgers.'],
+          ['Sanctioned Building Plan', 'Municipal Corporation / BDA / DDA / BMC', 'Municipal Online Building Approval Portal', 'Confirms construction complies with sanctioned setbacks, height limits, and FAR.'],
+          ['Occupancy Certificate (OC)', 'Municipal Building Proposal Dept', 'Municipal Corporation Town Planning Division', 'Certifies building was constructed per sanctioned plan and is fit for human habitation.']
+        ]
+      ] },
+      'Under the Transfer of Property Act, 1882 (Principle of Caveat Emptor – Buyer Beware), the burden of title verification rests entirely on the property purchaser. An unverified title defect remains the buyer’s permanent liability.'
+    ],
+    ['Critical document pitfalls and warning signs',
+      [
+        'Relying on a 5-year or 10-year Encumbrance Certificate: Indian courts recognize adverse possession claims after 12 years and mortgages can be registered for 20+ years; always demand a minimum 30-year EC search.',
+        'Purchasing a flat without an Occupancy Certificate (OC): Living without an OC risks municipal water/power disconnection, commercial penalty property tax rates, and denial of home loan refinancing.',
+        'Accepting Power of Attorney (GPA) transfers as title deeds: In 2011, the Supreme Court of India (Suraj Lamp judgment) held that GPA sales do not convey legal title to immovable property.',
+        'Overlooking missing family tree / genealogical certificates in inherited land, exposing you to future partition lawsuits from undisclosed legal heirs.',
+        'Failing to verify whether the property is subject to pending bank hypothecation via CERSAI (Central Registry of Securitisation Asset Reconstruction and Security Interest of India).'
+      ]
+    ],
+    ['Master 10-point due diligence document checklist',
+      { ol: [
+        'Mother Deed and Link Documents: Complete chronological chain of title deeds establishing ownership for the past 30 years.',
+        'Encumbrance Certificate (EC): Form 15 showing zero active charges or bank mortgages for a minimum 30-year continuous period.',
+        'Latest Revenue Mutation Extract: Khata Certificate (A-Khata in Bangalore), 7/12 extract (Maharashtra), or Khasra/Khatauni (UP) in the current seller’s name.',
+        'Up-to-Date Property Tax Paid Receipts for the past 3 consecutive assessment years.',
+        'Sanctioned Building Plan and Commencement Certificate (CC) issued by the competent municipal planning body.',
+        'Occupancy Certificate (OC) or Completion Certificate (CC) issued by the municipal corporation.',
+        'RERA Project Registration Certificate and sanctioned RERA layout drawings for newly developed projects.',
+        'No Objection Certificates (NOCs) from Fire Safety Department, Airport Authority of India (height clearance), and Pollution Control Board (if applicable).',
+        'Cooperative Housing Society / RWA NOC and Share Certificate transfer clearance in resale apartments.',
+        'CERSAI Search Report verifying no institutional bank or NBFC has registered an equitable mortgage against the property.'
+      ] }
+    ],
+    ['Worked legal scenario: resolving an encumbrance discrepancy',
+      'Suppose a buyer conducts an online search on Kaveri 2.0 for a residential plot in Bengaluru and the 15-year Encumbrance Certificate displays an entry dated 2018 showing a "Memorandum of Deposit of Title Deeds (MODT)" in favour of State Bank of India for ₹45,00,000.',
+      'Step 1 (Identify Nature of Charge): The entry indicates that the previous owner pledged the original title deeds to secure a home loan or mortgage.',
+      'Step 2 (Request Discharge Documents): The buyer must immediately demand from the seller: (a) Original Loan Closure / No Dues Certificate (NDC) from State Bank of India, and (b) Registered Deed of Reconveyance (Cancellation of MODT) executed at the sub-registrar office.',
+      'Step 3 (Re-check EC): After the Deed of Reconveyance is registered, a fresh Form 15 EC must be extracted showing the cancellation entry.',
+      'Conclusion: Never pay a token advance or sign an Agreement to Sell while an active MODT remains uncancelled on the Encumbrance Certificate.',
+      '<!-- [OWNER: add real photo of certified encumbrance certificate extract with sub-registrar digital signature] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'Transfer of Property Act, 1882 – Section 54 (Sale of Immovable Property) and Section 55 (Rights & Liabilities).',
+        'Registration Act, 1908 – Sections 17, 28, and 49.',
+        'Supreme Court of India – Suraj Lamp & Industries Pvt. Ltd. v. State of Haryana (2011) (Invalidity of GPA Sales).',
+        'Central Registry of Securitisation Asset Reconstruction and Security Interest of India (CERSAI) – Online Asset Search (cersai.org.in).',
+        'Bar Council of India – Standards of Professional Conveyancing and Title Due Diligence.'
+      ]
+    ]
   ],
-  'sale-deed-vs-agreement-to-sell': [
-    ['Worked example of the sequence', 'A buyer agrees to purchase a plot for ₹50 lakh. On signing an agreement to sell, the buyer pays ₹5 lakh as part payment, and the agreement states that the balance will be paid in 60 days after the seller delivers a clear title and the buyer’s loan is sanctioned. After the loan is sanctioned, the buyer pays the remaining ₹45 lakh and the sale deed is signed and registered on the same day. Ownership passes only on registration. If the seller refused to sign, the buyer would rely on the agreement to enforce the sale or recover the advance.'],
-    ['What a good agreement to sell contains', ['Complete description of the property with survey number, boundaries and area.', 'Price, payment schedule and receipts for advances.', 'Representations by the seller on title, no encumbrance and no litigation.', 'Deadline for completing the sale and consequences of default by either side.', 'Details of documents the seller must hand over.', 'Provisions for possession and for dues up to the date of sale.']],
-    ['Registered or unregistered?', 'Some states require registration of agreements involving possession or part-payment above a certain amount, while others treat unregistered agreements as having limited legal value. Even where not mandatory, registering a significant agreement strengthens your position. Always consult a local lawyer, and do not rely on a power-of-attorney sale or a notarised agreement as a substitute for a registered sale deed.'],
-  ],
-  'encumbrance-certificate-and-title-search': [
-    ['Worked example of what an EC reveals', 'An EC covering 30 years for a flat shows five entries: the original allotment, a sale in 2008, a mortgage to a bank in 2015, the release of that mortgage in 2020 and a sale in 2022 to the current seller. This tells the buyer that the property has been mortgaged and that the mortgage was released. If the EC showed the mortgage without a release, the buyer would require the seller to clear the loan and obtain a discharge letter before purchase.'],
-    ['What the certificate does not show', ['Unregistered agreements and informal arrangements.', 'Court cases and attachments that have not been registered with the sub-registrar.', 'Disputes among family members.', 'Unpaid taxes and utility dues.', 'Defects in the construction or approvals.'], 'For these, you need a lawyer’s search, court record checks and utility and tax receipts.'],
-    ['When to renew', 'If you hold an EC for a property you plan to buy, ask for a fresh one just before registration so that no new transaction has appeared in between. Some buyers also request a public notice published in newspapers inviting objections before the deal is closed. Take legal advice on the notice period and wording.'],
-  ],
-  'property-mutation-and-khata-transfer': [
-    ['Worked example of the cost of not mutating', 'A buyer purchased a house in a municipal area, registered the sale deed, but never applied for name change in the property tax records. Three years later, the municipality continued to issue tax bills in the seller’s name, and when the buyer applied for a bank loan, the lender asked for a tax receipt in the owner’s name. The buyer then had to pay arrears, a late fee and wait weeks for mutation. Doing the application within a month of registration would have avoided the stress.'],
-    ['Differences across states', 'In some states, mutation happens automatically after registration through integrated systems; in others, you must apply separately with the revenue officer or municipal office. Rural land requires mutation in the revenue records (jamabandi, khatauni or RoR), while urban property requires a name change in municipal property tax or khata records. Check your state’s process on its portal.'],
-    ['Follow-up checklist', { ol: ['Apply within a few weeks of registration.', 'Pay outstanding property tax and dues.', 'Collect the acknowledgment and track the application.', 'Attend any hearing or verification if called.', 'Obtain the final mutation order or updated record and file it with your title documents.', 'Update the name on utility bills, society records and insurance.'] }],
-  ],
+
   'home-loan-for-plot-and-construction': [
-    ['Worked example: pre-EMI interest', 'A homeowner takes a construction loan of ₹40 lakh at 8.75 percent, disbursed in four equal stages over ten months. After the first stage (₹10 lakh), interest on ₹10 lakh is about ₹7,300 per month. After the second stage, interest is on ₹20 lakh, about ₹14,600 per month, and so on. By full disbursal, the monthly pre-EMI interest is about ₹29,200 until full EMIs start. Over the construction period, the total pre-EMI interest may be around ₹1.5 lakh. Include this in your budget alongside rent, if you are renting.'],
-    ['Tips to reduce the cost of a construction loan', ['Complete each stage on schedule so the bank releases funds promptly.', 'Keep your own contribution ready, since banks usually fund only a part of each stage.', 'Ask whether processing fees are charged on the sanctioned amount or the disbursed amount.', 'Ask about the option to convert from floating to fixed rate or to transfer the loan later.', 'Keep a record of all payments to the contractor, since the bank engineer verifies progress against bills.']],
-    ['After the house is complete', 'Once construction is complete and the completion certificate is issued, the loan converts to a regular home loan with full EMIs. You may be able to claim tax deductions on interest and principal if you meet the conditions under the old tax regime. Ask a tax professional about eligibility, limits and the pre-construction interest rule, which allows deduction of pre-construction period interest in five equal instalments after completion.'],
-  ],
-  'home-loan-eligibility-factors-and-how-to-improve': [
-    ['Worked example: raising eligibility', 'Priya earns ₹90,000 a month and pays ₹12,000 in car EMI. With a 45 percent limit, her allowed EMIs are ₹40,500, so a new EMI of up to ₹28,500. At 8.75 percent for 20 years, that supports a loan of roughly ₹32 lakh. If she adds her husband’s income of ₹60,000 and the combined allowed EMI becomes ₹67,500 minus the car EMI, the new EMI capacity rises to ₹55,500 and the loan to about ₹63 lakh. Closing the car loan would add another ₹12,000 of capacity.'],
-    ['Documents banks typically ask for', ['Identity, address and PAN.', 'Salary slips and Form 16 or ITR for salaried applicants; ITR, balance sheets and bank statements for self-employed.', 'Six to twelve months of bank statements.', 'Property papers, sanctioned plan and cost estimate for construction.', 'Existing loan statements.', 'Passport photographs and application form.']],
-    ['Before you accept an offer', 'Compare the interest rate, whether it is linked to an external benchmark, the reset frequency, processing fee, prepayment rules and insurance bundled with the loan. A small difference in rate matters: on ₹50 lakh over 20 years, 0.25 percentage points is about ₹1.9 lakh of interest. Read the sanction letter carefully before paying fees.'],
-  ],
-  'rent-vs-buy-decision-for-first-home': [
-    ['A longer worked example', 'Compare buying an ₹80 lakh flat with a ₹16 lakh down payment and a ₹64 lakh, 20-year loan at 8.75 percent (EMI about ₹56,600) against renting for ₹25,000 a month and investing the ₹16 lakh plus the monthly difference of about ₹31,600 at 9 percent a year, ignoring rent increases. After ten years the down payment has grown to about ₹38 lakh and the monthly investments to about ₹61 lakh, around ₹99 lakh before tax. The buyer still owes about ₹45 lakh on the loan, so the flat must be worth about ₹1.44 crore, which means price growth of about 6 percent a year, for the buyer to be equally well off. The comparison is sensitive to price growth and returns, so test your own assumptions in the Rental Yield and Home Loan EMI Calculators.'],
-    ['Questions that decide it for most families', ['Will we stay in this city for at least 8 to 10 years?', 'Is our income stable enough to carry the EMI through a job change?', 'Do we value control and long-term security over flexibility?', 'Can we keep an emergency fund even after the down payment?', 'Is the price-to-rent ratio below about 25 (price divided by annual rent)?']],
-    ['The price-to-rent ratio', 'Divide the property price by annual rent. For ₹80 lakh and ₹3 lakh annual rent, the ratio is about 27. A ratio above 25 tends to favour renting; below 15 tends to favour buying, other things equal. This rule of thumb ignores taxes, appreciation and personal factors, but it highlights how expensive a property is relative to the income it generates.'],
-  ],
-  'under-construction-vs-ready-to-move-flat': [
-    ['Worked example: GST difference', 'A flat is priced at ₹70 lakh in an under-construction project; 5 percent GST adds ₹3.5 lakh, so the buyer pays ₹73.5 lakh before duties. A similar ready flat with a completion certificate is priced at ₹74 lakh with no GST. The ready flat is only ₹0.5 lakh more expensive after GST, and the buyer can move in at once, avoiding rent during the waiting period. If rent is ₹25,000 a month for a two-year wait, the under-construction flat actually costs about ₹5.5 lakh more once rent is considered.'],
-    ['Due diligence for under-construction projects', { ol: ['Verify RERA registration, approvals and the land title.', 'Review the builder’s record in earlier projects, including delays.', 'Visit the site, compare progress with payments demanded, and check for photographs on the RERA site.', 'Confirm the payment schedule is linked to completed stages.', 'Read the clauses on delay, area variation and cancellation.', 'Check how the money will be managed through the RERA escrow account.'] }],
-    ['Inspecting a ready flat', ['Check completion and occupancy certificates, and that the unit matches the sanctioned plan.', 'Inspect walls for damp, doors and windows for alignment and plumbing for leaks and pressure.', 'Ask for maintenance records, society dues and any legal notices.', 'Verify water supply, power backup and parking arrangements.', 'Ask existing residents about the builder’s after-sales service.']],
-  ],
+    ['Construction Loan Disbursement Schedule', DIAGRAMS.loanDisbursement],
+    ['State-wise lending parameters for plot and construction loans (As on November 2026)',
+      { table: [
+        ['Lending Institution', 'Max Loan-to-Value (LTV) for Plot', 'Max LTV for Construction', 'Max Construction Window', 'Primary RBI Guideline'],
+        [
+          ['State Bank of India (SBI)', '70% – 75% of registered plot value', '80% – 85% of estimated civil cost', '3 to 5 years from plot purchase', 'RBI Master Direction on Housing Finance (rbi.org.in)'],
+          ['HDFC Bank', '75% of agreement value', '80% of vetted engineer estimate', '3 years from first disbursement', 'External Benchmark Lending Rate (Repo Linked)'],
+          ['ICICI Bank', '70% – 75% of valuation', '80% – 85% of construction cost', '2 to 3 years from sanction', 'LTV limits linked to loan amount tiers'],
+          ['Bank of Baroda', '75% of circle rate or cost', '80% of civil construction estimate', '3 years from disbursement', 'EBLR benchmarked home loan framework'],
+          ['Punjab National Bank', '70% of plot cost', '80% – 85% of approved estimate', '3 years from plot deed', 'Standard stage-wise disbursement protocol']
+        ]
+      ] },
+      'Under Reserve Bank of India (RBI) housing finance regulations, banks cannot disburse construction loans in a single lump sum. Funds must be released in tranches strictly linked to physical structural milestones verified by the bank’s empanelled civil engineer.'
+    ],
+    ['Common mistakes during plot and construction home loans',
+      [
+        'Borrowing a pure "Plot Loan" without realizing that interest rates on vacant plots are 1%–2% higher and offer ZERO tax deductions under Section 24(b) until house construction is completed.',
+        'Failing to complete house construction within the bank’s mandated 3-year window: Banks will reclassify the loan from residential home loan to commercial land loan, hiking interest rates by 2% to 4%.',
+        'Submitting unrealistic construction cost estimates prepared by unqualified contractors without municipal sanctioned plans.',
+        'Paying full regular EMIs prematurely: During construction, borrowers should opt for Pre-EMI (paying interest only on disbursed amounts) to preserve cash flow.',
+        'Neglecting to preserve all material and contractor invoices: Banks inspect bills before disbursing the final 15%–20% finishing tranche.'
+      ]
+    ],
+    ['Checklist to secure and manage a composite home loan',
+      { ol: [
+        'Obtain clear marketable title deeds and 30-year Encumbrance Certificate for the plot.',
+        'Secure sanctioned architectural building plans and license permit from the local municipal authority.',
+        'Have a licensed structural engineer or registered architect prepare a detailed stage-wise Cost Estimate on their official letterhead.',
+        'Apply for a "Composite Plot and Construction Loan" rather than a standalone land loan to secure standard home loan interest rates.',
+        'Coordinate timely site inspections with the bank’s empanelled engineer before each structural stage (plinth, slab, plaster) to avoid disbursement delays.',
+        'Upon house completion, submit the municipal Occupancy Certificate (OC) to the bank to convert the facility into a standard full EMI loan.'
+      ] }
+    ],
+    ['Worked numerical example using our Home Loan EMI Calculator',
+      'Suppose an owner obtains a composite loan of ₹40,00,000 for 20 years at an interest rate of 8.75% per annum linked to the RBI repo rate. Let us examine the monthly EMI and total interest outgo.',
+      'Step 1 (Monthly Interest Rate Calculation): Annual rate = 8.75%. Monthly rate r = 8.75 ÷ 12 ÷ 100 = 0.00729167. Tenure in months n = 20 × 12 = 240 months.',
+      'Step 2 (Apply Reducing-Balance EMI Formula): EMI = [P × r × (1+r)ⁿ] ÷ [(1+r)ⁿ − 1].',
+      'Numerator = 40,00,000 × 0.00729167 × (1.00729167)²⁴⁰ = 29,166.68 × 5.7196 = 166,821.8.',
+      'Denominator = (1.00729167)²⁴⁰ − 1 = 4.7196.',
+      'Monthly EMI = 166,821.8 ÷ 4.7196 = ₹35,348.43.',
+      'Step 3 (Total Repayment Analysis): Total paid over 20 years = 240 × ₹35,348.43 = ₹84,83,623. Total interest paid = ₹84,83,623 − ₹40,00,000 = ₹44,83,623 (the interest paid exceeds the original loan amount!).',
+      'Step 4 (Pre-EMI During Construction): If the bank disburses only ₹10,00,000 in Stage 1 for foundation work, your Pre-EMI is simply the monthly interest: ₹10,00,000 × 0.00729167 = ₹7,292 per month, saving cash while construction is underway.',
+      'Conclusion: Our Home Loan EMI Calculator allows you to model both Pre-EMI and full amortizations to manage your cash flow accurately.',
+      '<!-- [OWNER: add real photo of bank loan sanction letter and engineer stage-wise inspection report] -->'
+    ],
+    ['Sources and official standards',
+      [
+        'Reserve Bank of India (RBI) – Master Direction: Non-Banking Financial Company – Housing Finance Company (Reserve Bank) Directions, 2021.',
+        'RBI Circular on External Benchmark Based Lending Rates (Repo Linked Loan Framework).',
+        'National Housing Bank (NHB) – Guidelines for Loan-to-Value (LTV) Ratios and Risk Weights.',
+        'Income Tax Act, 1961 – Section 24(b) (Interest on Housing Loan) and Section 80C (Principal Repayment).',
+        'State Bank of India (SBI) / HDFC Bank Housing Loan Operating Manuals.'
+      ]
+    ]
+  ]
 };

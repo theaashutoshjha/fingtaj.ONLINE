@@ -6,12 +6,60 @@ import cfg from '../../site.config.mjs';
 const root = path.resolve(import.meta.dirname, '../..');
 
 export const TOPICS = [
-  { id: 'land-measurement', file: 'land', name: 'Land & Measurement', icon: 'land', hue: '#2f6b57', desc: 'Land units, plot measurement, carpet area, FSI, land records and circle rate — explained so you know exactly what you are buying.' },
-  { id: 'building-materials', file: 'materials', name: 'Building Materials', icon: 'brick', hue: '#c1502e', desc: 'Cement, steel, bricks, sand, concrete grades, waterproofing, paint, tiles and pipes: what to choose, how to check quality and how much to order.' },
-  { id: 'house-construction', file: 'construction', name: 'House Construction', icon: 'frame', hue: '#3d5a80', desc: 'From budget and contractor agreements to foundations, soil tests, approvals, inspections and completion certificates.' },
-  { id: 'property-buying', file: 'property', name: 'Property Buying & Registration', icon: 'key', hue: '#7a3b69', desc: 'Stamp duty, RERA, documents, title checks, mutation, home loans and the true total cost of buying a flat or plot.' },
-  { id: 'power-solar-water', file: 'energy', name: 'Power, Solar & Water', icon: 'sun', hue: '#b8842a', desc: 'Electricity bills, appliance use, rooftop solar, inverters, AC sizing, water tanks and rainwater harvesting.' },
-  { id: 'interiors-maintenance', file: 'interiors', name: 'Interiors & Maintenance', icon: 'sofa', hue: '#5d7a2f', desc: 'Staircases, kitchens, ceilings, flooring, roofing, damp and leakage repairs and renovation planning.' },
+  {
+    id: 'land-measurement',
+    file: 'land',
+    name: 'Land & Measurement',
+    icon: 'land',
+    hue: '#2f6b57',
+    desc: 'Land units, plot measurement, carpet area, FSI, land records and circle rate — explained so you know exactly what you are buying.',
+    overview: 'Accurate land surveying and verification form the non-negotiable foundation of real estate investment in India. From interpreting traditional revenue units—such as bigha, katha, biswa, guntha, and cent—to cross-referencing khasra-khatauni records with licensed Total Station digital surveys, physical boundary errors are costly to rectify post-registration. Statutory compliance requires understanding local municipal floor space index (FSI/FAR) limitations, permissible ground coverage, and standard carpet area definitions mandated by the Real Estate (Regulation and Development) Act (RERA). These guides translate complex revenue jargon into actionable verification checklists for prospective plot buyers and individual home builders.',
+  },
+  {
+    id: 'building-materials',
+    file: 'materials',
+    name: 'Building Materials',
+    icon: 'brick',
+    hue: '#c1502e',
+    desc: 'Cement, steel, bricks, sand, concrete grades, waterproofing, paint, tiles and pipes: what to choose, how to check quality and how much to order.',
+    overview: 'Material selection directly governs the structural longevity, safety, and operational lifecycle of any residential building. Bureau of Indian Standards (BIS) specifications set rigorous baseline criteria—from IS 456 for concrete design and IS 1786 for high-strength deformed TMT steel rebars, to IS 269/1489 for Portland cements and IS 1077 for modular burnt clay bricks. Calculating accurate dry-volume bulking factors, testing aggregate silt content on-site, and verifying certified mill test reports prevent costly procurement overruns and prevent structural vulnerabilities like honeycombing or premature rebar corrosion. Our guides provide clear benchmarks and field testing procedures to verify materials before unloading.',
+  },
+  {
+    id: 'house-construction',
+    file: 'construction',
+    name: 'House Construction',
+    icon: 'frame',
+    hue: '#3d5a80',
+    desc: 'From budget and contractor agreements to foundations, soil tests, approvals, inspections and completion certificates.',
+    overview: 'Executing a residential construction project in India demands rigorous oversight across design, statutory clearances, structural framing, and contractor governance. Adhering to the National Building Code of India (NBC 2016) safeguards life safety through seismic detailing, fire resistance setbacks, and mandatory structural peer reviews. From commissioning geotechnical soil bore-log investigations and verifying sanctioned municipal bye-laws to managing stage-wise contractor escrow milestones and strict concrete curing protocols, systematic quality assurance prevents structural defects. These comprehensive guides walk property owners through every physical milestone from ground excavation to obtaining local municipal completion and occupancy certificates.',
+  },
+  {
+    id: 'property-buying',
+    file: 'property',
+    name: 'Property Buying & Registration',
+    icon: 'key',
+    hue: '#7a3b69',
+    desc: 'Stamp duty, RERA, documents, title checks, mutation, home loans and the true total cost of buying a flat or plot.',
+    overview: 'Navigating real estate transactions and statutory conveyancing in India necessitates thorough legal due diligence, title verification, and transparent financial budgeting. A prospective property buyer must examine at least 30 years of registered title deeds, verify non-encumbrance certificates (Form 15/16), inspect sanctioned building layout approvals, and verify developer compliance on state RERA portals. Furthermore, calculating true total acquisition costs—encompassing state-specific stamp duty, sub-registrar fees, local municipal cess, and reducing-balance home loan amortisation schedules—ensures financial liquidity. Our guides demystify the legal instruments, mutation workflows, and banking documentation required to protect your real estate ownership.',
+  },
+  {
+    id: 'power-solar-water',
+    file: 'energy',
+    name: 'Power, Solar & Water',
+    icon: 'sun',
+    hue: '#b8842a',
+    desc: 'Electricity bills, appliance use, rooftop solar, inverters, AC sizing, water tanks and rainwater harvesting.',
+    overview: 'Modern residential infrastructure requires resilient electrical and water supply engineering designed for climate adaptability and resource efficiency. Adhering to the National Building Code (NBC 2016) water consumption norms of 135 litres per capita per day (LPCD), homeowners must correctly size underground domestic storage sumps and overhead distribution tanks to prevent shortages. Integrating rooftop solar photovoltaic installations through central government initiatives—such as the PM Surya Ghar Muft Bijli Yojana—substantially mitigates long-term electricity overheads when inverter capacities and net-metering interconnections comply with state electricity distribution companies (discoms). These guides provide engineering-backed methods for sizing solar, inverter battery banks, and rainwater harvesting recharge pits.',
+  },
+  {
+    id: 'interiors-maintenance',
+    file: 'interiors',
+    name: 'Interiors & Maintenance',
+    icon: 'sofa',
+    hue: '#5d7a2f',
+    desc: 'Staircases, kitchens, ceilings, flooring, roofing, damp and leakage repairs and renovation planning.',
+    overview: 'Interior fit-outs and ongoing structural maintenance preserve the functional comfort, aesthetic value, and architectural integrity of a home. Designing safe staircase geometries per NBC 2016 standards (riser maximum 190 mm, tread minimum 250 mm), selecting durable floor finishes (vitrified tiles versus natural granite or Kota stone), and planning modular kitchen ergonomic layouts ensure daily convenience. Furthermore, proactive moisture management—identifying capillary rising damp, repairing terrace parapet cracks, applying elastomeric waterproofing membranes, and inspecting concealed plumbing joints—prevents severe structural deterioration. These guides offer actionable specifications, material comparison tables, and preventative maintenance protocols for modern homeowners.',
+  },
 ];
 
 // calculator names as they appear in guide text → slug, so they can be auto-linked
@@ -47,6 +95,15 @@ export async function loadGuides(calcSlugs) {
   }
   if (errors.length) throw new Error('Guide content errors:\n' + errors.join('\n'));
 
+  // Task 8: Filter out drafts and future publishDate
+  const today = cfg.lastModified || '2026-11-22';
+  const activeGuides = guides.filter((g) => {
+    if (g.status === 'draft') return false;
+    const pDate = g.publishDate || g.published || g.date || '2026-11-03';
+    if (pDate > today) return false;
+    return true;
+  });
+
   const aliasList = Object.entries(ALIASES).flatMap(([slug, names]) => names.map((n) => [n, slug])).sort((a, b) => b[0].length - a[0].length);
   const link = (text, used) => {
     let out = esc(text);
@@ -58,14 +115,22 @@ export async function loadGuides(calcSlugs) {
     return out;
   };
 
-  for (const g of guides) {
+  for (const g of activeGuides) {
     g.urlPath = '/guides/' + g.slug;
-    g.pub = cfg.buildDate; g.upd = cfg.buildDate;
+    g.published = g.published || g.publishDate || g.date || '2026-11-03';
+    g.modified = g.modified || g.published;
+    g.pub = g.published;
+    g.upd = g.modified;
+    g.author = g.author || 'ashutosh-jha';
     const used = new Set(); const toc = []; const ids = new Set();
     const html = g.sections.map(([h, ...blocks]) => {
       let id = slugify(h).slice(0, 60); while (ids.has(id)) id += '-2'; ids.add(id); toc.push({ id, text: h });
       const body = blocks.map((b) => {
-        if (typeof b === 'string') return `<p>${link(b, used)}</p>`;
+        if (b.rawHtml) return b.rawHtml;
+        if (typeof b === 'string') {
+          if (b.startsWith('<!--')) return b;
+          return `<p>${link(b, used)}</p>`;
+        }
         if (Array.isArray(b)) return `<ul>${b.map((x) => `<li>${link(x, used)}</li>`).join('')}</ul>`;
         if (b.ol) return `<ol>${b.ol.map((x) => `<li>${link(x, used)}</li>`).join('')}</ol>`;
         if (b.table) { const [head, rows] = b.table; return `<div class="table-wrap"><table><thead><tr>${head.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`; }
@@ -79,7 +144,7 @@ export async function loadGuides(calcSlugs) {
     const text = plain(html) + ' ' + g.faqs.map((f) => f.join(' ')).join(' ');
     g.words = text.split(' ').length; g.readMin = Math.max(2, Math.round(g.words / 220));
   }
-  return guides;
+  return activeGuides;
 }
 
 export function relatedGuides(guides, g, n = 3) {

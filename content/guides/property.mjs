@@ -1,7 +1,7 @@
 // Guides: Property Buying & Registration
 export default [
   {
-    slug: 'stamp-duty-and-registration-explained', title: 'Stamp Duty and Registration Charges Explained: How They Are Calculated', date: '',
+    slug: 'stamp-duty-and-registration-explained', title: 'Stamp Duty and Registration Charges Explained: How They Are Calculated', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'What stamp duty and registration fees are, who sets them, how they are calculated on circle rate or agreement value, concessions and how to pay them safely.',
     tags: ['stamp duty', 'registration', 'property', 'circle rate'], calcs: ['stamp-duty-calculator', 'total-property-cost-calculator'],
     sections: [
@@ -15,7 +15,7 @@ export default [
     faqs: [['Is stamp duty refundable?', 'Only in limited cases, such as a cancelled deal within a short period under state rules.'], ['Do I pay duty on the parking and club charges?', 'Duty is on the value shown in the registered document; check how the builder’s agreement shows these items.'], ['Can I pay stamp duty in instalments?', 'Generally not; it is paid at the time of registration.']],
   },
   {
-    slug: 'hidden-costs-of-buying-a-flat', title: 'Hidden Costs of Buying a Flat: What to Budget Beyond the Price', date: '',
+    slug: 'hidden-costs-of-buying-a-flat', title: 'Hidden Costs of Buying a Flat: What to Budget Beyond the Price', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'The extra costs when buying a flat: GST, stamp duty, registration, brokerage, parking, club fees, maintenance deposits, legal and moving costs.',
     tags: ['flat', 'hidden costs', 'gst', 'registration', 'budget'], calcs: ['total-property-cost-calculator', 'stamp-duty-calculator'],
     sections: [
@@ -28,7 +28,7 @@ export default [
     faqs: [['Is GST charged on resale flats?', 'No. GST applies to new, under-construction property sold by builders, not to resale.'], ['What is a maintenance deposit?', 'An advance that the builder or society holds for upkeep, which should be accounted for and transferred to the owners’ association.'], ['Can I negotiate GST?', 'No; it is fixed by law, but base price and other charges can be negotiated.']],
   },
   {
-    slug: 'total-cost-of-buying-a-plot-checklist', title: 'Total Cost of Buying a Plot: Registration, Development and Other Expenses', date: '',
+    slug: 'total-cost-of-buying-a-plot-checklist', title: 'Total Cost of Buying a Plot: Registration, Development and Other Expenses', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Beyond the price of the land: stamp duty, registration, brokerage, survey, boundary wall, soil test and development charges you should budget for.',
     tags: ['plot', 'land', 'cost', 'registration', 'survey'], calcs: ['land-price-calculator', 'stamp-duty-calculator'],
     sections: [
@@ -41,7 +41,7 @@ export default [
     faqs: [['Is GST charged on plots?', 'Sale of land is generally outside GST, but check for charges on development and amenities in a layout.'], ['Do I need a lawyer?', 'Yes, for a title search and agreement review; it is a small cost for a big purchase.'], ['Should I fence the plot immediately?', 'It helps prevent encroachment and is advisable.']],
   },
   {
-    slug: 'rera-guide-for-home-buyers', title: 'RERA for Home Buyers: Your Rights, Registration and How to Complain', date: '',
+    slug: 'rera-guide-for-home-buyers', title: 'RERA for Home Buyers: Your Rights, Registration and How to Complain', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'How the Real Estate (Regulation and Development) Act protects buyers: project registration, carpet-area pricing, escrow, delay compensation and complaint process.',
     tags: ['rera', 'home buyer', 'builder', 'complaint', 'rights'], calcs: ['carpet-area-calculator', 'total-property-cost-calculator'],
     sections: [
@@ -54,7 +54,7 @@ export default [
     faqs: [['Does RERA cover resale flats?', 'It primarily regulates projects and promoters; resale transactions between owners are generally outside its scope.'], ['Are all projects covered?', 'Projects above specified size thresholds must register; very small projects may be exempt.'], ['Can the builder change the plan after sale?', 'Major changes to the sanctioned plan generally need the consent of at least two-thirds of the allottees, as per the law.']],
   },
   {
-    slug: 'documents-to-check-before-buying-property', title: 'Documents to Check Before Buying Property: A Practical Checklist', date: '',
+    slug: 'documents-to-check-before-buying-property', title: 'Documents to Check Before Buying Property: A Practical Checklist', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'The papers to verify before buying a flat, house or plot: title deeds, land records, approvals, encumbrance certificate and tax receipts.',
     tags: ['documents', 'property', 'title', 'checklist', 'due diligence'], calcs: ['total-property-cost-calculator'],
     sections: [
@@ -68,7 +68,7 @@ export default [
     faqs: [['Who should verify the documents?', 'A property lawyer. Do not rely only on the broker or seller.'], ['How far back should the title chain go?', 'Usually at least 30 years, and as far back as available.'], ['What if one co-owner refuses to sell?', 'Do not proceed unless all co-owners sign the sale deed.']],
   },
   {
-    slug: 'sale-deed-vs-agreement-to-sell', title: 'Sale Deed vs Agreement to Sell: What Is the Difference?', date: '',
+    slug: 'sale-deed-vs-agreement-to-sell', title: 'Sale Deed vs Agreement to Sell: What Is the Difference?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'An agreement to sell is a promise to sell in future; a sale deed transfers ownership. Learn the difference, when each is used and why registration matters.',
     tags: ['sale deed', 'agreement to sell', 'registration', 'ownership', 'conveyance'], calcs: ['stamp-duty-calculator'],
     sections: [
@@ -82,7 +82,7 @@ export default [
     faqs: [['Is an agreement to sell enough to claim ownership?', 'No. Ownership transfers only with a registered sale deed.'], ['Can I register the agreement?', 'In many cases it is advisable to register, particularly if possession is given; the rules differ by state.'], ['What is a conveyance deed?', 'Another name for the final deed that transfers ownership, often used for flats in a housing society.']],
   },
   {
-    slug: 'encumbrance-certificate-and-title-search', title: 'Encumbrance Certificate and Title Search: How to Check a Property Is Clear', date: '',
+    slug: 'encumbrance-certificate-and-title-search', title: 'Encumbrance Certificate and Title Search: How to Check a Property Is Clear', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'What an encumbrance certificate shows, how to apply for it, how long a title search should cover and what to do if loans or disputes appear.',
     tags: ['encumbrance certificate', 'title search', 'mortgage', 'legal check'], calcs: ['total-property-cost-calculator'],
     sections: [
@@ -96,7 +96,7 @@ export default [
     faqs: [['Is EC proof of ownership?', 'No. It shows registered transactions; ownership is established by the title deeds.'], ['How long does it take to get an EC?', 'Online certificates may be issued within days; manual applications can take longer.'], ['Do I need an EC for a loan?', 'Banks typically ask for it as part of their legal verification.']],
   },
   {
-    slug: 'property-mutation-and-khata-transfer', title: 'Property Mutation and Khata Transfer After Purchase: Why It Matters', date: '',
+    slug: 'property-mutation-and-khata-transfer', title: 'Property Mutation and Khata Transfer After Purchase: Why It Matters', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'After registering a sale deed, get the property mutated in your name in revenue and tax records. Learn what mutation is, the steps and documents.',
     tags: ['mutation', 'khata', 'property tax', 'revenue record', 'transfer'], calcs: ['stamp-duty-calculator'],
     sections: [
@@ -109,7 +109,7 @@ export default [
     faqs: [['How long does mutation take?', 'From a few weeks to a few months, depending on the department and whether objections arise.'], ['Is mutation the same as registration?', 'No. Registration transfers legal title; mutation updates the revenue or tax record.'], ['Do I need to mutate a flat?', 'Yes, usually through the society and the municipal property tax records.']],
   },
   {
-    slug: 'home-loan-for-plot-and-construction', title: 'Home Loan for Plot Purchase and House Construction: Types, Stages and Costs', date: '',
+    slug: 'home-loan-for-plot-and-construction', title: 'Home Loan for Plot Purchase and House Construction: Types, Stages and Costs', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'How banks finance land and construction: plot loans, construction loans released in stages, pre-EMI interest and documents, with tips to keep costs low.',
     tags: ['home loan', 'plot loan', 'construction loan', 'emi', 'pre-emi'], calcs: ['home-loan-emi-calculator', 'home-affordability-calculator'],
     sections: [
@@ -123,7 +123,7 @@ export default [
     faqs: [['How much loan will I get for construction?', 'Usually a percentage of the estimated construction cost, subject to your income and the lender’s limits.'], ['Can I get a tax benefit?', 'Tax deductions on home loan interest and principal apply under the old tax regime with limits; confirm current rules with a tax professional.'], ['What is pre-EMI?', 'Interest paid on the amount disbursed during construction before full EMIs begin.']],
   },
   {
-    slug: 'home-loan-eligibility-factors-and-how-to-improve', title: 'Home Loan Eligibility: What Banks Check and How to Improve Your Chances', date: '',
+    slug: 'home-loan-eligibility-factors-and-how-to-improve', title: 'Home Loan Eligibility: What Banks Check and How to Improve Your Chances', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Income, credit score, existing EMIs, age, property value and employment all decide your home loan eligibility. See how to raise your limit and avoid rejection.',
     tags: ['home loan', 'eligibility', 'credit score', 'foir', 'emi'], calcs: ['home-affordability-calculator', 'home-loan-emi-calculator'],
     sections: [
@@ -137,7 +137,7 @@ export default [
     faqs: [['What is a good credit score for a home loan?', '750 and above is considered good by most lenders.'], ['Does a co-applicant help?', 'Yes, adding an earning co-applicant adds income to the eligibility calculation.'], ['Can I get a loan on a plot in a new layout?', 'Only if the layout and plot are approved and the title is clear.']],
   },
   {
-    slug: 'rent-vs-buy-decision-for-first-home', title: 'Rent or Buy Your First Home? A Practical Way to Decide', date: '',
+    slug: 'rent-vs-buy-decision-for-first-home', title: 'Rent or Buy Your First Home? A Practical Way to Decide', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare rent and buy using rental yield, EMI, down payment, opportunity cost and your plans. A framework to decide without relying on rules of thumb.',
     tags: ['rent vs buy', 'rental yield', 'emi', 'first home'], calcs: ['rental-yield-calculator', 'home-loan-emi-calculator'],
     sections: [
@@ -151,7 +151,7 @@ export default [
     faqs: [['Is buying always better in the long run?', 'No. It depends on price growth, rent levels and the returns you could earn elsewhere.'], ['How much down payment should I have?', 'At least 20 percent plus 8 to 10 percent for duties and costs.'], ['What if prices fall?', 'Ownership carries price risk; consider how long you can hold.']],
   },
   {
-    slug: 'under-construction-vs-ready-to-move-flat', title: 'Under-Construction vs Ready-to-Move Flat: Price, Risk, GST and Possession', date: '',
+    slug: 'under-construction-vs-ready-to-move-flat', title: 'Under-Construction vs Ready-to-Move Flat: Price, Risk, GST and Possession', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Compare buying an under-construction flat with a ready-to-move one: price, GST, delay risk, RERA protection, loan disbursal and what to verify.',
     tags: ['under construction', 'ready to move', 'gst', 'rera', 'possession'], calcs: ['total-property-cost-calculator', 'home-loan-emi-calculator'],
     sections: [

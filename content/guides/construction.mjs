@@ -1,7 +1,7 @@
 // Guides: House Construction
 export default [
   {
-    slug: 'steps-to-build-a-house-in-india', title: 'Steps to Build a House in India: From Land Check to Handover', date: '2026-11-01',
+    slug: 'steps-to-build-a-house-in-india', title: 'Steps to Build a House in India: From Land Check to Handover', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'The full sequence of building a house in India — land checks, design, approvals, foundation, structure, finishing and occupancy — with what to do at each stage.',
     tags: ['house', 'construction', 'steps', 'process'], calcs: ['construction-cost-calculator', 'house-budget-planner'],
     sections: [
@@ -15,7 +15,7 @@ export default [
     faqs: [['How long does it take to build a house?', 'A typical two-floor house takes 8 to 14 months from foundation to handover, depending on size, weather and approvals.'], ['Do I need an architect?', 'It is strongly advised. An architect plans space, light and ventilation, and approvals usually need drawings from a licensed professional.'], ['Should I take a loan before starting?', 'Arrange financing early because banks release funds in stages and need sanctioned plans and documents.']],
   },
   {
-    slug: 'how-to-plan-a-house-construction-budget', title: 'How to Plan a House Construction Budget (and Avoid Running Out of Money)', date: '2026-11-02',
+    slug: 'how-to-plan-a-house-construction-budget', title: 'How to Plan a House Construction Budget (and Avoid Running Out of Money)', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'A practical method to build a house budget: fixed costs, per-sq-ft estimate, professional fees, approvals, contingency and a stage-wise payment schedule.',
     tags: ['budget', 'house', 'cost', 'contingency'], calcs: ['house-budget-planner', 'construction-cost-calculator'],
     sections: [
@@ -29,7 +29,7 @@ export default [
     faqs: [['How much contingency should I keep?', 'At least 10 percent of construction cost; 15 percent if you are making design decisions as you go.'], ['Should I pay everything to the contractor upfront?', 'No. Pay in stages tied to measured progress and quality.'], ['Is the lowest quote the best?', 'Not always. Compare scope, specifications and the contractor’s track record.']],
   },
   {
-    slug: 'construction-cost-per-sq-ft-what-affects-it', title: 'Construction Cost per Sq Ft in India: What Really Drives the Rate', date: '2026-11-03',
+    slug: 'construction-cost-per-sq-ft-what-affects-it', title: 'Construction Cost per Sq Ft in India: What Really Drives the Rate', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Why quotes vary so much: location, structure, finishes, brand choices, soil, floors and contract type. Learn how to compare quotes fairly and spot hidden gaps.',
     tags: ['construction cost', 'per sq ft', 'quote', 'rate'], calcs: ['construction-cost-calculator'],
     sections: [
@@ -43,7 +43,7 @@ export default [
     faqs: [['Is built-up area measured with walls?', 'Yes. Built-up area includes wall thickness, staircase and covered balconies.'], ['Do rates include GST?', 'Check each quote; for works contracts GST may be charged separately.'], ['Does adding a floor cost the same per sq ft?', 'Often slightly less per sq ft because the foundation is shared, but additional structure and access costs apply.']],
   },
   {
-    slug: 'grey-structure-vs-turnkey-construction', title: 'Grey Structure vs Turnkey Construction: What Is Included in Each', date: '2026-11-04',
+    slug: 'grey-structure-vs-turnkey-construction', title: 'Grey Structure vs Turnkey Construction: What Is Included in Each', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'The difference between grey structure and turnkey house construction, what each covers, typical exclusions and when each option makes sense for your project.',
     tags: ['grey structure', 'turnkey', 'contractor', 'scope'], calcs: ['construction-cost-calculator', 'house-budget-planner'],
     sections: [
@@ -57,7 +57,7 @@ export default [
     faqs: [['Is turnkey always more expensive?', 'The rate per sq ft is higher, but the total can be similar once you add finishing costs and your time.'], ['Can I switch from grey structure to turnkey later?', 'Yes, by signing a separate contract for finishing, but price and coordination are easier if planned from the start.'], ['What is a defect liability period?', 'A period after handover, commonly 6 to 12 months, during which the contractor fixes defects at no cost.']],
   },
   {
-    slug: 'labour-contract-vs-material-contract-vs-turnkey', title: 'Labour Contract vs Material Contract vs Turnkey: Which Is Best for You?', date: '2026-11-05',
+    slug: 'labour-contract-vs-material-contract-vs-turnkey', title: 'Labour Contract vs Material Contract vs Turnkey: Which Is Best for You?', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'Understand the three main ways to hire a builder in India, the risks and control in each, and how to choose based on your time, budget and experience.',
     tags: ['contractor', 'labour contract', 'material contract', 'turnkey'], calcs: ['construction-cost-calculator'],
     sections: [
@@ -71,7 +71,7 @@ export default [
     faqs: [['Which is cheapest?', 'Labour contract often has the lowest rate per sq ft but you take on the material cost risk and effort.'], ['Can I change the contract midway?', 'Yes, but only by a written amendment that records what was done and the new terms.'], ['Who pays for wastage?', 'In labour contracts, the owner; in material contracts, the contractor within the agreed norms.']],
   },
   {
-    slug: 'how-to-choose-a-contractor-and-sign-a-construction-agreement', title: 'How to Choose a Contractor and Sign a Construction Agreement', date: '2026-11-06',
+    slug: 'how-to-choose-a-contractor-and-sign-a-construction-agreement', title: 'How to Choose a Contractor and Sign a Construction Agreement', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'A checklist to shortlist a builder, verify past work and write an agreement that covers scope, payments, timelines, quality and dispute handling.',
     tags: ['contractor', 'agreement', 'checklist', 'builder'], calcs: ['house-budget-planner'],
     sections: [
@@ -85,7 +85,7 @@ export default [
     faqs: [['Do I need a lawyer?', 'A lawyer can review the draft; it is worth the small cost for a project of this size.'], ['How much advance is normal?', 'A modest mobilisation advance, often 5 to 10 percent, followed by stage payments.'], ['What if the contractor abandons the work?', 'A clear termination clause and records of measured progress help you finish with another contractor.']],
   },
   {
-    slug: 'types-of-foundation-for-houses', title: 'Types of Foundation for Houses: Footing, Strip, Raft and Pile', date: '2026-11-07',
+    slug: 'types-of-foundation-for-houses', title: 'Types of Foundation for Houses: Footing, Strip, Raft and Pile', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'How foundations work, which type suits which soil and building, depth rules of thumb and why a soil test and structural design should always decide.',
     tags: ['foundation', 'footing', 'raft', 'pile', 'soil'], calcs: ['excavation-calculator', 'concrete-calculator'],
     sections: [
@@ -99,7 +99,7 @@ export default [
     faqs: [['Is a raft foundation stronger?', 'It spreads loads more evenly and suits weak soils, but costs more; the right choice depends on the soil test.'], ['What is lean concrete?', 'A thin layer of low-grade concrete poured under footings to give a clean, level base.'], ['Can I change the foundation design on site?', 'Only with approval from the structural engineer.']],
   },
   {
-    slug: 'soil-testing-before-construction', title: 'Soil Testing Before Construction: Why, How and What the Report Tells You', date: '2026-11-08',
+    slug: 'soil-testing-before-construction', title: 'Soil Testing Before Construction: Why, How and What the Report Tells You', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'What a soil investigation is, how bore tests give safe bearing capacity, what the report contains and how it decides foundation type and depth.',
     tags: ['soil test', 'bearing capacity', 'foundation', 'borehole'], calcs: ['excavation-calculator'],
     sections: [
@@ -113,7 +113,7 @@ export default [
     faqs: [['Is a soil test mandatory?', 'It depends on local rules and building size, but it is strongly recommended for every new building.'], ['Can I use my neighbour’s report?', 'Soil can change over short distances, so a report from a nearby plot is only a rough guide.'], ['What is black cotton soil?', 'A clay that swells when wet and shrinks when dry, damaging shallow foundations; it needs special design.']],
   },
   {
-    slug: 'how-much-cement-sand-and-steel-for-a-house', title: 'How Much Cement, Sand and Steel Does a House Need? Thumb Rules and Real Estimates', date: '2026-11-09',
+    slug: 'how-much-cement-sand-and-steel-for-a-house', title: 'How Much Cement, Sand and Steel Does a House Need? Thumb Rules and Real Estimates', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Rule-of-thumb quantities of cement and steel per sq ft, how to turn them into a rough bill, and why a bill of quantities from drawings is the only reliable method.',
     tags: ['cement', 'steel', 'sand', 'thumb rule', 'quantity'], calcs: ['material-thumb-rule-estimator', 'concrete-calculator', 'brick-quantity-calculator'],
     sections: [
@@ -127,7 +127,7 @@ export default [
     faqs: [['How many bags of cement for a 1,200 sq ft house?', 'About 480 bags by the 0.4 rule, but actual use depends on design.'], ['How much steel for a G+1 house of 1,000 sq ft per floor?', 'Roughly 6 to 9 tonnes in total as a rough guess; use drawings for exact numbers.'], ['Should I buy extra material?', 'Keep a 3 to 5 percent buffer, but avoid large surplus because cement ages and steel rusts.']],
   },
   {
-    slug: 'building-plan-approval-in-india-basics', title: 'Building Plan Approval in India: The Basic Process and Documents', date: '2026-11-10',
+    slug: 'building-plan-approval-in-india-basics', title: 'Building Plan Approval in India: The Basic Process and Documents', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'How building plan sanction works in India, the usual documents, what a commencement certificate is and what happens if you build without approval.',
     tags: ['building plan', 'sanction', 'approval', 'bye-laws', 'permit'], calcs: ['construction-cost-calculator'],
     sections: [
@@ -141,7 +141,7 @@ export default [
     faqs: [['How long does approval take?', 'It ranges from a few days under self-certification schemes to several weeks or months in busy authorities.'], ['Do I need approval in a village?', 'Rules differ; many panchayats require permission and some require approval from the district planning authority.'], ['Can I get approval after building?', 'Regularisation may be possible in some cases at a penalty, but is not guaranteed.']],
   },
   {
-    slug: 'site-inspection-checklist-during-construction', title: 'Site Inspection Checklist: What to Check at Every Stage of Construction', date: '2026-11-11',
+    slug: 'site-inspection-checklist-during-construction', title: 'Site Inspection Checklist: What to Check at Every Stage of Construction', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'A stage-by-stage owner’s checklist: foundation, slabs, masonry, plaster, waterproofing, plumbing, electrical and finishing, with tests to request.',
     tags: ['inspection', 'quality', 'checklist', 'construction'], calcs: ['concrete-calculator', 'steel-weight-calculator'],
     sections: [
@@ -156,34 +156,76 @@ export default [
     faqs: [['How often should I visit the site?', 'At least weekly, and at every critical stage such as before concreting.'], ['Should I hire an independent engineer?', 'For first-time builders, hiring a structural engineer to inspect key stages is a sound investment.'], ['What tests should I ask for?', 'Concrete cube tests, steel weight checks, a ponding test on waterproofing and pressure tests on plumbing.']],
   },
   {
-    slug: 'common-house-construction-mistakes-to-avoid', title: '15 Common House Construction Mistakes (and How to Avoid Them)', date: '2026-11-12',
+    slug: 'common-house-construction-mistakes-to-avoid', title: '15 Common House Construction Mistakes (and How to Avoid Them)', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'Fifteen mistakes that cost owners money and cause defects — from skipping soil tests to poor curing and weak agreements — with simple ways to prevent each.',
     tags: ['mistakes', 'construction', 'defects', 'checklist'], calcs: ['construction-cost-calculator', 'house-budget-planner'],
     sections: [
-      ['Learn from other people’s costly errors', 'Most problems with new houses were avoidable. The list below comes from what typically goes wrong in Indian house construction. Each item has a simple preventive step.'],
-      ['Planning mistakes', { ol: ['No realistic budget or contingency: build one with the House Budget Planner.', 'Starting before approvals: sanction first.', 'Skipping the soil test: do it before design.', 'Ignoring orientation, light and ventilation: plan windows and cross-ventilation.', 'Not planning electrical and plumbing points: mark them before plastering.'] }],
-      ['Contract mistakes', { ol: ['Verbal agreements: write everything.', 'Paying too much in advance: pay by stage.', 'No specification of brands and quality: list them.', 'No defect liability clause: agree on a period.'] }],
-      ['Construction mistakes', { ol: ['Poor curing of concrete: cure at least 7 to 10 days.', 'Weak concrete from too much water: control water-cement ratio.', 'Reducing steel or size on site: only the engineer may change it.', 'Bad waterproofing in bathrooms and terraces: test by ponding.', 'Skipping slopes in wet areas: ensure drainage slopes.', 'Cheap, unbranded wiring or pipes: concealed items are expensive to replace.'] }],
-      ['The biggest lesson', 'Most defects trace back to a few shortcuts: weak planning, poor supervision and cutting corners on hidden work. Spend a little more attention on the items that you cannot easily fix later: foundation, structure, waterproofing, plumbing and wiring.'],
+      ['Learn from other people’s costly errors', 'Most structural and finishing problems with newly built residential homes in India are completely avoidable. When defects appear—such as foundation settlement, diagonal plaster cracks, hollow flooring tiles, or ceiling seepage—rectification costs three to five times more than doing the work correctly during construction. The comprehensive inventory below highlights typical pitfalls across design, contracts, structural execution, and MEP installations, providing actionable preventive protocols for each.'],
+      ['Pre-construction and planning errors', { ol: [
+        'Starting without geotechnical soil testing: Designing footings without knowing soil safe bearing capacity (SBC) risks differential settlement. Always commission a standard bore-log test per IS 1892 before finalizing foundation drawings.',
+        'Commencing work without sanctioned municipal building plans: Building beyond bye-law setbacks or permissible FSI risks demolition notices, power disconnection, and denial of completion certificates.',
+        'Unrealistic financial budgeting and zero contingency reserve: Unforeseen price spikes in cement and steel or unanticipated excavation depths can halt work. Maintain at least a 10% to 15% dedicated contingency buffer using our House Budget Planner.',
+        'Inadequate cross-ventilation and daylight orientation: Placing primary bedroom windows directly into harsh western sun without shading eaves drastically increases life-cycle air-conditioning electricity expenses.',
+        'Failing to plan MEP (mechanical, electrical, plumbing) layouts beforehand: Cutting structural concrete beams or chiseling newly cured brick walls to chase electrical conduits weakens structural elements.',
+      ] }],
+      ['Contractual and procurement pitfalls', { ol: [
+        'Relying on verbal agreements with contractors: Always execute a stamped, written contract detailing item-rate specifications, approved material brands, milestone schedules, and dispute resolution terms.',
+        'Front-loading contractor payments: Never pay advance mobilization sums exceeding 10% to 15%. Link all disbursements strictly to verified physical site milestones (such as plinth completion, slab casting, or internal plaster).',
+        'Vague material brand specifications: Contracts stating generic phrases like "first-class cement" or "standard TMT bars" invite sub-standard substitutes. Specify exact grades, such as 53-grade OPC/PPC cement and Fe 500D TMT steel from primary producers.',
+        'Omitting a formal defect liability period (DLP): Retain 5% of the total contract value for at least 12 months post-handover to cover monsoon seepage, plumbing leaks, and settlement cracks.',
+      ] }],
+      ['Structural execution and site supervision mistakes', { ol: [
+        'Shortchanging concrete curing duration: Concrete achieves its design strength through prolonged hydration. Per IS 456 clause 13.5, cure slabs, beams, and columns continuously for a minimum of 7 to 10 days (14 days for blended mineral admixture cements).',
+        'Excess water in concrete mix: Adding extra water to make wet concrete flow easily drastically increases the water-cement ratio, creating porosity, honeycombing, and severe strength reduction. Maintain slump within specified limits and use plasticizers if needed.',
+        'Omitting concrete cover blocks: Placing reinforcement rebars directly against shuttering plywood without factory-made PVC or cement cover blocks exposes steel to air and moisture, causing rapid rebar corrosion and concrete spalling.',
+        'Substandard terrace and wet-area waterproofing: Waterproofing failures account for over 70% of post-construction disputes. Insist on a mandatory 48-to-72-hour hydrostatic ponding test on all bathroom sunken slabs and terrace slabs prior to tiling.',
+        'Neglecting drainage slopes on roofs and balconies: Water pooling on horizontal concrete surfaces eventually breaches waterproofing membranes. Ensure a minimum 1:100 slope towards rainwater downspout pipes.',
+        'Using unbranded concealed electrical conduit and plumbing pipes: Repairing a leaking CPVC pipe joint or an undersized charred electrical wire concealed inside masonry requires breaking expensive tiles and plaster.',
+      ] }],
+      ['Critical inspection milestones', 'To protect your investment, establish five mandatory site sign-off gates where an independent structural engineer or architect must inspect the site before work proceeds: (1) Foundation pit bottom inspection prior to lean concrete placement, (2) Rebar placement and shuttering alignment check before slab casting, (3) Post-deshuttering inspection for honeycombing or rebar exposure, (4) Terrace waterproofing ponding test verification, and (5) Concealed plumbing pressure testing at 10 kg/cm² prior to wall plastering.'],
     ],
-    faqs: [['What is the most expensive mistake?', 'Foundation and structural problems, because they are hardest to correct.'], ['Can I fix poor curing later?', 'Not fully; the strength lost cannot be restored, so cure properly from the start.'], ['Should I use a project manager?', 'For large or complex builds, a professional project manager or architect for supervision can pay for itself.']],
+    faqs: [
+      ['What is the single most expensive construction mistake to rectify?', 'Foundation settlement and structural column defects are the most catastrophic and costly, often requiring expensive micro-piling, column jacketing, or permanent underpinning.'],
+      ['Can inadequate concrete curing be remedied at a later stage?', 'No. Once concrete dries prematurely and the hydration reaction terminates, unhydrated cement cannot gain full compressive strength. Curing must begin immediately as the concrete sets.'],
+      ['Should an individual house owner employ an independent site supervisor?', 'Yes. Engaging a licensed civil engineer or registered architect for periodic milestone inspections typically saves multiple times their professional fee by preventing contractor shortcuts and material wastage.'],
+      ['How do I verify rebar quality delivered to my construction site?', 'Check for clear manufacturer mill test certificates, inspect the factory heat-stamped brand and grade markings on each bar (e.g., Fe 500D), and perform a field rebar bend test per IS 1786.'],
+    ],
   },
   {
-    slug: 'construction-in-monsoon-precautions', title: 'Construction in the Monsoon: Precautions for Concrete, Steel, Brickwork and Excavation', date: '2026-11-13',
+    slug: 'construction-in-monsoon-precautions', title: 'Construction in the Monsoon: Precautions for Concrete, Steel, Brickwork and Excavation', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-22', author: 'ashutosh-jha',
     desc: 'How to protect work and materials when building during the rains: scheduling pours, covering steel, drainage, storing cement and avoiding trench collapse.',
     tags: ['monsoon', 'rain', 'construction', 'precautions'], calcs: ['excavation-calculator', 'concrete-calculator'],
     sections: [
-      ['Rain can damage a build', 'Heavy rain causes trench collapse, washes out fresh concrete, rusts steel and spoils cement. With planning, work can continue safely, but some tasks are better postponed.'],
-      ['Excavation and foundations', ['Divert surface water with temporary drains and bunds.', 'Pump out water from trenches before concreting.', 'Slope or shore deep excavations to prevent collapse.', 'Cover the bottom with lean concrete soon after digging.']],
-      ['Concrete', ['Plan pours for dry spells and check forecasts.', 'Keep plastic sheets ready to cover fresh concrete.', 'Do not place concrete in standing water.', 'Adjust water in the mix for wet aggregates.', 'Continue curing as usual.']],
-      ['Steel and cement', ['Store steel off the ground and cover it; wire-brush rusty bars.', 'Keep cement bags on a raised platform in a dry room, wrapped in plastic.', 'Use older stock first and reject lumpy bags.']],
-      ['Masonry, plaster and finishing', ['Cover freshly built walls with sheets to avoid washout of mortar.', 'Delay plastering and painting until the walls are dry.', 'Keep sand under cover to control moisture.']],
-      ['Safety and scheduling', 'Wet scaffolds and slippery surfaces increase accidents; provide safe walkways and stop work during storms. Where possible, schedule excavation and foundation work in the dry season and enclose the structure before heavy rains.'],
+      ['Rain can damage a build without active safeguards', 'The Indian monsoon brings torrential rainfall that presents severe logistical, geotechnical, and structural challenges to residential construction sites. Heavy rainfall destabilizes excavation pits, washes out unhydrated cement slurry from freshly poured concrete, accelerates corrosion on unworked rebar stockpiles, and ruins bagged cement inventory. However, with systematic engineering planning and proactive site drainage, construction can proceed safely and efficiently.'],
+      ['Excavation and foundation precautions', { ol: [
+        'Divert surface run-off water: Cut perimeter cut-off drains and compacted soil bunds around the plot perimeter to divert stormwater away from open foundation pits.',
+        'Dewatering pumps on standby: Maintain at least one functional diesel or submersible dewatering pump with flexible discharge hose pipes on site to clear flooded trenches immediately.',
+        'Slope stabilization and shoring: Wet soil loses shear strength rapidly. Cut excavation sides to safe natural repose angles (minimum 1:1 or 45 degrees in cohesive soils) or install timber shoring to prevent trench wall collapse.',
+        'Immediate mud mat placement: Lay a 75 mm to 100 mm lean concrete bed (M7.5 or M10 grade plain cement concrete) immediately upon reaching footing bottom depth to prevent water slaking the bearing soil stratum.',
+      ] }],
+      ['Concrete placement and curing in wet weather', { ol: [
+        'Track local radar forecasts: Never begin casting a major structural reinforced concrete slab, beam, or column if continuous heavy rainfall is imminent.',
+        'Keep heavy-duty polyethylene tarpaulins ready: Have sufficient 250+ micron waterproof plastic sheets deployed right beside the pour area to immediately shield fresh concrete against surface washout if sudden showers strike.',
+        'Strictly forbid placing concrete in pooled water: Concrete poured directly into standing puddle water dilutes the cement paste and creates segregated honeycombed pockets. Pump out all water before pouring.',
+        'Account for sand bulking and surface moisture: Wet coarse sand expands in volume by up to 20% to 30% due to surface moisture tension (IS 2386 Part 3). Adjust batch box volumes and reduce water dosing to preserve the target water-cement ratio.',
+        'Do not skip curing: High ambient relative humidity does not eliminate the need for moist curing; continue ponding or wet hessian wrapping on vertical columns per IS 456.',
+      ] }],
+      ['Protecting cement and structural steel inventories', { ol: [
+        'Stacking cement bags per IS 4082: Store cement bags in a weatherproof shed on a raised wooden plank platform elevated at least 150 mm to 200 mm above the floor, and keep stacks 300 mm clear of peripheral masonry walls.',
+        'Hermetic plastic encapsulation: Wrap the entire cement stack with heavy waterproof plastic sheets. Use older consignments first (FIFO method), and instantly reject bags containing hardened lumps.',
+        'Elevating TMT steel rebar stock: Stack steel reinforcement bars on wooden sleepers or concrete blocks at least 150 mm above damp ground to avoid contact with mud and standing rainwater.',
+        'Wire-brushing surface rust: While mild uniform brownish surface oxidation is normal, flaking scaly rust must be wire-brushed off before bending or binding steel rebars into beams and columns.',
+      ] }],
+      ['Masonry, external plaster and site electrical safety', 'Avoid external wall plastering and exterior acrylic painting during peak rainy months, as high atmospheric humidity prevents proper drying and causes blistering and efflorescence. In masonry, protect newly laid brick walls with polythene sheets at the end of each work shift to prevent torrential rain from washing wet cement mortar out of vertical joints. Ensure all temporary on-site electrical wiring is enclosed in heavy-duty weatherproof cables with dedicated residual current circuit breakers (RCCB/ELCB) to prevent electrocution hazards.'],
     ],
-    faqs: [['Can I pour a slab during rain?', 'Avoid it unless you can fully cover the work; rain dilutes the mix and washes cement from the surface.'], ['How do I keep sand dry?', 'Store it on a plastic sheet under a tarpaulin and on a raised platform.'], ['Is the monsoon a bad time to start?', 'It is better to start excavation and foundation after the monsoon ends, but with precautions, work can proceed.']],
+    faqs: [
+      ['Can I cast an RCC roof slab during light drizzle?', 'Light intermittent drizzle is manageable if the finished surface is promptly covered with plastic sheeting. However, if heavy downpours begin, halt pouring, establish an engineered construction joint at the slab quarter-span, and cover the cast section immediately.'],
+      ['How do I detect if moisture in sand is throwing off my concrete mix?', 'Perform an on-site sand bulking test using a 250 ml measuring cylinder. If the sand volume increases by 15% to 25% due to absorbed moisture, adjust batching proportions to avoid an under-sanded, porous concrete mix.'],
+      ['Is it advisable to start basement excavation during the monsoon?', 'No. Geotechnical engineers strongly recommend completing deep basement excavation and foundation retaining walls before the onset of the monsoon, as saturated soil pressure significantly increases retaining wall collapse risks.'],
+    ],
   },
   {
-    slug: 'completion-certificate-and-occupancy-certificate', title: 'Completion Certificate vs Occupancy Certificate: What They Are and Why You Need Them', date: '2026-11-14',
+    slug: 'completion-certificate-and-occupancy-certificate', title: 'Completion Certificate vs Occupancy Certificate: What They Are and Why You Need Them', status: 'published', publishDate: '2026-11-03', published: '2026-11-03', modified: '2026-11-03', author: 'ashutosh-jha',
     desc: 'The difference between a completion certificate and an occupancy certificate, what authorities check, why banks and utilities ask for them and what to do if missing.',
     tags: ['completion certificate', 'occupancy certificate', 'oc', 'cc', 'approval'], calcs: ['total-property-cost-calculator'],
     sections: [
