@@ -9,6 +9,7 @@
     "test": "node scripts/test-calcs.mjs",
     "check": "node scripts/check.mjs",
     "serve": "node scripts/serve.mjs",
+    "verify-live": "node scripts/verify-live.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "indexnow:all": "node scripts/indexnow.mjs --all",
     "assets": "npm install --no-save sharp && node scripts/make-assets.mjs"

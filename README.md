@@ -53,8 +53,18 @@ Local preview: `npm install && npm run build && npm run serve` → http://localh
 
 ## SEO / AI-search features
 
-Unique titles (≤60 chars) and descriptions, canonicals, Open Graph/Twitter cards (per-topic images), JSON-LD (`Organization`, `WebSite`, `Article`, `WebApplication`, `FAQPage`, `BreadcrumbList`, `CollectionPage`), sitemap, HTML sitemap, RSS, `robots.txt` allowing Googlebot, Mediapartners-Google and AI crawlers, and `llms.txt` (formulas and summaries of every page).
-`npm run check` audits all pages (broken links, titles, schema, AdSense/GA tags) — it reports 0 errors.
+Unique titles (≤60 chars) and descriptions, canonicals, Open Graph/Twitter cards (per-topic images), JSON-LD (`Organization`, `WebSite`, `Article`, `WebApplication`, `FAQPage`, `BreadcrumbList`, `CollectionPage`), sitemap, HTML sitemap, RSS, `robots.txt` with configurable AI training crawler policy, and `llms.txt` (formulas and summaries of every page).
+`npm run check` audits all pages (broken links, titles, schema, AdSense/GA tags, word counts, bylines, date diversity) — it reports 0 errors.
+
+## Crawlability & Robots Policy
+
+* **Authoritative Robots.txt (`aiCrawlerPolicy` in `site.config.mjs`):**
+  - `'block-training'` (default): Explicitly permits all search and discovery engines (`Googlebot`, `Googlebot-Image`, `AdsBot-Google`, `Mediapartners-Google`, `Bingbot`, `OAI-SearchBot`, `Claude-SearchBot`, `PerplexityBot`), while cleanly disallowing AI training model scrapers (`GPTBot`, `ClaudeBot`, `anthropic-ai`, `CCBot`, `Google-Extended`, `Applebot-Extended`, `Bytespider`, `meta-externalagent`, `Amazonbot`, `cohere-ai`). No crawler is listed under contradictory Allow and Disallow directives.
+  - `'allow'`: Allows all web search and AI crawlers without Disallow rules.
+* **Cloudflare Managed robots.txt:** Turn OFF "Manage your robots.txt" in the Cloudflare Dashboard so `dist/robots.txt` is the single source of truth. See [docs/CLOUDFLARE-CHECKLIST.md](docs/CLOUDFLARE-CHECKLIST.md).
+* **Email Obfuscation Protection:** Every rendered email address is wrapped in `<!--email_off-->...<!--/email_off-->` comments, guaranteeing that Cloudflare's Scrape Shield never replaces contact addresses with `[email protected]`.
+* **Rocket Loader Bypass:** Critical script tags (`adsbygoogle.js` and consent/gtag inline scripts) carry `data-cfasync="false"` so Cloudflare Rocket Loader does not defer or break execution.
+* **Live Verification Command:** Run `npm run verify-live` to test live endpoints for robots.txt rules, Cloudflare challenge interference, AdSense script presence, and email readability.
 
 ## Before you apply
 
