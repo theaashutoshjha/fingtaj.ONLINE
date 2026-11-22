@@ -14,7 +14,7 @@ const mixOptions = Object.entries(MIXES).map(([k, v]) => [k, v[0]]);
 
 export default [
   {
-    slug: 'brick-quantity-calculator', category: CAT, title: 'Brick Quantity Calculator',
+    slug: 'brick-quantity-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Brick Quantity Calculator',
     short: 'Estimate the number of bricks or AAC blocks, cement bags and sand needed for a wall of any size.',
     tags: ['brick', 'wall', 'masonry', 'aac', 'mortar', 'cement', 'sand'],
     intro: [
@@ -43,7 +43,7 @@ export default [
     },
   },
   {
-    slug: 'plaster-calculator', category: CAT, title: 'Plaster Calculator (Cement & Sand)',
+    slug: 'plaster-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Plaster Calculator (Cement & Sand)',
     short: 'Calculate cement bags and sand for internal or external plastering from the wall area and plaster thickness.',
     tags: ['plaster', 'cement', 'sand', 'wall'],
     intro: [
@@ -66,7 +66,7 @@ export default [
     },
   },
   {
-    slug: 'concrete-calculator', category: CAT, title: 'Concrete Quantity Calculator (Cement, Sand, Aggregate)',
+    slug: 'concrete-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Concrete Quantity Calculator (Cement, Sand, Aggregate)',
     short: 'Estimate concrete volume and the cement bags, sand and aggregate for slabs, footings, beams and columns.',
     tags: ['concrete', 'slab', 'footing', 'column', 'beam', 'cement', 'sand', 'aggregate', 'rcc'],
     intro: [
@@ -94,7 +94,7 @@ export default [
     },
   },
   {
-    slug: 'steel-weight-calculator', category: CAT, title: 'TMT Steel Weight Calculator',
+    slug: 'steel-weight-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'TMT Steel Weight Calculator',
     short: 'Calculate the weight of TMT / rebar steel bars from diameter and length using the standard d²/162 formula.',
     tags: ['steel', 'tmt', 'rebar', 'weight', 'bar'],
     intro: [
@@ -116,7 +116,7 @@ export default [
     },
   },
   {
-    slug: 'tile-flooring-calculator', category: CAT, title: 'Tile & Flooring Calculator',
+    slug: 'tile-flooring-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Tile & Flooring Calculator',
     short: 'Find how many tiles and boxes you need for a room, including wastage, for any tile size.',
     tags: ['tile', 'flooring', 'floor', 'room'],
     intro: [
@@ -138,7 +138,7 @@ export default [
     },
   },
   {
-    slug: 'paint-quantity-calculator', category: CAT, title: 'Paint Quantity Calculator',
+    slug: 'paint-quantity-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Paint Quantity Calculator',
     short: 'Estimate litres of paint and primer for the walls and ceiling of a room, with doors, windows and number of coats.',
     tags: ['paint', 'wall', 'primer', 'ceiling'],
     intro: [
@@ -161,7 +161,7 @@ export default [
     },
   },
   {
-    slug: 'excavation-calculator', category: CAT, title: 'Excavation & Earthwork Calculator',
+    slug: 'excavation-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Excavation & Earthwork Calculator',
     short: 'Calculate excavation volume, loose soil volume after swell and the number of truck loads for foundations or pits.',
     tags: ['excavation', 'earthwork', 'foundation', 'soil', 'pit'],
     intro: [
@@ -183,7 +183,7 @@ export default [
     },
   },
   {
-    slug: 'staircase-calculator', category: CAT, title: 'Staircase Calculator (Riser & Tread)',
+    slug: 'staircase-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Staircase Calculator (Riser & Tread)',
     short: 'Design a comfortable staircase: number of steps, riser height, tread depth and total run from the floor-to-floor height.',
     tags: ['staircase', 'stairs', 'riser', 'tread'],
     intro: [

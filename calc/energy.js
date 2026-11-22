@@ -4,7 +4,7 @@ const CAT = 'energy';
 
 export default [
   {
-    slug: 'electricity-bill-calculator', category: CAT, title: 'Electricity Bill Calculator',
+    slug: 'electricity-bill-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Electricity Bill Calculator',
     short: 'Calculate your monthly electricity bill from units consumed using slab rates, fixed charge and duty — enter your own state tariff.',
     tags: ['electricity', 'bill', 'tariff', 'units', 'slab'],
     intro: [
@@ -28,7 +28,7 @@ export default [
     },
   },
   {
-    slug: 'appliance-energy-calculator', category: CAT, title: 'Appliance Power Consumption Calculator',
+    slug: 'appliance-energy-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Appliance Power Consumption Calculator',
     short: 'Find the monthly units and cost of your AC, fans, lights, fridge and other appliances from wattage and daily use.',
     tags: ['appliance', 'power', 'consumption', 'electricity', 'ac', 'units'],
     intro: [
@@ -51,7 +51,7 @@ export default [
     },
   },
   {
-    slug: 'solar-rooftop-calculator', category: CAT, title: 'Rooftop Solar Calculator',
+    slug: 'solar-rooftop-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Rooftop Solar Calculator',
     short: 'Estimate the solar system size, roof area, cost, yearly savings and payback period from your monthly electricity use.',
     tags: ['solar', 'rooftop', 'net metering', 'savings', 'payback'],
     intro: [
@@ -73,7 +73,7 @@ export default [
     },
   },
   {
-    slug: 'inverter-battery-calculator', category: CAT, title: 'Inverter & Battery Size Calculator',
+    slug: 'inverter-battery-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Inverter & Battery Size Calculator',
     short: 'Size an inverter and battery bank for your home from the load in watts and the backup hours you need.',
     tags: ['inverter', 'battery', 'backup', 'power cut'],
     intro: [
@@ -95,7 +95,7 @@ export default [
     },
   },
   {
-    slug: 'water-tank-calculator', category: CAT, title: 'Water Tank Capacity Calculator',
+    slug: 'water-tank-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Water Tank Capacity Calculator',
     short: 'Calculate the capacity of a rectangular or cylindrical water tank in litres and the days of supply for your family.',
     tags: ['water tank', 'sump', 'capacity', 'litres', 'overhead tank'],
     intro: [
@@ -117,7 +117,7 @@ export default [
     },
   },
   {
-    slug: 'rainwater-harvesting-calculator', category: CAT, title: 'Rainwater Harvesting Calculator',
+    slug: 'rainwater-harvesting-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Rainwater Harvesting Calculator',
     short: 'Estimate how many litres of rainwater your roof can collect each year from its area and local rainfall.',
     tags: ['rainwater', 'harvesting', 'roof', 'water'],
     intro: [

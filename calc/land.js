@@ -12,7 +12,7 @@ const unitOptions = AREA_UNITS.map(([id, label]) => [id, label]);
 
 export default [
   {
-    slug: 'land-area-converter', category: CAT, title: 'Land Area Converter',
+    slug: 'land-area-converter', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Land Area Converter',
     short: 'Convert land area between sq ft, gaj, sq m, acre, hectare, guntha, cent, kanal, marla, bigha and katha.',
     tags: ['land', 'area', 'bigha', 'guntha', 'cent', 'acre', 'unit'],
     intro: [
@@ -40,7 +40,7 @@ export default [
     },
   },
   {
-    slug: 'plot-area-calculator', category: CAT, title: 'Plot Area Calculator',
+    slug: 'plot-area-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Plot Area Calculator',
     short: 'Find the area of a rectangular, triangular, trapezoid or four-sided irregular plot from its side lengths.',
     tags: ['plot', 'area', 'irregular', 'measure'],
     intro: [
@@ -71,7 +71,7 @@ export default [
     },
   },
   {
-    slug: 'carpet-area-calculator', category: CAT, title: 'Carpet Area & Super Built-up Area Calculator',
+    slug: 'carpet-area-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Carpet Area & Super Built-up Area Calculator',
     short: 'Convert between carpet area, built-up area and super built-up area and see the real loading you are paying for.',
     tags: ['carpet area', 'super built-up', 'rera', 'flat', 'loading'],
     intro: [
@@ -97,7 +97,7 @@ export default [
     },
   },
   {
-    slug: 'land-price-calculator', category: CAT, title: 'Land Price Calculator',
+    slug: 'land-price-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Land Price Calculator',
     short: 'Work out the total price of a plot from its rate per sq ft, gaj, cent, guntha or acre — and compare rates across units.',
     tags: ['land', 'price', 'rate', 'plot'],
     intro: [

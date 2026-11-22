@@ -4,7 +4,7 @@ const CAT = 'property';
 
 export default [
   {
-    slug: 'stamp-duty-calculator', category: CAT, title: 'Stamp Duty & Registration Calculator',
+    slug: 'stamp-duty-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Stamp Duty & Registration Calculator',
     short: 'Estimate stamp duty, registration fee and total cost on a property purchase using your state’s current rates.',
     tags: ['stamp duty', 'registration', 'circle rate', 'property'],
     intro: [
@@ -28,7 +28,7 @@ export default [
     },
   },
   {
-    slug: 'total-property-cost-calculator', category: CAT, title: 'Total Property Purchase Cost Calculator',
+    slug: 'total-property-cost-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Total Property Purchase Cost Calculator',
     short: 'Add up the real cost of buying a home: price, GST, stamp duty, registration, brokerage, parking and deposits.',
     tags: ['property cost', 'gst', 'buying', 'flat', 'registration'],
     intro: [
@@ -50,7 +50,7 @@ export default [
     },
   },
   {
-    slug: 'home-loan-emi-calculator', category: CAT, title: 'Home Loan EMI Calculator',
+    slug: 'home-loan-emi-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Home Loan EMI Calculator',
     short: 'Calculate the EMI, total interest and year-wise repayment of a home or construction loan.',
     tags: ['home loan', 'emi', 'construction loan', 'interest'],
     intro: [
@@ -72,7 +72,7 @@ export default [
     },
   },
   {
-    slug: 'home-affordability-calculator', category: CAT, title: 'Home Affordability Calculator',
+    slug: 'home-affordability-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Home Affordability Calculator',
     short: 'Find the maximum home price you can afford from your income, existing EMIs, down payment and interest rate.',
     tags: ['affordability', 'home loan', 'budget', 'income'],
     intro: [
@@ -95,7 +95,7 @@ export default [
     },
   },
   {
-    slug: 'rental-yield-calculator', category: CAT, title: 'Rental Yield Calculator',
+    slug: 'rental-yield-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Rental Yield Calculator',
     short: 'Calculate gross and net rental yield and payback period for a property you plan to buy and let out.',
     tags: ['rental yield', 'rent', 'investment', 'property'],
     intro: [

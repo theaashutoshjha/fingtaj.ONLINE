@@ -6,7 +6,8 @@ export default {
   tagline: 'Measure twice. Build once. Calculators and guides for Indian homes',
   description: '30 free calculators and 72 practical guides on land measurement, building materials, house construction cost, property registration, solar and home maintenance in India.',
   email: 'contact@fingtaj.online',
-  buildDate: new Date().toISOString().slice(0, 10),
+  launchDate: '2026-11-03',
+  lastModified: '2026-11-22',
   updatedLabel: 'November 2026',
 
   // ---- Verification & monetisation (as provided) ----

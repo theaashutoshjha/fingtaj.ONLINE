@@ -11,20 +11,32 @@ const CONV = [
 
 export default [
   {
-    slug: 'unit-converter', category: CAT, title: 'Construction Unit Converter',
+    slug: 'unit-converter', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Construction Unit Converter',
     short: 'Convert the units used on Indian building sites: feet, metres, inches, mm, sq ft, cubic feet, litres, quintals and more.',
     tags: ['unit', 'convert', 'feet', 'metre', 'cubic'],
     intro: [
-      'Building work in India mixes feet and inches with metres and millimetres, square feet with square metres, and cubic feet with cubic metres. Drawings may be in metric while material is sold in imperial units. A quick, reliable converter avoids costly mistakes.',
-      'Choose the conversion you need, enter the value, and read the result and the reverse conversion. Standard factors are used throughout.',
+      'Building work in India mixes feet and inches with metres and millimetres, square feet with square metres, and cubic feet with cubic metres. Architectural drawings may be in metric units while physical building materials like timber, steel rods, and ready-mix concrete are sold in imperial feet, inches, or metric tonnes. A quick, reliable converter avoids costly mathematical errors on site.',
+      'Choose the conversion you need, enter your measured quantity, and view the converted value alongside the exact reverse conversion factor. Standard international scientific conversion factors are used throughout this tool.',
+      'Understanding unit conversions is critical during bill of quantities (BOQ) preparation, contractor measurement book (MB) verification, and material procurement to ensure site orders match structural drawings.',
     ],
-    formula: 'Result = Value × conversion factor',
-    how: ['1 foot = 0.3048 m; 1 inch = 25.4 mm; 1 sq ft = 0.0929 sq m; 1 cubic foot = 28.317 litres.', '1 cubic metre = 35.315 cubic feet = 1,000 litres; 1 quintal = 100 kg; 1 tonne = 1,000 kg.', 'To change the unit pair, pick another conversion from the list.'],
-    assumptions: ['Factors are exact international values; local trade units may differ slightly.'],
+    formula: 'Converted Result = Input Value × Exact Conversion Factor;  Reverse Value = Converted Result ÷ Exact Conversion Factor',
+    how: [
+      'Linear dimensions: 1 international foot = exactly 0.3048 metres (or 304.8 mm); 1 inch = 25.4 mm; 1 metre = 3.28084 feet.',
+      'Surface area: 1 square metre = 10.7639 square feet; 1 square foot = 0.092903 square metres; 1 square yard (gaj) = 9 square feet.',
+      'Volume and capacity: 1 cubic metre = 35.3147 cubic feet (cft) = 1,000 litres; 1 cubic foot = 28.3168 litres = 0.028317 m³.',
+      'Weight and mass: 1 quintal = 100 kilograms; 1 metric tonne = 1,000 kilograms = 10 quintals.',
+      'To switch between different measurement pairs, select any conversion from the dropdown menu above.',
+    ],
+    assumptions: [
+      'Conversion factors are exact international scientific values as recognized by the Bureau of Indian Standards (BIS) and the International System of Units (SI).',
+      'Local trade measurements (such as brass for coarse aggregates or cubic volume in sand deliveries) may involve slight truck-packing variations; verify local municipal trade definitions.',
+    ],
     faqs: [
-      ['How many square feet are in a square metre?', 'One square metre is about 10.764 square feet.'],
-      ['How many litres are in a cubic foot?', 'One cubic foot is about 28.317 litres.'],
-      ['How do I convert feet and inches to metres?', 'Convert inches to feet (divide by 12), add to the feet, then multiply by 0.3048.'],
+      ['How many square feet are in a square metre?', 'One square metre equals approximately 10.7639 square feet (commonly rounded to 10.76 sq ft on construction sites). To convert square metres to square feet, multiply by 10.7639.'],
+      ['How many litres are in a cubic foot?', 'One cubic foot holds approximately 28.3168 litres of water. This conversion is widely used in India when sizing domestic overhead and underground water storage tanks.'],
+      ['How do I convert feet and inches to decimal metres?', 'First convert the inches into fractional feet by dividing inches by 12, add the result to the whole feet, and then multiply the total feet by 0.3048 to get metres.'],
+      ['What is the relationship between brass, cubic metres, and cubic feet?', 'In Indian construction trade, one brass of sand or aggregate equals 100 cubic feet, which corresponds to approximately 2.8317 cubic metres.'],
+      ['How many kilograms are in one metric tonne and one quintal?', 'One metric tonne equals exactly 1,000 kilograms (or 10 quintals). One quintal equals exactly 100 kilograms. Reinforcing steel is commonly billed in metric tonnes or quintals.'],
     ],
     inputs: [SEL('c', 'Conversion', 'ft-m', CONV.map(([k, l]) => [k, l])), F('v', 'Value', 100, 0, 1e12, 0.01, 'num')],
     compute(v) {
@@ -33,7 +45,7 @@ export default [
     },
   },
   {
-    slug: 'ac-tonnage-calculator', category: CAT, title: 'AC Tonnage Calculator',
+    slug: 'ac-tonnage-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'AC Tonnage Calculator',
     short: 'Find the right air conditioner size in tons for a room based on area, sun exposure, occupants and heat-producing appliances.',
     tags: ['ac', 'tonnage', 'air conditioner', 'cooling'],
     intro: [
@@ -55,7 +67,7 @@ export default [
     },
   },
   {
-    slug: 'sloped-roof-area-calculator', category: CAT, title: 'Sloped Roof Area Calculator',
+    slug: 'sloped-roof-area-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Sloped Roof Area Calculator',
     short: 'Calculate the true area of a sloped roof from its plan area, slope and overhang, for sheets, tiles or waterproofing.',
     tags: ['roof', 'slope', 'sheet', 'tile', 'area'],
     intro: [

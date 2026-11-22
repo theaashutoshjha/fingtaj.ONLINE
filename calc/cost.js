@@ -5,7 +5,7 @@ const slice = (label, value, color) => ({ label, value, color });
 
 export default [
   {
-    slug: 'construction-cost-calculator', category: CAT, title: 'House Construction Cost Calculator',
+    slug: 'construction-cost-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'House Construction Cost Calculator',
     short: 'Estimate the cost of building a house from built-up area and your local construction rate, with fees and contingency.',
     tags: ['construction cost', 'house', 'budget', 'per sq ft'],
     intro: [
@@ -33,7 +33,7 @@ export default [
     },
   },
   {
-    slug: 'house-budget-planner', category: CAT, title: 'House Building Budget Planner',
+    slug: 'house-budget-planner', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'House Building Budget Planner',
     short: 'Turn your total budget into a plan: land, construction, interiors, approvals and a safety reserve.',
     tags: ['budget', 'house', 'plan', 'construction cost'],
     intro: [
@@ -60,7 +60,7 @@ export default [
     },
   },
   {
-    slug: 'interior-cost-calculator', category: CAT, title: 'Home Interior Cost Calculator',
+    slug: 'interior-cost-calculator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Home Interior Cost Calculator',
     short: 'Estimate the interior cost of a flat or house from carpet area and your quality tier, with a room-wise split.',
     tags: ['interior', 'modular kitchen', 'wardrobe', 'renovation'],
     intro: [
@@ -83,7 +83,7 @@ export default [
     },
   },
   {
-    slug: 'material-thumb-rule-estimator', category: CAT, title: 'Cement & Steel Thumb-Rule Estimator',
+    slug: 'material-thumb-rule-estimator', category: CAT, published: '2026-11-03', modified: '2026-11-03', title: 'Cement & Steel Thumb-Rule Estimator',
     short: 'Rough planning estimate of cement bags and steel for a house from its built-up area, using editable rules of thumb.',
     tags: ['cement', 'steel', 'thumb rule', 'estimate', 'house'],
     intro: [
