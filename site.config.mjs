@@ -19,6 +19,11 @@ export default {
   // ---- Instant indexing (IndexNow: Bing, Yandex, Seznam, Naver, Yep) ----
   indexNowKey: 'dd42d910f10e14978a7dd6380733ff08',
 
+  // ---- AI Crawler & Robots.txt Policy ----
+  // 'block-training': allows search bots (Google, Bing, OAI-SearchBot, Claude-SearchBot, Perplexity) but disallows AI model training scrapers (GPTBot, ClaudeBot, CCBot, Google-Extended, etc.)
+  // 'allow': allows all public crawlers and AI bots without training restrictions
+  aiCrawlerPolicy: 'block-training',
+
   founder: 'Ashutosh Jha',
   team: 'Fingtaj Editorial Team',
   social: {},

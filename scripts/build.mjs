@@ -216,7 +216,7 @@ for (const author of AUTHORS) {
     <h2>About ${esc(author.name.split(' ')[0])}</h2>
     <p>${esc(author.bio)}</p>
     <p>Ashutosh researches statutory land documentation, circle rate valuations, reducing-balance loan mechanics, and municipal approval processes, referencing primary standards from the Bureau of Indian Standards (BIS), National Building Code (NBC 2016), and state revenue gazettes.</p>
-    <p>To report an error, submit a calculation inquiry, or propose a topic, contact our desk via the <a href="/contact">contact page</a> or email <a href="mailto:${cfg.email}">${cfg.email}</a>.</p>
+    <p>To report an error, submit a calculation inquiry, or propose a topic, contact our desk via the <a href="/contact">contact page</a> or email <!--email_off--><a href="mailto:${cfg.email}">${cfg.email}</a><!--/email_off-->.</p>
     <h2>Guides Researched &amp; Authored by ${esc(author.name)} (${authorGuides.length})</h2>
     <div class="grid wide" style="margin-top:20px">
       ${authorGuides.map(guideCard).join('')}
@@ -242,44 +242,69 @@ write('404.html', page({ title: 'Page not found', desc: 'This page could not be 
 // ================= MACHINE-READABLE FILES =================
 write('search-index.json', JSON.stringify(searchIndex));
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `<url><loc>${abs(p.path)}</loc><lastmod>${p.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
-write('robots.txt', `# Everything public is crawlable, including search and AI answer engines.
-User-agent: *
-Allow: /
+const robotsTxt = (() => {
+  const lines = [
+    '# Cloudflare managed robots.txt must be switched OFF in the dashboard so this file is authoritative.',
+    `# Policy: ${cfg.aiCrawlerPolicy || 'block-training'}`,
+    '',
+    'User-agent: *',
+    'Allow: /',
+    '',
+    'User-agent: Googlebot',
+    'Allow: /',
+    '',
+    'User-agent: Googlebot-Image',
+    'Allow: /',
+    '',
+    'User-agent: AdsBot-Google',
+    'Allow: /',
+    '',
+    'User-agent: Mediapartners-Google',
+    'Allow: /',
+    '',
+    'User-agent: Bingbot',
+    'Allow: /',
+    '',
+    'User-agent: OAI-SearchBot',
+    'Allow: /',
+    '',
+    'User-agent: Claude-SearchBot',
+    'Allow: /',
+    '',
+    'User-agent: PerplexityBot',
+    'Allow: /',
+  ];
 
-User-agent: Mediapartners-Google
-Allow: /
+  if ((cfg.aiCrawlerPolicy || 'block-training') === 'block-training') {
+    const trainingBots = [
+      'GPTBot',
+      'ClaudeBot',
+      'anthropic-ai',
+      'CCBot',
+      'Google-Extended',
+      'Applebot-Extended',
+      'Bytespider',
+      'meta-externalagent',
+      'Amazonbot',
+      'cohere-ai',
+    ];
+    lines.push('');
+    lines.push('# Training crawlers disallowed under block-training policy');
+    for (const bot of trainingBots) {
+      lines.push(`User-agent: ${bot}`);
+      lines.push('Disallow: /');
+      lines.push('');
+    }
+    if (lines[lines.length - 1] === '') lines.pop();
+  }
 
-User-agent: Googlebot
-Allow: /
+  lines.push('');
+  lines.push(`Sitemap: ${cfg.url}/sitemap.xml`);
+  lines.push('');
+  return lines.join('\n');
+})();
 
-User-agent: AdsBot-Google
-Allow: /
-
-User-agent: AdsBot-Google-Mobile
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-User-agent: OAI-SearchBot
-Allow: /
-User-agent: ChatGPT-User
-Allow: /
-User-agent: PerplexityBot
-Allow: /
-User-agent: ClaudeBot
-Allow: /
-User-agent: Claude-SearchBot
-Allow: /
-User-agent: Google-Extended
-Allow: /
-User-agent: Applebot-Extended
-Allow: /
-
-Sitemap: ${cfg.url}/sitemap.xml
-`);
+write('robots.txt', robotsTxt);
 write('feed.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>${cfg.name}</title><link>${cfg.url}</link><description>${esc(cfg.tagline)}</description><language>en-IN</language><atom:link href="${cfg.url}/feed.xml" rel="self" type="application/rss+xml"/>\n${guides.slice(0, 30).map((g) => `<item><title>${esc(g.title)}</title><link>${abs(g.urlPath)}</link><guid isPermaLink="true">${abs(g.urlPath)}</guid><pubDate>${new Date(g.pub + 'T08:00:00+05:30').toUTCString()}</pubDate><category>${esc(g.topic.name)}</category><description>${esc(g.desc)}</description></item>`).join('\n')}\n</channel></rss>\n`);
 write('llms.txt', `# ${cfg.name}
 
