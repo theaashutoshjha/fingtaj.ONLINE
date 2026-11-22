@@ -694,3 +694,4 @@ export const DIAGRAMS = {
     <text x="320" y="290" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#c1502e" text-anchor="middle">Volume Conversion: 1 Cubic Metre = 1,000 Litres (1 cu ft ≈ 28.3 litres).</text>
   `, 'Household water storage demand diagram based on NBC 2016 135 lpcd standard, comparing underground sump and overhead tank capacities.', 'Water tank capacity planning underground sump and overhead tank diagram')
 };
+

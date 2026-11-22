@@ -110,3 +110,4 @@ The figures in the 25 expanded state comparison tables reflect verified schedule
   - National Portal for Rooftop Solar (`pmsuryaghar.gov.in` / MNRE)
 - [ ] **Electricity Tariffs:**
   - State Electricity Regulatory Commissions (MERC, DERC, KERC, UPERC, TNERC)
+

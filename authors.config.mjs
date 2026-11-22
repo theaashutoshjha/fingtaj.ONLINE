@@ -17,3 +17,4 @@ export const AUTHORS = [
 
 export const getAuthor = (slug = 'ashutosh-jha') => AUTHORS.find((a) => a.slug === slug) || AUTHORS[0];
 export default AUTHORS;
+
